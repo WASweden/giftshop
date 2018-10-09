@@ -1,0 +1,53 @@
+<div class="digital-card xmas">
+
+  <!--
+    <div class="row">
+      <div class="column">
+  -->
+  <div class="digital-card-header">
+    <h2 class="digital-card-header__title">God Jul</h2>
+  </div>
+  <!--
+      </div>
+    </div>
+  -->
+
+  <div class="row digital-card-content">
+    <div class="digital-card-content__message">
+      <p>
+        Du får en julklapp som går till en annan del av vår jord, ett bidrag som skänker liv och hopp vid en annan familjs bord. Gåvan jag ger dig är rent och friskt vatten, en tanke jag hoppas värmer dig i den kalla julnatten.
+      </p>
+    </div>
+    <div class="digital-card-content__generated">
+      <%= simple_format(h(@card.text)) %>
+    </div>
+  </div>
+
+  <div class="digital-card-footer">
+    <%= image_tag "wateraid-logo.png" %>
+    <small>
+      WaterAid är en internationell oberoende organisation som jobbar för att förändra människors liv genom att förbättra tillgången till rent vatten, bättre hygien och sanitet i världens fattigaste samhällen. Läs mer på <a href="www.wateraid.se" target="_self">www.wateraid.se</a><span><!-- --></span>
+    </small>
+  </div>
+
+</div>
+
+
+<!--
+<div class="card-info">
+  <div class="card-info__content">
+    <p>Du har fått ett gåvobevis från WaterAid.<br>Lorem ipsum</p>
+    <%= link_to "Så fungerar det", info_path, class: 'button' %>
+<%= link_to "Ge en gåva", root_path, class: 'button' %>
+  </div>
+</div>
+-->
+
+<!--
+<footer class="footer footer--card">
+  <div class="footer-content">
+    <%#= render 'shared/footer_links' %>
+<%= render 'shared/footer_registration' %>
+  </div>
+</footer>
+-->

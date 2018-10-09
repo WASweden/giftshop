@@ -1,0 +1,42 @@
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '<%= Rails.application.secrets.facebook_app_id %>',
+      xfbml      : true,
+      version    : 'v2.1'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/sv_SE/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script>var seconds = 10;setTimeout(function() { fbq('track', 'ViewContent'); }, seconds * 1000);</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=770236689764961&amp;ev=ViewContent&noscript=1 " /></noscript>
+
+<!-- Adwords -->
+<!-- Global site tag (gtag.js) - AdWords: 827922118 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-827922118"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-827922118');
+</script>
+
+<script>
+  gtag('event', 'page_view', {
+    'send_to': 'AW-827922118',
+    'user_id': '1'
+  });
+</script>
+
+<!-- Bing all pages -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"41000043"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
+

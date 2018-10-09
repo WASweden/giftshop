@@ -1,0 +1,44 @@
+<% if @preview %>
+  <% html_classes "card-preview" %>
+
+  <div class="card__preview">
+    <p>Detta är en förhandsvisning av gåvobeviset.</p>
+    
+    <% if @customer_token %>
+      <%= link_to "", customer_path(@customer_token), class: "close" %>
+    <% end %>
+  </div>
+<% end %>
+
+<%= render @card.subtype.try(:underscore) || "regular" %>
+
+<div class="card__download">
+  <%= link_to "Ladda ner som PDF", card_path(@card.token, format: :pdf), class: 'button download-card' %>
+  <a class="print-card button" href="#">Skriv ut</a>
+</div>
+
+<% if !@card.order.paid_at.nil? %>
+  <script>
+    mixpanel.track(
+      "View card",
+      {
+        <% if @card.sent_at == nil %>
+
+        <% else %>
+        "card-sent-at": '<%= @card.sent_at.strftime('%Y-%m-%d') %>',
+        <% end %>
+        "card-id": '<%= @card.id %>',
+        "card-form-type": '<%= @card.form_type %>',
+        'card-type': 'digital',
+        'card-subtype': '<%= @card.subtype %>',
+        'card-price': '<%= @card.quantity %>',
+
+        <% if @card.send_to_donor == true %>
+        'card-send-to-donor': true,
+        <% end %>
+      }
+    );
+
+    ga('send', 'event', 'card', 'view-card');
+  </script>
+<% end %>

@@ -1,0 +1,279 @@
+// -----------------------------------------------------------------------------
+// Links
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+// Headings
+// -----------------------------------------------------------------------------
+
+/**
+ * Base headings classes
+ */
+.t-h1 {
+  @extend %h1;
+}
+.t-h2 {
+  @extend %h2;
+}
+.t-h3 {
+  @extend %h3;
+}
+.t-h4 {
+  @extend %h4;
+}
+.t-h5 {
+  @extend %h5;
+}
+.t-h6 {
+  @extend %h6;
+}
+
+// -----------------------------------------------------------------------------
+// Body copy
+// -----------------------------------------------------------------------------
+
+/**
+ * Lead text
+ * Used for the introduction of a longer text.
+ */
+%t-lead {
+  font-size: ds-em-calc(18px);
+  font-weight: $ds-font-weight-bold;
+  line-height: 1.5;
+
+  @media #{$medium-up} {
+     font-size: ds-em-calc(24px);
+     font-weight: $ds-font-weight;
+  }
+}
+.t-lead {
+  @extend %t-lead;
+}
+
+%t-meta {
+  font-size: .8em;
+}
+.t-meta {
+  @extend %t-meta;
+}
+
+// -----------------------------------------------------------------------------
+// Lists
+// -----------------------------------------------------------------------------
+
+/**
+ * Body copy list
+ * Bullets and numbers are blue!
+ */
+// Credits:
+// http://css-tricks.com/numbering-in-style/
+// http://www.456bereastreet.com/archive/201105/styling_ordered_list_numbers/
+%t-list-body {
+  ol {
+    counter-reset: li;
+    margin-left: 0;
+    padding-left: $ds-margin;
+
+    & > li {
+      list-style: none;
+      position: relative;
+
+      &:before {
+        color: $ds-color-blue-dark;
+        content: counter(li) ".";
+        counter-increment: li;
+        font-weight: $ds-font-weight-bold;
+        left: -($ds-margin);
+        position:absolute;
+        width: $ds-margin;
+      }
+    }
+  }
+
+  ul {
+    margin-left: 0;
+    padding-left: $ds-margin;
+
+    & > li {
+      list-style: none;
+      position: relative;
+
+      &:before {
+        color: $ds-color-blue-dark;
+        content: "●";
+        left: -($ds-margin);
+        position:absolute;
+        width: $ds-margin;
+      }
+    }
+  }
+}
+.t-list-body {
+  @extend %t-list-body;
+}
+
+/**
+ * Unstyled
+ *
+ * Example:
+ * <ul class="t-list-unstyled"></ul>
+ */
+%t-list-unstyled {
+  list-style: none;
+  margin-#{$ds-float}: 0;
+  padding-#{$ds-float}: 0;
+
+  & > li {
+    margin-bottom: $ds-margin;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+}
+.t-list-unstyled {
+  @extend %t-list-unstyled;
+}
+
+/**
+ * Inline
+ *
+ * Example:
+ * <ul class="t-list-inline"></ul>
+ */
+%t-list-inline {
+  @extend %t-list-unstyled;
+
+  & > li {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-#{$ds-float-opposite}: $ds-margin;
+
+    &:last-child {
+      margin-#{$ds-float-opposite}: 0;
+    }
+  }
+}
+.t-list-inline {
+  @extend %t-list-inline;
+}
+
+/**
+ * Zebra list
+ *
+ * Example:
+ * <ul class="t-list-zebra"></ul>
+ */
+%t-list-zebra {
+  @extend %t-list-unstyled;
+
+  & > li {
+    background: $ds-color-grey-background;
+    margin-bottom: 0;
+    padding: 4px 6px;
+
+    &:nth-child(even) {
+      background: none;
+    }
+  }
+}
+.t-list-zebra {
+  @extend %t-list-zebra;
+}
+
+// -----------------------------------------------------------------------------
+// Alignment / Layout
+// -----------------------------------------------------------------------------
+
+%t-left {
+  text-align: left;
+}
+.t-left {
+  @extend %t-left;
+}
+
+%t-center {
+  text-align: center;
+}
+.t-center {
+  @extend %t-center;
+}
+
+%t-right {
+  text-align: right;
+}
+.t-right {
+  @extend %t-right;
+}
+
+// -----------------------------------------------------------------------------
+// Forms
+// -----------------------------------------------------------------------------
+
+%t-checkbox {
+  label {
+    color: $ds-color-text;
+    display: inline-block;
+    font-weight: $ds-font-weight;
+    margin: 0;
+    text-transform: none;
+  }
+}
+.t-checkbox {
+  @extend %t-checkbox;
+}
+
+// -----------------------------------------------------------------------------
+// Visual stuff
+// -----------------------------------------------------------------------------
+
+.t-wave {
+  @include background-clip(text);
+  animation: wave-animation 1s infinite linear, loading-animation 10s infinite linear alternate;
+  background-color: #000;
+  background-image: image-url('wateraid-wave.png');
+  background-repeat: repeat-x;
+  background-size: 100px 100px;
+  color: rgba(0,0,0,0);
+  display: block;
+  font-family: $ds-font-family-black;
+  font-size: 72px;
+  height: 100px;
+  line-height: normal;
+  opacity: 1;
+  text-align: center;
+  text-shadow: 0px 0px rgba(255,255,255,0.06);
+  vertical-align: bottom;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100px;
+  bottom: 0;
+}
+
+@keyframes wave-animation {
+  0% {
+    background-position: 10px bottom
+  };
+
+  100% {
+    background-position: 100px bottom
+  };
+}
+
+@keyframes loading-animation {
+  0% {
+    background-size: 100px 0px
+  };
+
+  100% {
+    background-size: 100px 100px
+  };
+}
+

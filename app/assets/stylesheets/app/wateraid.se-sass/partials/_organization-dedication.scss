@@ -1,0 +1,28 @@
+$organization-dedication-margin-bottom: 20px;
+
+form.generic-form {
+	.on-behalf-organization {
+		label {
+			@include inline-block;
+			margin-bottom: $organization-dedication-margin-bottom;
+			line-height: 1.5em;
+		}
+	}
+
+	div.organization-dedication-detail {
+		margin-top: 10px - $organization-dedication-margin-bottom;
+
+		.field-holder-long {
+			input[type='text'] {
+				width: 250px;
+			}
+		}
+	}
+
+	.corporate-partner-radio-buttons {
+		label {
+			margin-right: 20px;
+			line-height: 1.8em;
+		}
+	}
+}

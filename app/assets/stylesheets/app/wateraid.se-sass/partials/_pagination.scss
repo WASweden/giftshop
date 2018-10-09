@@ -1,0 +1,46 @@
+.pagination-wrapper{
+  @include border-top;
+  @include clearfix;
+  padding: 22px 0;
+  margin-bottom: 40px;
+  
+  .centered{
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    
+    ul.pagination{
+      @include clearfix;
+      @include no-bullets;
+      display: block;
+      float:left;
+      padding:0;
+      margin:0;
+    }
+  
+    li{
+      display:inline;
+    
+      a{
+        padding: 0 5px;
+    
+        &.curpage{
+          font-family: $font-family-bold;
+          color:$link-hover-color;
+        }
+    
+        &.prev{
+          padding-right:15px;
+          margin-right:15px;
+          border-right: 1px solid $border-color;
+        }
+      
+        &.next{
+          padding-left:15px;
+          margin-left:15px;
+          border-left: 1px solid $border-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+
+.footer {
+  text-align: center;
+  padding-top: 80px;
+
+  .card-bg & {
+    color: $ds-color-campaign-blue;
+  }
+}
+
+.footer-content {
+  @include grid-row;
+}
+
+.footer-links,
+.footer-registration {
+  @include grid-column(12);
+
+  @media #{$medium-up} {
+    @include grid-column($columns: 10, $push: 1);
+  }
+}
+
+.footer-links {
+  padding-bottom: $column-gutter/2;
+
+  .button-pill {
+    margin-right: 0;
+    margin-left: 8px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    .card-bg & {
+      background: $ds-color-campaign-blue;
+
+      &:hover {
+        background: $ds-color-yellow;
+      }
+    }
+  }
+}
+
+.footer-registration {
+  padding-top: $column-gutter;
+  padding-bottom: $column-gutter;
+
+  color: $ds-color-black;
+  p {
+    //font-family: $ds-font-family-black;
+    font-size: ds-em-calc(14px);
+    margin: 0;
+  }
+
+  a {
+    color: $ds-color-black;
+    text-decoration: underline;
+
+    .card-bg & {
+      color: $ds-color-black;
+    }
+  }
+}
+
+.footer__90-logo {
+  //background: $ds-color-blue-light;
+  //padding: 8px;
+  margin-top: $column-gutter;
+
+  .card-bg & {
+    //background: none;
+    //padding: 0;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Hide Google tracking stuff
+// -----------------------------------------------------------------------------
+
+.footer-tracking {
+  img,
+  iframe {
+    @extend %ds-helper-visuallyhidden;
+  }
+}

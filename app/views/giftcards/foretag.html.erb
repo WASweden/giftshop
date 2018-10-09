@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+<div class="row">
+  <% @giftcards.each do |giftcard| %>
+  <div class="col-md-3">
+    <div class="card">
+      <img class="card-img-top" src="/img/card-placeholder.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title" style="color:#00adb8;"><%= giftcard.amount %> kronor</h5>
+        <p class="card-text"><%= giftcard.description %></p>
+        <div class="text-right">
+          <%= link_to 'Beställ', giftcard, :class => 'btn btn-primary' %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>

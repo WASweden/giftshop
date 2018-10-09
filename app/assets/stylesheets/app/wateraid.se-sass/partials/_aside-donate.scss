@@ -1,0 +1,59 @@
+.sidebar-donate{
+  position:relative;
+  min-height: 330px;
+  background: url("/img/common/brush-aside.jpg") no-repeat left bottom;
+   
+  .donate-amount{
+    padding: 0 100px 0 20px;
+    color: #00aeef;
+    font-family: $font-family-normal;
+    font-size: $font-size-large;
+    line-height:1;
+    
+    span.currency{
+      display:block;
+      font-family: $font-family-bold;
+      font-size: 92px;
+      letter-spacing: -6px;
+      color: #fea710;
+      width: 100%;
+    }
+  }
+  
+  .well-count{
+    display:block;
+    color:#FFF;
+    margin: 15px 25px 0;
+    font-size: 40px;
+    line-height: 1.5;
+    text-align: right;
+    
+    img{
+      margin: 0 0 0 5px !important;
+    }
+  }
+  
+  .button-donate {
+    font-family: $font-family-bold;
+    position:absolute;
+    left: 24px;
+    bottom: 35px;
+  }
+  
+  &.no-border{
+    border:0 none;
+  }
+  
+  &.colored{
+    background: $donate-colored-bg;
+    height: 400px;
+    
+    .donate-amount{
+      color: #FFF;
+    }
+    
+    .button-donate {
+      bottom:100px;
+    }    
+  }
+}

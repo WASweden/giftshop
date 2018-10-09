@@ -1,0 +1,63 @@
+
+section.twitter-feed {
+  width: column(8);
+  
+  div.section-header {
+    padding-bottom: 10px;
+    
+    h2 {
+      padding-top: 19px;
+      
+      span.twitter-logo {
+        @include inline-block;
+        vertical-align: top;
+        background: url('/img/common/social/twitter-header-logo.png') 0 0 no-repeat;
+        width: 37px;
+        height: 36px;
+        margin: -16px 0 0 10px;
+      }
+    }
+    
+    .username,
+    .hashtag {
+      font-size: 16px;
+      line-height: 20px;
+      position: absolute;
+      right: 0;
+      bottom: 10px;
+    }
+  }
+  
+  article {
+    border-bottom: 1px solid #ddd;
+    padding: 0 0 20px 0;
+    
+    p {
+      margin: 0;
+      
+      small {
+        color: #999;
+        display: block;
+      }
+    }
+    
+    a {
+      font-family: $font-family-default;
+    }
+    
+    &.last {
+      border-bottom: none
+    }
+    
+  }
+}
+
+.twitter-content
+{
+	width:600px !important;
+
+	p
+	{
+		margin-right:20px !important;
+	}
+}

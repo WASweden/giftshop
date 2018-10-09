@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html class="no-js <%= content_for?(:html_classes) ? yield(:html_classes) : '' %>" lang="sv">
+<head>
+  <%= render 'shared/head' %>
+</head>
+
+<body>
+  <%= yield %>
+</body>
+</html>

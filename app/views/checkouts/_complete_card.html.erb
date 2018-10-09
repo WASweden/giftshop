@@ -1,0 +1,151 @@
+
+<main class="page" role="main">
+  <article>
+
+  <% if @order.donor.donor_type == 'company' %>
+    <h1>Tack för att ni har räddat och förändrat liv!</h1>
+
+    <hr>
+
+    <p class="t-lead">Er beställning av vattendroppar är nu genomförd.</p>
+
+    <p>Ett kvitto samt bekräftelse på gåvan har skickats till din e-post.
+
+    <% if @order.has_analog_cards? %>
+      Tryckta gåvobevis skickas inom fyra arbetsdagar.
+    <% end %>
+    </p>
+
+    <p>Vi hoppas att det blir en uppskattad present. Er gåva kommer bidra till att ge människor i världens fattigaste samhällen tillgång till rent vatten, toaletter och utbildning i hygien. Det bidrar till att fler barn överlever och till att hålla familjer friska. Varje droppe räknas.</p>
+
+    <% if @order.has_digital_cards? %>
+      <div class="checkout-complete__create-cards">
+        <h3>Skapa nu era digitala gåvobevis</h3>
+
+        <p>
+          De digitala gåvobevis som ni har beställt ligger och väntar på att skapas och skickas.
+        </p>
+
+        <p>
+        <%= link_to 'Skapa gåvobevis', customer_url(@customer.token), class: 'button action' %>
+        </p>
+      </div>
+    <% end %>
+
+    <h3>Kan ni hjälpa oss lite till?</h3>
+
+    <p>Berätta på Facebook eller Twitter att ni har gett bort vattendroppar. Uppmana era vänner att göra som ni! Då kan vi tillsammans ge ännu fler  människor tillgång till rent vatten.</p>
+
+    <p>
+      <a class="button fb-share-purchase" href="https://www.facebook.com/sharer/sharer.php?u=<%=u 'https://gavoshop.wateraid.se' %>">
+        Dela på Facebook
+      </a>
+
+      <a class="button twitter-share-purchase" href="https://twitter.com/intent/tweet?text=Varje+droppe+räknas+&#35;argjul&amp;url=<%=u 'https://gavoshop.wateraid.se' %>" target="_blank" rel="noopener noreferrer">
+        Dela på Twitter
+      </a>
+    </p>
+ 
+     <p>Tack för att ni är med och räddar och förändrar liv! Läs gärna mer om vår verksamhet  på <a href="http://www.wateraid.se" target="_blank">wateraid.se</a></p>
+    <p>WaterAid</p>
+
+    <!-- Tag for Activity Group: WaterAid_Business(RET), Activity Name: WaterAid - kampanjsida - Gåvoshop - Företag (LEAD), Activity ID: 1970209 -->
+    <!-- Expected URL: https://gavoshop.wateraid.se/ -->
+
+    <!--
+    Activity ID: 1970209
+    Activity Name: WaterAid - kampanjsida - Gåvoshop - Företag (LEAD)
+    Activity Group Name: WaterAid_Business(RET)
+    -->
+
+    <!--
+    Start of DoubleClick Floodlight Tag: Please do not remove
+    Activity name of this tag: WaterAid - kampanjsida - Gåvoshop - Företag (LEAD)
+    URL of the webpage where the tag is expected to be placed: https://gavoshop.wateraid.se/
+    This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+    Creation Date: 11/03/2014
+    -->
+    <script type="text/javascript">
+    var axel = Math.random() + "";
+    var a = axel * 10000000000000;
+    document.write('<iframe src="https://4402018.fls.doubleclick.net/activityi;src=4402018;type=Water000;cat=water000;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+    </script>
+    <noscript>
+    <iframe src="https://4402018.fls.doubleclick.net/activityi;src=4402018;type=Water000;cat=water000;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+    </noscript>
+    <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+  <% else %>
+    <h1>Tack för att du har räddat och förändrat liv!</h1>
+
+    <hr>
+
+    <p class="t-lead">Din beställning av vattendroppar är nu genomförd.</p>
+
+    <p>Ett kvitto samt bekräftelse på gåvan har skickats till din e-post.
+    <% if @order.has_analog_cards? %>
+      Tryckta gåvobevis skickas inom fyra arbetsdagar.
+    <% end %>
+    </p>
+
+    <p>Vi hoppas att det blir en uppskattad present. Din gåva kommer bidra till att ge människor i världens fattigaste samhällen tillgång till rent vatten, toaletter och utbildning i hygien. Det bidrar till att fler barn överlever och till att hålla familjer friska. Varje droppe räknas.</p>
+
+    <% if @order.has_digital_cards? %>
+      <div class="checkout-complete__create-cards">
+        <h3>Skapa nu dina digitala gåvobevis</h3>
+
+        <p>
+          De digitala gåvobevis som du har beställt ligger och väntar på att skapas och skickas.
+        </p>
+
+        <p>
+        <%= link_to 'Skapa gåvobevis', customer_url(@customer.token), class: 'button action' %>
+        </p>
+      </div>
+    <% end %>
+
+    <h3>Kan du hjälpa oss lite till?</h3>
+
+    <p>Berätta på Facebook eller Twitter att du har gett bort vattendroppar. Uppmana dina vänner att göra som du! Då kan vi tillsammans ge ännu fler  människor tillgång till rent vatten.</p>
+
+    <p>
+      <a class="button fb-share-purchase" href="https://www.facebook.com/sharer/sharer.php?u=<%=u 'https://gavoshop.wateraid.se' %>">
+        Dela på Facebook
+      </a>
+
+      <a class="button twitter-share-purchase" href="https://twitter.com/intent/tweet?text=Varje+droppe+räknas+&#35;argjul&amp;url=<%=u 'https://gavoshop.wateraid.se' %>" target="_blank" rel="noopener noreferrer">
+        Dela på Twitter
+      </a>
+    </p>
+
+     <p>Tack för att du är med och räddar och förändrar liv! Läs gärna mer om vår verksamhet  på <a href="http://www.wateraid.se" target="_blank" rel="noopener">wateraid.se</a></p>
+    <p>WaterAid</p>
+
+    <!-- Tag for Activity Group: WaterAid(RET), Activity Name: WaterAid - Kampanjsida - Gåvoshop - Privat (LEAD), Activity ID: 1978001 -->
+    <!-- Expected URL: https://gavoshop.wateraid.se/gavobevis -->
+
+    <!--
+    Activity ID: 1978001
+    Activity Name: WaterAid - Kampanjsida - Gåvoshop - Privat (LEAD)
+    Activity Group Name: WaterAid(RET)
+    -->
+
+    <!--
+    Start of DoubleClick Floodlight Tag: Please do not remove
+    Activity name of this tag: WaterAid - Kampanjsida - Gåvoshop - Privat (LEAD)
+    URL of the webpage where the tag is expected to be placed: https://gavoshop.wateraid.se/gavobevis
+    This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+    Creation Date: 11/03/2014
+    -->
+    <script type="text/javascript">
+    var axel = Math.random() + "";
+    var a = axel * 10000000000000;
+    document.write('<iframe src="https://4402018.fls.doubleclick.net/activityi;src=4402018;type=Water0;cat=water003;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+    </script>
+    <noscript>
+    <iframe src="https://4402018.fls.doubleclick.net/activityi;src=4402018;type=Water0;cat=water003;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+    </noscript>
+    <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+  <% end %>
+  </article>
+</main>
+

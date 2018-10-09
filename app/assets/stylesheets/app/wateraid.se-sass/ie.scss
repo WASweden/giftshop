@@ -1,0 +1,90 @@
+@import "blueprint";
+
+// To generate css equivalent to the blueprint css but with your configuration applied, uncomment:
+// @include blueprint-ie
+
+//Recommended Blueprint configuration with scoping and semantic layout:
+body.bp {
+  @include blueprint-ie(true);
+  // Note: Blueprint centers text to fix IE6 container centering.
+  // This means all your texts will be centered under all version of IE by default.
+  // If your container does not have the .container class, don't forget to restore
+  // the correct behavior to your main container (but not the body tag!)
+  // Example:
+  // .my-container
+  //   text-align: left
+}
+
+section{
+  padding-bottom:20px;
+}
+
+// Footer
+div#footer-content hr{
+  margin-bottom:10px;
+  margin-top:-5px;
+}
+div#footer-content .registration{
+  padding-bottom:20px;
+}
+div#footer-content .registration hr{
+  margin:5px 0;
+}
+div#footer-content section#additional-content,
+div#footer-content .registration{
+  margin-bottom:0;
+}
+
+// pagination
+.pagination-wrapper{
+  text-align: center;
+}
+
+.pagination-wrapper .centered{
+  display: inline;
+  zoom:1;
+}
+
+// World Map
+section.world-map {
+  padding:0;
+  
+  canvas {
+    height: 560px;
+  }
+}
+
+// Carousel
+div.brush.get-involved .carousel{
+  border-bottom:8px solid #FFF;
+  padding-bottom:0;
+  margin-bottom:0;
+}
+div.brush.get-involved .carousel .carousel-content{
+  padding:0;
+}
+
+// Sidebar
+.content-with-sidebar{
+  margin-bottom:50px;
+  padding-bottom:0;
+}
+
+// Splittted text fields
+form.generic-form {
+  div[data-module-class="SeparateTextField"] {
+    input {
+      vertical-align: middle;
+    }
+  }
+}
+
+section article.article-list {
+	zoom: 1;
+}
+
+// Search 
+
+.search-header p {
+  bottom: 1.95em;
+}

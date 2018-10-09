@@ -1,0 +1,17 @@
+<% title "Dina beställningar" %>
+<% description "Fyll i din e-postadress i formuläret nedan så skickar vi dig en länk som fungerar i 24 timmar. Där kan du se alla dina tidigare beställningar och har möjlighet att redigera de digitala kort som ännu ej skickats ut." %>
+
+<main class="page" role="main">
+  <article>
+    <h1 class="page__title">Dina beställ&shy;ningar</h1>
+
+    <hr>
+
+    <p class="t-lead">Har du beställt från oss tidigare?</p>
+    <p>Fyll i din e-postadress i formuläret nedan så skickar vi dig en länk som fungerar i 24 timmar.</p>
+
+    <p>Där kan du se alla dina tidigare beställningar och har möjlighet att redigera de digitala kort som ännu ej skickats ut.</p>
+
+    <%= render partial: 'form', locals: {customer: @customer} %>
+  </article>
+</main>

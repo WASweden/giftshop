@@ -1,0 +1,25 @@
+
+.parsley-errors-list {
+  display: none;
+  list-style: none;
+  margin-bottom: 0;
+
+  &.filled {
+    display: block;
+  }
+
+  li {
+    @extend %t-meta;
+    color: red;
+
+    &:first-child {
+      padding-top: 5px;
+    }
+  }
+}
+
+.parsley-error,
+input.parsley-error,
+textarea.parsley-error {
+  border-color: red;
+}

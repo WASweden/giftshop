@@ -1,0 +1,7 @@
+# WaterAid GiftShop API + ActiveAdmin in Rails
+
+We should tighten the CORS before deploying the final app.
+More info on rack-cors gem.
+
+
+

@@ -1,0 +1,12 @@
+sv:
+  flash:
+      actions:
+        create:
+          notice: '%{resource_name} skapad'
+          alert: '%{resource_name} kunde inte skapas'
+        update:
+          notice: '%{resource_name} uppdaterad'
+          alert: '%{resource_name} kunde inte uppdateras'
+        destroy:
+          notice: '%{resource_name} raderad'
+          alert: '%{resource_name} kunde inte raderas'

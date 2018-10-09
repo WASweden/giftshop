@@ -1,0 +1,9 @@
+machine:
+  timezone:
+    Europe/Stockholm
+deployment:
+  production:
+    branch: master
+    commands:
+      - git push git@heroku.com:wateraid-giftshop.git $CIRCLE_SHA1:refs/heads/master
+      - heroku run rake db:migrate --app wateraid-giftshop

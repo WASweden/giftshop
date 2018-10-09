@@ -1,0 +1,76 @@
+body
+{
+	div.container
+	{
+		section.content-with-sidebar
+		{
+			margin: 0;
+		}
+
+		header
+		{
+
+			display:none;
+		}
+
+		section.carousel
+		{
+			display:none;
+		}
+
+		aside.sidebar
+		{
+			display:none; 
+		}
+
+
+		.content-with-sidebar 
+		{
+
+			section.main-content 
+			{
+				section.column-1
+				{
+					margin-bottom: 0px;
+				}
+
+				.confirmation-details
+				{
+					background: none;
+					padding: 0;
+				}
+
+				color: black;
+				width: 100%;
+				border: 0; 
+
+				h3 
+				{
+					color: black;
+				}
+
+				.print-receipt
+				{
+					display:none;
+				}
+			}
+
+		}
+
+		#main-footer
+		{
+			display: none;
+		}
+
+		footer 
+		{
+			display:none;
+		}
+
+		section.help-module
+		{
+			display:none;
+		}
+	}
+
+}

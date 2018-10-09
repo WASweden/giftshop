@@ -1,0 +1,42 @@
+// Static pages
+// Example: /hjalp
+
+.page {
+  @include grid-row();
+
+  article {
+    @include grid-column(12);
+    @extend %ds-page-gutter;
+
+    @media #{$medium-up} {
+      @include grid-column($columns: 10, $push: 1);
+    }
+  }
+
+  .page__title, .blue {
+    color: $ds-color-campaign-blue;
+  }
+
+  .page__title { margin-top: 0; }
+
+  &__intro {
+    background-color: $ds-color-white;
+    border: 1.5rem solid $ds-color-white;
+    box-shadow: 0px 2px 25px rgba(0,0,0,.15);
+    margin: 0 0 1.875rem;
+  }
+
+  &__orders {
+    background-color: $ds-color-white;
+    border: 1.5rem solid $ds-color-white;
+    box-shadow: 0px 2px 25px rgba(0,0,0,.15);
+  }
+
+  .order__items {
+    @include clearfix;
+
+    border-collapse: collapse;
+    background-color: $ds-color-white;
+
+  }
+}

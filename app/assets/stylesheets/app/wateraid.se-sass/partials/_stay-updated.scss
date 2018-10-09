@@ -1,0 +1,79 @@
+
+section.stay-updated {
+  width: 940px;
+  padding: 30px 26px;
+  margin-bottom: 50px;
+  background-color: #f7f7f7;
+  
+  div.social-media {
+    width: 372px;
+    height: 72px;
+    float: left;
+    background-color: #fff;
+    
+    ul.social-links {
+      margin: 25px 0 25px 50px;
+    }
+  }
+  
+  div.email-form {
+    width: 528px;
+    height: 36px;
+    float: left;
+    margin-right:0;
+    background-color: #1ab5f0;
+    padding: 18px 0 18px 30px;
+    
+    h3 {
+      float: left;
+      color: #fff;
+      font-size: 16px;
+      line-height: 36px;
+      margin-right: 20px;
+      font-family: $font-family-bold;
+    }
+
+    input {
+      float: left;
+      padding: 7px 5px;
+    	width: 292px;
+    	height: 20px;
+    	font-size: 14px;
+    	background-color: #fff;
+    	border: 1px solid #fff;
+    	color: #999;
+    	box-shadow: none;
+    	
+    	&.active{
+    	  color: #000;
+    	  
+    	  &.error{
+      	  border: 2px solid red;
+      	  color: #F00;
+      	}
+    	}
+    	
+    	&:focus{
+    	  outline: 0 none;
+    	}
+    }
+
+    button {
+    	padding: 0;
+    	margin: 0 0 0 20px;
+    	color: #fff;
+    	font-size: 16px;
+    	line-height: 36px;
+    	background-color: #1ab5f0;
+      border: none;
+    	cursor: pointer;
+    	text-align: left;
+      font-family: $font-family-bold;
+    	&:hover{
+    	  color: $link-hover-color;
+    	}
+    }
+  
+  
+  }
+}

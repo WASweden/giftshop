@@ -1,0 +1,37 @@
+
+<main class="page" role="main">
+  <article>
+    <h1 class="page__title">Dina beställningar</h1>
+
+    <hr>
+
+    <p class="t-lead">Har du beställt från oss tidigare?</p>
+    <p>Fyll i din e-postadress i formuläret nedan så skickar vi dig en länk där du kan se alla dina tidigare beställningar.</p>
+    <p>Du kommer där ha möjlighet att redigera digitala kort som ännu ej skickats ut.</p>
+
+    <form class="your-orders" data-parsley-validate>
+      <div>
+        <label for="your-orders__email">Din e-post</label>
+        <input class="your-orders__email" data-parsley-required-message="Fyll i din e-postadress" data-parsley-required data-parsley-type="email" id="your-orders__email" name="" type="email">
+      </div>
+
+      <input type="submit" class="your-orders__submit" value="Skicka">
+    </form>
+
+    <!--
+    Felmeddelande: E-postadressen finns inte.
+
+    <p>Vi hittade inga tidigare beställningar för [EMAIL].</p>
+    <p>Skrev du in rätt e-post?</p>
+    <p>Kontakta oss på [SUPPORT EMAIL] om du behöver mer hjälp.</p>
+    -->
+
+    <!--
+    Bekräftelse: Länk skickad
+
+    <p>Tack! Vi har nu skickat ut ett mejl med vidare instruktioner till [EMAIL].</p>
+    <p>Om mejlet inte syns i din inbox ta då en titt i din spam-korg för att se om det olyckligtvis skulle hamnat där.</p>
+    <p>Om du inte får något mejl kontakta oss på [SUPPORT EMAIL].</p>
+    -->
+  </article>
+</main>

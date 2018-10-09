@@ -1,0 +1,30 @@
+.publication.article-list {
+	.article-description {
+		margin-left: 0 !important;
+		padding: 10px;
+
+		h3 span {
+			color: $border-color;
+			font-size: 16px;
+		}
+
+		small {
+			color: $border-color;
+			font-family: $font-family-bold;
+			font-size: 14px;
+			margin-top: 7px;
+			font-style: italic;
+		}
+	}
+
+	&.featured {
+		em {
+			font-family: $font-family-bold !important;
+			font-size: 14px;
+		}
+	}
+
+	.pagination-wrapper {
+		margin-top: -31px;
+	}
+}

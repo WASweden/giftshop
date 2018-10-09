@@ -1,0 +1,84 @@
+<h3> Order summary </h3>
+
+<p> You will now be redirected to Stripe for the payments process and you will
+be redirected back after you complete the process successfully</p>
+
+<div class='orderdetails'>
+
+<h3>Your cards</h3>
+<ul>
+  <% @cart.cards.each do |c| %>
+    <li>
+      Receiver: <%= link_to(c.receiver, card_path(c.id)) %>
+      <br>
+      Text: <%= c.text %>
+      <br>
+      Quantity: <%= c.quantity %>
+      <br>
+      Send at: <%= c.send_at %>
+    </li>
+  <% end.empty? and begin %>
+    <li>No cards found.</li>
+  <% end %>
+</ul>
+
+<h3>Your information</h3>
+<p>It's important to add correct information in case you need to edit your
+cards after you submit the order. </p>
+
+<div class="checkout-form-fields">
+  <div class="checkout-company-info">
+    <h5>Företagsnamn</h5>
+    <%= @cart.donor.company_name %> <br>
+    <h5>Orgnr</h5>
+    <%= @cart.donor.organisation %> <br>
+  </div>
+
+  <h5>Förnamn</h5>
+  <%= @cart.donor.first_name %> <br>
+  <h5>Efternamn</h5>
+  <%= @cart.donor.last_name %> <br>
+  <h5>E-post</h5>
+  <%= @cart.donor.email %> <br>
+  <h5>Telefon</h5>
+  <%= @cart.donor.phone %> <br>
+  <h5>Adress</h5>
+  <%= @cart.donor.address %> <br>
+  <h5>Postnr</h5>
+  <%= @cart.donor.post_code %> <br>
+  <h5>Ort</h5>
+  <%= @cart.donor.city %> <br>
+  <h5>Land</h5>
+  <%= @cart.donor.country_code %> <br>
+
+  <% if @cart.donor.newsletter %>
+    Ja, jag vill ha WaterAids nyhetsbrev<br>
+  <% end %>
+
+<div class="checkout-payment">
+  <h5>Betala med</h5>
+  <%= @cart.payment %>
+  <br><br>
+</div>
+
+</div>
+
+<%= render 'shared/flash_messages' if !flash.empty? %>
+
+<form action="<%= checkout_path %>" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_4Tggao5rE3fJnM6Yxg3MQvrB"
+    data-amount="2000"
+    data-name="Demo Site"
+    data-currency="sek"
+    data-description="2 widgets ($20.00)"
+    data-email = "<%= @cart.donor.email %>"
+    data-allow-remember-me = "false"
+    <%# data-image="/128x128.png" %> >
+
+  </script>
+  <input type='hidden' name='order_id' value='<%= @cart.id %>'>
+</form>
+
+<br><br><br><br>

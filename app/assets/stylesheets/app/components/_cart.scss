@@ -1,0 +1,151 @@
+
+.cart-empty {
+  padding-bottom: 100px;
+}
+
+.order__items {
+  border: 0;
+
+  th,
+  td {
+    border: 0;
+    border-bottom: 1px solid $ds-color-border;
+    padding: 7px 0;
+  }
+
+  th {
+    background: none;
+    border-bottom-width: 3px;
+    font-family: $ds-font-family-bold;
+  }
+
+  tfoot {
+    font-style: normal;
+  }
+
+  input { margin: 0; }
+}
+
+.order__item__type {
+  small {
+    display: block;
+  }
+}
+
+.order__item--empty-cart {
+  text-align: center;
+}
+
+.order__item__actions {
+  text-align: right;
+
+  .button-pill {
+    margin-left: 8px;
+    margin-right: 0;
+  }
+}
+
+.cart__print-delivery {
+  @extend %t-meta;
+}
+
+.checkout {
+  .form-item {
+    @media #{$medium-up} {
+      margin-bottom: $column-gutter;
+    }
+  }
+
+  input[type='submit'] {
+    background-color: $ds-color-yellow;
+
+    &:hover {
+      background-color: $ds-color-yellow;
+    }
+  }
+}
+
+.checkout__company {
+  margin-bottom: $ds-margin !important;
+}
+
+.checkout__company-fields {
+  padding: 0 0.9375rem;
+  // .js & {
+  //   display: none;
+  // }
+}
+
+// .checkout-payment {
+//   .js & {
+//     display: none;
+//   }
+// }
+
+.checkout-footer {
+  text-align: center;
+  margin: $column-gutter 0;
+
+  &__privacy-notice {
+    color: #888;
+    font-size: .8em;
+    margin: 0 auto 24px;
+    max-width: 700px;
+  }
+}
+
+.checkout-stripe {
+  padding-top: $column-gutter;
+}
+
+.checkout-stripe__info {
+  color: #888;
+  font-size: .8em;
+  margin-bottom: 6px;
+}
+
+.checkout-stripe__logo {
+  opacity: .5;
+}
+
+.checkout-complete__create-cards {
+  border: 3px solid $ds-color-yellow;
+  margin-bottom: $column-gutter;
+  padding: $column-gutter;
+
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.checkout-payment-option {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  margin-bottom: $ds-margin/2;
+
+  input {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 1.4em;
+    height: 1.4em;
+    margin-right: 0.8em;
+    border-radius: 4px;
+    background-color: $ds-color-white;
+    border: 1px solid $ds-color-yellow;
+
+    &[type=radio] { border-radius: 50%; }
+
+    &:checked {
+      background-color: $ds-color-yellow;
+      border-color: $ds-color-yellow;
+
+      &:hover {
+        background-color: lighten($ds-color-yellow, 10%);
+      }
+    }
+  }
+}

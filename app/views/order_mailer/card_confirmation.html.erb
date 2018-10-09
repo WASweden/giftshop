@@ -1,0 +1,7 @@
+<div>
+<% if @order.donor.donor_type == 'company' %>
+  <%= render 'card_confirmation_company' %>
+<% else %>
+  <%= render 'card_confirmation' %> 
+<% end %>
+</div>

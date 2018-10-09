@@ -1,0 +1,21 @@
+
+article.article-4col.bulleted {
+  text-align: left;
+  @include border(#ccc);
+  @include clearfix;
+
+  span.bullet {
+    float: left;
+    display: block;
+    width: 30px;
+    height: 100%;
+    color: #00adee;
+    font-size: 26px;
+  }
+}
+
+article.bulleted.last {
+  margin-right: 0;
+  padding-right: 0;
+  border-right: none;
+}

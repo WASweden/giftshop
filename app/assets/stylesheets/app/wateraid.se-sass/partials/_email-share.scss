@@ -1,0 +1,71 @@
+#email-share{
+  @include clearfix;
+  @include border-bottom;
+  background: url("/img/common/form/email-form-bg.png") no-repeat left bottom #f8f8f8;
+  float:none;
+  margin: 160px auto 0;
+  padding: 30px;
+  position: relative;
+  width: 514px;
+  display:none;
+  font-family: $font-family-normal;
+  
+  section{
+    width:auto;
+  }
+  
+  form.generic-form{
+    
+    h3{
+      @include article-header;
+      margin-bottom: 20px;
+    }
+    
+    input,textarea{
+      width:494px
+    }
+    
+    .field-holder{
+      float:none;
+      margin-bottom: 15px;
+      
+      label{
+        font-family: $font-family-default;
+        color: #6d6e72;
+        width:515px;
+
+        span{
+          font-size: 11px;
+          position:absolute;
+          right:30px;
+          
+          em.error{
+            color: #F00;
+            border: 0 none;
+            background: 0 none;
+          }
+        }
+      }
+    }
+    
+    .close{
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      display: block;
+      height: 18px;
+      width: 18px;
+      background: url("/img/common/news-media/close.png") no-repeat;
+    }
+    
+    .button-misc-1{
+      margin-right:20px;
+    }
+    
+    .error, .alert {
+//      margin: 0;
+      background-color: #EBEBEB;
+      border: 1px dotted #F00;
+    }
+  }
+}

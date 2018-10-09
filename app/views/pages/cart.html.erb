@@ -1,0 +1,125 @@
+
+<br><br><br>
+
+<div class="row cart-empty">
+  <div class="column h-centered">
+    <h1>Varukorg</h1>
+    <br><br><br>
+    <p>Din varukorg är tom.<br>Ge en gåva:</p>
+    <p><a href="index.html" class="button">Privatpersoner</a> <a class="button" href="company.html">Företag</a></p>
+
+    <br><br>
+    <p>Vill du veta mer?</p>
+    <p><a href="info.html" class="button tiny">Så fungerar det</a> <a class="button tiny" href="help.html">Frågor och svar</a></p>
+  </div>
+</div>
+
+<div class="cart row">
+  <div class="column">
+    <h1><span style="font-size: 2em">Varukorg</span></h1>
+
+    <h1>Jag vill beställa:</h1>
+    <br>
+
+
+    <table>
+      <tr>
+        <th>Mottagare</th>
+        <th>Inkl tryckt?
+        <th>Skickas</th>
+        <th>Summa</th>
+        <th></th>
+      </tr>
+      <tr>
+        <td>Jag själv</td>
+        <td>Ja</td>
+        <td>I morgon</td>
+        <td>240 kr</td>
+        <td><a href="#">ändra</a> / <a href="#">ta bort</a></td>
+      </tr>
+      <tr>
+        <td>samuel@kollegorna.se</td>
+        <td>Nej</td>
+        <td>Omgående</td>
+        <td>200 kr</td>
+        <td><a href="#">ändra</a> / <a href="#">ta bort</a></td>
+      </tr>
+      <tr>
+        <td>filippos@kollegorna.se</td>
+        <td>Ja</td>
+        <td>Fredag 13 september</td>
+        <td>240 kr</td>
+        <td><a href="#">ändra</a> / <a href="#">ta bort</a></td>
+      </tr>
+      <tr>
+        <td>henrik@kollegorna.se</td>
+        <td>Nej</td>
+        <td>24 december 2014</td>
+        <td>200 kr</td>
+        <td><a href="#">ändra</a> / <a href="#">ta bort</a></td>
+      </tr>
+    </table>
+
+    <div class="row">
+      <div class="medium-6 column">
+        <h5><strong>Totalt</strong><br> 880 kr</h5>
+      </div>
+
+      <div class="medium-6 column" style="text-align:right">
+        Beställ mer: <a href="index.html" class="button">Privatpersoner</a> <a class="button" href="company.html">Företag</a>
+      </div>
+    </div>
+
+
+    <br>
+    <p>De tryckta korten är framme senast 9 september.</p>
+
+    <br><br>
+    <h2>Mina uppgifter</h2>
+
+    <div class="checkout-customer-type">
+      <h5>Jag är…</h5>
+      <input type="radio" name="customer_type" value="privateperson" checked> Privatperson<br>
+       <input type="radio" name="customer_type" value="company"> Företag
+    </div>
+
+    <div class="checkout-form-fields">
+      <div class="checkout-company-info">
+        <h5>Företagsnamn</h5>
+        <input type="text">
+        <h5>Orgnr</h5>
+        <input type="text">
+      </div>
+
+      <h5>Förnamn</h5>
+      <input type="text">
+      <h5>Efternamn</h5>
+      <input type="text">
+      <h5>E-post</h5>
+      <input type="text">
+      <h5>Telefon</h5>
+      <input type="text">
+      <h5>Adress</h5>
+      <input type="text">
+      <h5>Postnr</h5>
+      <input type="text">
+      <h5>Ort</h5>
+      <input type="text">
+      <h5>Land</h5>
+      <select name="country">
+        <option>Sverige</option>
+      </select>
+      <input type="checkbox"> Ja, jag vill ha WaterAids nyhetsbrev
+
+      <div class="checkout-payment">
+        <h5>Betala med</h5>
+        <input type="radio" name="payment" value="card" checked> Kort<br>
+        <input type="radio" name="payment" value="invoice" disabled> <span style="text-decoration: line-through;">Faktura</span> <em>För att kunna betala mot rekvisition måste det totala ordervärdet överstiga <%= Order::INVOICABLE_MINIMUM %> kr.</em>
+      </div>
+
+      <br><br>
+      <a class="button" href="#">Till betalningen</a>
+    </div>
+  </div>
+</div>
+

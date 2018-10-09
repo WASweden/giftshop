@@ -1,0 +1,222 @@
+
+// Start compass imports
+@import "compass/typography/lists";
+@import "compass/typography/links/link-colors";
+@import "compass/utilities/general/min";
+
+// Start user defined mixins
+@mixin border-test($color: #f00) {
+  border: 1px solid $color;
+}
+
+@mixin border-bottom($color: $border-color) {
+  border-bottom: 5px solid $color;
+}
+@mixin border-bottom-hairline($color: $border-color){
+  border-bottom: 1px solid $color;
+}
+@mixin border-top($color: $border-color) {
+  border-top: 5px solid $color;
+}
+@mixin border-top-hairline($color: $border-color){
+  border-top: 1px solid $color;
+}
+@mixin section-style() {
+  margin: 0 auto 50px;
+  *margin: 0 auto 20px;
+  width: span(12);
+}
+
+@mixin section-style-narrow() {
+  width: span(8);
+}
+
+@mixin sidebar-podlet() {
+  width: span(4);
+}
+
+@mixin section-header($color: $h2-color, $fontsize: $h2-font-size, $lineheight: $h2-line-height) {
+  color: $color;
+  font-size: $fontsize;
+  line-height: $lineheight;
+  font-family: $font-family-black;
+  letter-spacing: 0px;
+  margin: 0;
+}
+
+@mixin section-header-sidebar($color: $h2-color-sidebar, $fontsize: $h2-font-size-sidebar, $lineHeight: $h2-line-height-sidebar) {
+  color: $color;
+  font-family: $font-family-black;
+  font-size: $fontsize;
+  line-height: $lineHeight;
+  margin: 0;
+}
+
+@mixin article-header($color: $h3-color, $fontsize: $article-title-font-size, $lineheight: $article-title-line-height) {
+  color: $color;
+  font-family: $article-title-font-family;
+  font-size: $fontsize;
+  line-height: $lineheight;
+  letter-spacing: 0px;
+  margin: 10px 0 15px 0;
+  a {
+    font-family: $article-title-font-family;
+  }
+}
+
+// remove text and bg color?
+@mixin tabs-list-item($text-color: #000, $bg-color: #fff) {
+  padding: 0;
+  text-align: center;
+  font-family: $font-family-normal;
+  color: $text-color !important;
+  font-size: 1.3em;
+  background-color: $bg-color;
+}
+
+@mixin padded-column($n, $p-top, $p-right: $p-top, $p-bottom: $p-top, $p-left: $p-top) {
+  @include column($n);
+  padding: $p-top $p-right $p-bottom $p-left;
+  width: $blueprint_grid_width * $n + ($blueprint_grid_margin * ($n - 1) - $p-right - $p-left);
+}
+
+@mixin blueprint-typography-body($font-size: 100px) {
+  line-height: 1.5;
+  @include normal-text;
+  font-size: 100% * $font-size / 16px; 
+}
+
+@mixin border-left($color, $gap) {
+  margin-left: $gap;
+  border-left: 1px solid $color;
+}
+
+@mixin border-left-grid($border-color: $blueprint-border-color, $border-width: 1px) {
+  padding-left: $blueprint-grid-margin / 2 - $border-width;
+  margin-left: $blueprint-grid-margin / 2;
+  margin-right: 0 !important;
+  border-left: #{$border-width} solid #{$border-color};
+}
+
+@mixin borderleft($border-color: $blueprint-border-color, $outer-gap: $blueprint-grid-margin / 2, $inner-gap: $blueprint-grid-margin / 2, $border-width: 1px) {
+  padding-left: $inner-gap - $border-width;
+  margin-left: $outer-gap;
+  margin-right: 0 !important;
+  border-left: #{$border-width} solid #{$border-color};
+}
+
+@mixin borderright($border-color: $blueprint-border-color, $outer-gap: $blueprint-grid-margin / 2, $inner-gap: $blueprint-grid-margin / 2, $border-width: 1px) {
+  padding-right: $inner-gap - $border-width;
+  margin-right: $outer-gap;
+  margin-left: 0 !important;
+  border-right: #{$border-width} solid #{$border-color};
+}
+
+@mixin no-border(){
+  border: 0 none !important;
+}
+
+@mixin sidebar-horizontal-rule($top-margin:30px, $bottom-margin:30px){
+  @include clearfix;
+  margin: $top-margin auto $bottom-margin;
+  color: #B6B6B8;
+  background: #B6B6B8;
+}
+
+@mixin link-style($fontSize: $blueprint-font-size, $fontFamily: $font-family-bold, $color: $link-color, $hover-color: $link-hover-color){
+  color: $color;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  line-height: $fontSize + 2px;
+  &:hover{
+    color: $hover-color;
+  }
+}
+
+@mixin link-style-light($fontSize: $blueprint-font-size, $lineHeight: $standard-line-height, $fontFamily: $font-family-bold){
+  color: #FFF;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  &:hover{
+    color: $link-hover-color;
+  }
+}
+
+@mixin list-link-style($font-family: $font-family-normal){
+  @include link-style($font-size-normal, $font-family);
+}
+
+@mixin link-style-read-more($display:block){
+  @include link-style($font-size-normal, $font-family-bold);
+  display: $display;
+  margin-top:10px;
+}
+
+@mixin section-intro-font(){
+  font-family: $font-family-thin;
+  font-size: $font-size-intro-medium;
+  color: $h2-color;
+}
+
+@mixin pdf-font(){
+  font-family:$font-family-bold;
+  font-size: $font-size-small;
+  color: $pdf-font-color;
+  display:inline;
+}
+
+@mixin call-to-action-button($normal-color: $button-normal-color, $normal-bg-color: $button-normal-bg-color, $img-bg-position: 0, $fontsize: $button-font-size) {
+  color: $normal-color;
+  font-family: $font-family-bold;
+  font-size: $fontsize;
+  background-color: $normal-bg-color;
+  text-decoration: none;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  margin-top: 24px;
+  padding: 0 10px;
+  @include inline-block;
+  @include min-width(102px);
+  
+  &:visited {
+    color: $normal-color;
+  }
+
+  &:active {
+    color: $normal-color;
+  }
+
+  &:focus {
+    color: $normal-color;
+  }
+  
+  span.caret {
+    @include inline-block;
+    vertical-align: baseline;
+    width: 12px;
+    height: 12px;
+    margin-left: 10px;
+    background: url('/img/common/button-arrows.png') 0 $img-bg-position no-repeat;
+  }
+}
+
+@mixin call-to-action-button-hover($hover-color: $button-hover-color, $hover-bg-color: $button-hover-bg-color, $img-bg-position: false) {
+  &:hover {
+    color: $hover-color !important;
+    background-color: $hover-bg-color;
+    
+    @if $img-bg-position {
+      span.caret {
+        background-position: 0 $img-bg-position;
+      }
+    }
+  }
+}
+
+@mixin main-content-paragraph(){
+  font-family: $font-family-default;
+  margin-right: 50px;
+  line-height: 1.45;
+}

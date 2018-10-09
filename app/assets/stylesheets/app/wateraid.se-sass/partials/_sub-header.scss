@@ -1,0 +1,68 @@
+div.sub-header {
+  margin: 20px auto 0;
+  width: span(12);
+  position:relative;
+  z-index:1;
+  zoom:1;
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      float: left;
+
+      a, div {
+        float: left;
+      }
+    }
+  }
+  
+  ul.social-bar {
+    position: relative;
+    height: 25px;
+    margin:2px 230px 10px 0px;
+    
+    li {
+      width: 26px;
+      height: 25px;
+	  overflow:hidden;
+
+	  &.share {
+		overflow:visible;
+	  }
+    }
+  }
+  
+  ul.breadcrumb {
+    float: left;
+    margin: 9px 0 0;
+    
+    li {
+      background: url('/img/common/breadcrumb/breadcrumb_arrow.png') no-repeat 3px;
+      color: $breadcrumb-font-color;
+      padding: 0 10px 0 18px;
+      float: left;
+      font-size: $breadcrumb-font-size;
+      line-height: $breadcrumb-line-height;
+      
+      a {
+        color: $breadcrumb-font-color;
+        
+        img{
+          margin-left:10px;
+        }
+        
+        &:hover{
+          color: $breadcrumb-font-hover-color;
+        }
+      }
+      
+      &:first-child {
+        background:none;
+        padding-left:0;
+      }
+    }
+  }
+}

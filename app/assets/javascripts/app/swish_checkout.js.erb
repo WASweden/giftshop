@@ -1,0 +1,19 @@
+function doPoll() {
+  $.get(Routes.swish_payment_status_checkout_path(), function(data) {
+    if(data.completed) {
+      window.location.replace(Routes.complete_checkout_path());
+    } else {
+      if (data.error) {
+        $('#swish-checkout-info').html(data.error)
+      } else {
+        setTimeout(doPoll,5000);
+      }
+    }
+  });
+}
+
+$(document).ready(function(){
+  if ($('#swish-checkout-info').length) {
+    doPoll();
+  }
+});

@@ -1,0 +1,28 @@
+.tcCookiesDialogWrapper {
+	background-color: #E6E6E6;
+	border: 1px solid #D3D3D4;
+	@include clearfix;
+
+	a {
+		cursor: pointer;
+	}
+
+	.tcCookiesCtaText {
+		float: left;
+		padding: 5px;
+		padding-right: 5%;
+	}
+
+	.tcCookieCloseButtonWrapper {
+		position: absolute;
+		right:0;
+		width: 5%;
+		text-align: right;
+
+		a {
+			color: #00ADEE;
+			padding: 5px 10px 5px 5px;
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,28 @@
+
+section.help-module {
+  @include min-height(400px);
+  width: $max-width - 150;
+  background: url("/img/common/help/help-module-bg.png") no-repeat left bottom;
+  padding-left: 150px;
+  margin-bottom: 150px;
+  
+  article {
+    font-size: 12px;
+    line-height: 22px;
+    
+    a {
+      font-family: $font-family-normal !important;
+      font-size: 15px !important;
+    }
+  }
+  
+  img.help-icon {
+    display: block;
+    margin-left: -42px;
+  }
+}
+
+section[data-name="help-module"] {
+  display: none;
+  margin-bottom: 0;
+}

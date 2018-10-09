@@ -1,0 +1,15 @@
+<%= form_for(OrderItem.new, url: controller_path == "company/orders" ? company_order_items_path : order_items_path) do |f| %>
+  <%= f.hidden_field :order_id, value: @order.id %>
+  <div class="add-item__content">
+    <%= f.hidden_field :product_quantity, value: 1 %>
+    <%= f.hidden_field :product, value: "Extra" %>
+    <%= f.hidden_field :subtype, value: "extra" %>
+
+      Extra gåva
+      <%= f.number_field :quantity, min: Card::MINIMUM_QUANTITY, id: "new_bonus_amount", class: "add-item__input--quantity" %>
+      kr
+
+    <%= f.submit "Lägg till", class: "btn" %>
+  </div>
+
+<% end %>

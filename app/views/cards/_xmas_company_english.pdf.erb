@@ -1,0 +1,55 @@
+<div class="digital-card xmas" style="background-size: 120%; background-position: center -150px;">
+
+  <!--
+    <div class="row">
+      <div class="column">
+  -->
+  <div class="digital-card-header">
+    <h2 class="digital-card-header__title" style="font-size: 38px;">Merry Christmas</h2>
+  </div>
+  <!--
+      </div>
+    </div>
+  -->
+
+  <div class="row digital-card-content" style="margin-top: 155px">
+    <div class="digital-card-content__message">
+      <p>Sometimes it's hard to find the right Christmas gift. Sometimes it's very easy. This year our
+      Christmas gift aims to help the 844 million people on our planet lacking access to safe water.
+      With this gift we give life and hope for the future, in the places where it's needed the most.
+      </p>
+    </div>
+    
+    <div class="digital-card-content__generated">
+      <%= simple_format(@card.text) %>
+    </div>
+  </div>
+
+  <div class="digital-card-footer" style="margin-top: 125px;">
+    <%= pdf_logo_tag("wateraid-logo.png") %>
+    <small>
+      WaterAid is an international independent organisation working to transform people’s lives by improving access to safe water, sanitation and hygiene in the world’s poorest communities. Read more at <a href="www.wateraid.se" target="_self">www.wateraid.se</a><span><!-- --></span>
+    </small>
+  </div>
+
+</div>
+
+
+<!--
+<div class="card-info">
+  <div class="card-info__content">
+    <p>Du har fått ett gåvobevis från WaterAid.<br>Lorem ipsum</p>
+    <%= link_to "Så fungerar det", info_path, class: 'button' %>
+<%= link_to "Ge en gåva", root_path, class: 'button' %>
+  </div>
+</div>
+-->
+
+<!--
+<footer class="footer footer--card">
+  <div class="footer-content">
+    <%#= render 'shared/footer_links' %>
+<%= render 'shared/footer_registration.html' %>
+  </div>
+</footer>
+-->

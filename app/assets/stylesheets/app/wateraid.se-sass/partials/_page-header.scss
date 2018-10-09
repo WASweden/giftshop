@@ -1,0 +1,48 @@
+section.page-header{
+  //margin-top:30px;
+  
+  h2 {
+    color: #00adee;
+    font-size: 72px;
+    line-height: 72px;
+    font-family: $font-family-black;
+    margin-bottom: 20px;
+    width: 680px;
+    letter-spacing: $page-header-letter-spacing;
+  }
+  
+  p {
+    font-family: $font-family-thin;
+    color: #00adee;
+    font-size: 18px;
+    line-height: 24px;
+    width: 680px;
+    margin-bottom: 0;
+  }
+  
+  &.with-aside{
+    
+    h2{
+      float:left;
+      width: 680px;
+      margin-top: 40px;
+    } 
+    
+    p{
+      float: left;
+      width: 680px;
+      margin-bottom:20px;
+    }
+    
+    aside{
+      float:right;
+      margin-top: 40px;
+      width: 200px;
+      
+      .featured{
+        font-size: 16px;
+        color: $emphasis-font-color;
+      }
+    }
+  }
+}

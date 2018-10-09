@@ -1,0 +1,26 @@
+.plain-content {
+  @include clearfix;
+  width:auto;
+  
+  img.region-map {
+    float:left;
+    margin: 0 40px 30px 0;
+  }
+  
+  div {
+    @include clearfix;
+    margin-bottom: 30px;
+  }
+  
+  h3 {
+    margin-top: 40px;
+    
+    &:first-child{
+      margin-top:0;
+    }
+  }
+  
+  p:last-child{
+    margin-bottom:0;
+  }
+}

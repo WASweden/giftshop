@@ -1,0 +1,39 @@
+
+table {
+  border: 0;
+  margin: 0 0 $ds-margin;
+  width: 100%;
+}
+
+caption {
+  @extend %h3;
+  padding: $column-gutter 0 0;
+  text-align: $ds-float;
+}
+
+tbody {
+  border: 0;
+}
+
+th,
+td {
+  border:0;
+  border-bottom: 1px solid $ds-color-border;
+  padding: ds-em-calc(7px) 0;
+}
+
+th {
+  background: none;
+  border-bottom-width: 3px;
+  font-weight: $ds-font-weight-bold;
+  text-align: $ds-float;
+}
+
+td,
+td img {
+  vertical-align: top;
+}
+
+tfoot {
+  font-style: italic;
+}

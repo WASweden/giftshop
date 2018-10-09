@@ -1,0 +1,19 @@
+<h3> Betala med kort </h3>
+
+<p>Fyll i dina betalkortuppgifter</p>
+
+<form action="<%= checkout_path %>" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_4Tggao5rE3fJnM6Yxg3MQvrB"
+    data-amount="2000"
+    data-name="WaterAid Gåvoshop"
+    data-currency="sek"
+    data-description=""
+    data-email = "<%= @order.donor.email %>"
+    data-allow-remember-me = "false"
+    <%# data-image="/128x128.png" %> >
+
+  </script>
+  <input type='hidden' name='order_id' value='<%= @order.id %>'>
+</form>

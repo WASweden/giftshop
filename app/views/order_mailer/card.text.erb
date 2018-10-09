@@ -1,0 +1,13 @@
+<% if @order.payment_type == 'sms' && @card.send_to_donor == false %>
+  <%= render 'card_sms' %>
+<% elsif @order.payment_type == 'sms' && @card.send_to_donor == true %>
+  <%= render 'card_sms_self' %>
+<% elsif @card.send_to_donor == true && @order.donor.donor_type == 'company' %>
+  <%= render 'card_company_self' %>
+<% elsif @order.donor.donor_type == 'company' %>
+  <%= render 'card_company' %>
+<% elsif @card.send_to_donor == true %>
+  <%= render 'card_self' %>
+<% else %>
+  <%= render 'card' %>
+<% end %>

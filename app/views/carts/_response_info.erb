@@ -1,0 +1,25 @@
+<script>
+  var handler = StripeCheckout.configure({
+    key: '<%= Rails.application.secrets.stripe_publishable_key %>',
+    name: 'WaterAid Gåvoshop',
+    currency: 'SEK',
+    allowRememberMe: false,
+    image: '<%= image_path "wateraid-drop.png" %>',
+    token: function(token) {
+      req = $.post('<%= charge_checkout_path %>', { stripe_token: token.id });
+      req.done(function(data) {
+        window.location = '<%= complete_checkout_path %>';
+      }),
+      req.fail(function(data) {
+        window.location = '<%= cart_url %>';
+      })
+    }
+  });
+
+  handler.open({
+    email: '<%= order.donor.email %>',
+    description: '<%= "#{order.cards.count} gåvobevis" %>',
+    amount: <%= order.calculate_total * 100 %>,
+    panelLabel: 'Betala'
+  });
+</script>

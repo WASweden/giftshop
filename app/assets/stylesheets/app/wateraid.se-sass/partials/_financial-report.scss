@@ -1,0 +1,8 @@
+.financial-report{
+  @include border-bottom-hairline(#00aeef);
+
+  img{
+    margin: 50px auto !important;
+    
+  }
+}

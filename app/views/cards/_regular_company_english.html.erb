@@ -1,0 +1,60 @@
+<div class="digital-card">
+
+  <!--
+    <div class="row">
+      <div class="column">
+  -->
+  <div class="digital-card-header">
+    <%= image_tag "card/card-standard-en.jpg" %>
+  </div>
+  <!--
+      </div>
+    </div>
+  -->
+
+  <div class="row digital-card-content">
+    <p class="digital-card-content__title">You have just changed lives.</p>
+
+    <div class="digital-card-content__generated">
+      <%= simple_format(h(@card.text)) %>
+    </div>
+
+    <div class="digital-card-content__message">
+      <p>
+        Your gift is the building block of all life; clean, safe water. Today 844 million people on our planet lack access to safe water.
+      </p>
+
+      <p>
+        With this gift you give life and hope for the future, in a place where it’s needed the most.
+      </p>
+    </div>
+  </div>
+
+  <div class="digital-card-footer">
+    <%= image_tag "wateraid-logo.png" %>
+    <small>
+      WaterAid is an international independent organisation working to transform people’s lives by improving access to safe water, sanitation and hygiene in the world’s poorest communities. Read more at <a href="www.wateraid.se" target="_self">www.wateraid.se</a><span><!-- --></span>
+    </small>
+  </div>
+
+</div>
+
+
+<!--
+<div class="card-info">
+  <div class="card-info__content">
+    <p>Du har fått ett gåvobevis från WaterAid.<br>Lorem ipsum</p>
+    <%= link_to "Så fungerar det", info_path, class: 'button' %>
+<%= link_to "Ge en gåva", root_path, class: 'button' %>
+  </div>
+</div>
+-->
+
+<!--
+<footer class="footer footer--card">
+  <div class="footer-content">
+    <%#= render 'shared/footer_links' %>
+<%= render 'shared/footer_registration' %>
+  </div>
+</footer>
+-->

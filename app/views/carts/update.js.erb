@@ -1,0 +1,2 @@
+$('#donor-info').html('<%=j render(partial: 'form', locals: {donor: @donor, cart: @cart, disabled: true}) %>');
+$('#response-info').html('<%=j render(partial: 'response_info', locals: {order: @order}) %>');

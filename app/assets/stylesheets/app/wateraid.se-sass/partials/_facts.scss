@@ -1,0 +1,138 @@
+div.brush-facts{
+  background: url("/img/common/brush-facts.jpg") no-repeat left bottom;
+  width: $max-width;
+  margin-bottom:50px;
+}
+
+
+section.facts{
+  margin:0 auto;
+  padding: 30px 0 100px;
+ 
+  article {
+    padding: 0;
+    margin: 0;
+    width: 330px;
+    border-right: 1px solid #ddd;
+
+    .stats {
+      font-family: $font-family-bold;
+      color: $h2-color;  
+      font-size: 84px;
+      line-height: 1;
+      margin: 0 auto;
+      width: 143px;
+     
+      sup {
+        line-height: 40px;
+        vertical-align: top;
+        font-family: $font-family-bold;
+        color: $h2-color;  
+        font-size: 16px;
+        margin-top: 20px;
+      }
+    
+      &.figure {
+        font-size: 86px;
+        line-height: 1;
+
+      }
+    
+      &.figureWithArrow {
+        background: url("/img/common/facts/fact-arrow-up.png") no-repeat 0 12px ;
+        padding-left: 20px;
+        font-size: 86px;
+        line-height: 1;
+      }
+      &.speech-bubble {
+        background: url("/img/common/facts/speech-bubble.png") no-repeat;
+        width: 144px;
+        height: 74px;
+        color: #fff;
+        font-size: 45px;
+        line-height: 49px;
+        padding-top: 0.25%;
+        .value{
+          margin: 4px 0 0 0;
+          text-align: center;
+        }
+      }
+      &.linegraph {
+        background: url("/img/common/facts/facts-linegraph.png") no-repeat;
+        width: 110px;
+        height: 96px;
+        color: #fff;
+        font-size: 2.2em;
+        line-height: 44px;
+        padding-left: 5px;
+        text-align: center;
+      }
+    }
+  
+    img{
+     margin: 0 auto;
+     display: block;
+    }
+  
+    p {
+      padding: 0 50px;
+      margin:0;
+      text-align: center;
+    }
+  
+    div.canvas-holder {
+      margin: 0 auto;
+      width: 96px;
+      height: 96px;
+    }
+  
+    .brush-facts &.last{
+      border:0 none;
+    }
+  } 
+}
+
+
+aside.sidebar {
+  section.facts {
+    width: auto;
+    margin: 0 0 50px;
+    padding: 0;
+    
+    div.section-header {
+      margin-bottom: 0;
+      
+      h2 {
+        color: #6d6e72;
+        font-size: 18px;
+        line-height: 18px;
+      }
+    }
+
+    article.article-4col,
+    #detail-page & article.article-4col{
+      border-bottom: 1px solid #ddd;
+      padding: 30px 0 0 0;
+      margin: 0;
+      width: 305px;
+      border-right: 0;
+      
+      .stats.figure {
+        @include column(4);
+        background: url("/img/common/facts/fact-sidebar-arrow-up.png") no-repeat 127px 86px;
+        padding-left: 0;
+        padding-bottom: 28px;
+        font-size: 86px;
+        line-height: 1;
+        text-align: center;
+        margin-right:0;
+      }
+      
+      &.last,
+      #detail-page &.last {
+        border-bottom: 5px solid #ccc;
+      }
+    }
+  }
+}
+

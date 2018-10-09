@@ -1,0 +1,36 @@
+
+div.photo-credit {
+  width: 20px;
+  height: 20px;
+  background: url("/img/common/copyright-icon.gif") no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  margin:0 !important;
+  
+  #homepage section.carousel & {
+    top: auto;
+    left: 110px;
+    bottom: 30px;
+  }
+
+  #detail-page section.gallery & {
+    top: 0 !important;
+    left: 0 !important;
+    bottom: auto !important;
+  }
+  
+}
+
+div.photo-credit-tooltip {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  color: #999;
+  font-family: $font-family-default;
+  font-size: 10px;
+}

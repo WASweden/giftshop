@@ -1,0 +1,12 @@
+<h1> Card details </h1>
+
+<%= link_to 'Order', purchased_order_path(@card.order.id) %>
+
+<ul>
+  <li><%= @card.text %></li>
+  <li><%= @card.quantity %></li>
+  <li><%= @card.receiver %></li>
+  <li><%= @card.send_at %></li>
+  <li><%= link_to 'Share', card_path(@card.id) %>
+</ul>
+

@@ -1,0 +1,16 @@
+Hej <%= @order.donor.first_name %>!
+
+Här kommer det digitala gåvobeviset som ni har beställt. Ni kan enkelt vidarebefordra länken till gåvobeviset, eller skriva ut det och ge bort till en medarbetare, kund eller som ett talartack.
+
+Klicka på länken nedan för att komma till gåvobeviset:
+<%= card_url(@card.token) %>
+
+Tack för att ni har gett bort världens viktigaste gåva! Utan vatten överlever ingen, men ändå saknar idag 844 miljoner människor runt om i världen tillgång till rent vatten. Er gåva kommer att skänka liv, hopp och framtidstro på en plats där det behövs som allra mest.
+
+Allt börjar med vatten - tack för att ni är med och förändrar liv!
+
+Vänliga hälsningar, 
+Cecilia Chatterjee-Martinsen
+Generalsekreterare, WaterAid
+
+P.S. Glöm inte att följa oss på Facebook för att se hur er gåva gör skillnad! https://www.facebook.com/wateraidswe"

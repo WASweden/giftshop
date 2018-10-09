@@ -1,0 +1,58 @@
+<div class="card">
+
+  <div class="row">
+    <div class="column">
+      <div class="card-header">
+        <%= image_tag "card/card-header.jpg" %>
+
+        <div class="card-header__info">
+          <h1 class="card-header__title">Gåvobevis från <br> WaterAid</h1>
+          <h1 class="card-header__amount">5000 kr</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row card__content">
+    <div class="medium-7 large-6 large-push-1 column">
+      <div class="card__message">
+        <p>Hej vänner!</p>
+
+        <p>Cred roof party cardigan flannel, flexitarian tofu bitters. Slow-carb freegan Thundercats vinyl aesthetic gluten-free disrupt, Blue Bottle seitan kitsch Intelligentsia letterpress.</p>
+
+        <p>Schlitz cred synth ethical, Intelligentsia ennui pour-over pickled Austin mlkshk drinking vinegar Cosby sweater. Pickled stumptown YOLO semiotics typewriter, asymmetrical pork belly Thundercats Tonx.</p>
+      </div>
+
+      <div class="card__sender">
+        / Farbror Per
+      </div>
+    </div>
+
+    <div class="medium-5 large-3 large-pull-1 column">
+      <div class="card__sender-image">
+        <figure>
+          <img src="http://lorempixel.com/800/600/sports" />
+        </figure>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="card-info">
+  <div class="card-info__content">
+    <p>Du har fått ett gåvobevis från WaterAid.<br>Lorem ipsum</p>
+    <%= link_to "Så fungerar det", info_path, class: 'button' %>
+    <%= link_to "Ge en gåva", root_path, class: 'button' %>
+  </div>
+</div>
+
+<!--
+<footer class="footer footer--card">
+  <div class="footer-content">
+    <%#= render 'shared/footer_links' %>
+    <%= render 'shared/footer_registration' %>
+  </div>
+</footer>
+-->

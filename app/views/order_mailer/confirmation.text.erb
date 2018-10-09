@@ -1,0 +1,5 @@
+<% if @order.donor.donor_type == 'company' %>
+  <%= render 'confirmation_company' %>
+<% else %>
+  <%= render 'confirmation' %>
+<% end %>

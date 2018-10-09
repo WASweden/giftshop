@@ -1,0 +1,314 @@
+$(document).ready(function(){
+
+  $('.card-landing').show().addClass('animated fadeInUp');
+
+  // ---------------------------------------------------------------------------
+  // Card background
+  // ---------------------------------------------------------------------------
+
+  // if ($('html').hasClass('card-bg')) {
+  //   if ($('html').hasClass('about')) {
+  //     card_bg_image = '<%= asset_path 'splat/splat-christmas-about.jpg' %>';
+  //   } else {
+  //     card_bg_image = '<%= asset_path 'splat/splat-christmas.jpg' %>';
+  //   }
+  //
+  //   $('body').css({
+  //     'background-image': 'url(' + card_bg_image + ')',
+  //     'background-position': 'center top -450px',
+  //     'background-size': '2880px auto'
+  //   });
+  // }
+
+  // ---------------------------------------------------------------------------
+  // Card form
+  // ---------------------------------------------------------------------------
+  $('.add-item__input--product').on('change', function (e) {
+    var value = $(this).val();
+    var form = $(this).closest('form');
+
+    if (value === "AnalogCard") {
+      form.addClass('new_order_item--analog');
+      form.removeClass('new_order_item--digital');
+
+      // Private
+      form.find('.add-item__card[data-subtype=regular] img').attr('src', '<%= asset_path "cards/analog.jpg" %>');
+      form.find('.add-item__card[data-subtype=xmas] img').attr('src', '<%= asset_path "cards/analog-xmas.jpg" %>');
+
+      // Company
+      form.find('.add-item__card[data-subtype=regular-company] img').attr('src', '<%= asset_path "cards/analog-company.jpg" %>');
+      form.find('.add-item__card[data-subtype=xmas-company]').hide();
+
+      form.find('.add-item__card[data-subtype=regular-company-english]').hide();
+      form.find('.add-item__card[data-subtype=xmas-company-english]').hide();
+    } else {
+      // DigitalCard
+      form.addClass('new_order_item--digital');
+      form.removeClass('new_order_item--analog');
+
+      // Private
+      form.find('.add-item__card[data-subtype=regular] img').attr('src', '<%= asset_path "cards/digital.jpg" %>');
+      form.find('.add-item__card[data-subtype=xmas] img').attr('src', '<%= asset_path "cards/digital-xmas.jpg" %>');
+      form.find('.add-item__card[data-subtype=xmas2] img').attr('src', '<%= asset_path "cards/digital-xmas2.jpg" %>');
+
+      // Company
+      form.find('.add-item__card[data-subtype=regular-company] img').attr('src', '<%= asset_path "cards/digital-company.jpg" %>');
+      form.find('.add-item__card[data-subtype=xmas-company]').show();
+      form.find('.add-item__card[data-subtype=xmas-company]').show();
+      form.find('.add-item__card[data-subtype=xmas-company] img').attr('src', '<%= asset_path "cards/digital-xmas-company.jpg" %>');
+
+
+      form.find('.add-item__card[data-subtype=regular-company-english]').show();
+      form.find('.add-item__card[data-subtype=xmas-company-english]').show();
+    }
+  });
+
+  $('.add-item__card-image').on('click', function() {
+    $('.add-item__card').removeClass('selected');
+    $(this).parent().addClass('selected');
+
+    // Set hidden input's subtype
+    var subtype = $(this).parent().attr("data-subtype");
+    $("input[id=order_item_subtype]").attr('value', subtype);
+  });
+
+  $('.zoom-image').on('click', function() {
+    var modalType = $(this).attr("data-image");
+
+    if (modalType === "xmas") {
+      $('#modal-zoom-xmas, .modal-zoom-bg').fadeIn();
+    } else if (modalType === "xmas2") {
+        $('#modal-zoom-xmas-2, .modal-zoom-bg').fadeIn();
+    } else if (modalType === "default") {
+      $('#modal-zoom-default, .modal-zoom-bg').fadeIn();
+    }
+  });
+
+  $('.modal-zoom, .modal-zoom-bg').click(function() {
+    $(".modal-zoom-bg, .modal-zoom").fadeOut();
+  });
+
+  if ($('.card-form').length) {
+    function cardAmount() {
+      $('.card-form__donation-total').html($('.card-form__amount').val() + ' kr');
+    }
+
+    function cardDonationsExamples() {
+      var card_example_last = false, card_example_last_id;
+      $('.card-form__donation-examples li').each(function(i) {
+        if (i == 0) {
+          if (parseInt($(this).attr('data-amount')) > parseInt($('.card-form__amount').val())) {
+            $('.card-form__donation-info').slideUp('fast');
+          } else {
+            $('.card-form__donation-info').slideDown('fast');
+          }
+        }
+
+        $(this).attr('data-id', i);
+
+        if (parseInt($(this).attr('data-amount')) <= parseInt($('.card-form__amount').val()))  {
+          if (card_example_last == false) {
+            card_example_last_id = i;
+          }
+        } else {
+          card_example_last = true;
+        }
+      });
+
+      $('.card-form__donation-examples li').not('[data-id="' + card_example_last_id + '"]').hide();
+      $('.card-form__donation-examples li[data-id="' + card_example_last_id + '"]').slideDown('medium');
+
+    }
+
+    function cardType() {
+      var card_type = $('.card-form__type__choice:checked').val();
+      $('.card-form').parsley().destroy();
+      if (card_type == 'AnalogCard') {
+        $('.card-form__type__digital').slideUp('fast');
+        $('.card-form__type__print').slideDown('fast');
+        cardValidationAnalog();
+      } else {
+        $('.card-form__type__print').slideUp('fast');
+        $('.card-form__type__digital').slideDown('fast');
+        cardValidationDigital();
+      }
+      $('.card-form').parsley();
+    }
+
+    function cardDeliverTo() {
+      var paymentType = $('#payment_type').val();
+
+      var card_send_to_donor = $('.card-form__deliver-to:checked').val();
+      var recipientLabel = $('div.form-item.card-form__recipient > h4 > label');
+
+      $('.card-form').parsley().destroy();
+      if (card_send_to_donor == 'true') {
+
+        if (paymentType === 'sms') {
+          recipientLabel.html("Din e-postadress");
+          cardValidationRecipientRequired();
+        } else {
+          $('.card-form__recipient').slideUp('fast');
+          cardValidationRecipientOptional();
+        }
+
+      } else if (card_send_to_donor == 'false') {
+
+        if (paymentType === 'sms') {
+          recipientLabel.html("Mottagarens e-postadress");
+        } else {
+          $('.card-form__recipient').slideDown('fast');
+        }
+        cardValidationRecipientRequired();
+      }
+      $('.card-form').parsley();
+    }
+
+    function cardValidationDigital() {
+      $('.card-form__message').attr('data-parsley-required', '');
+      $('.card-form__message').attr('data-parsley-required-message', 'Glöm inte att skriva en hälsning!');
+
+      $('.card-form__from').attr('data-parsley-required', '');
+      $('.card-form__from').attr('data-parsley-required-message', 'Skriv in vem hälsningen är från…');
+
+      cardValidationRecipientRequired();
+    }
+
+    function cardValidationAnalog() {
+      $('.card-form__message').removeAttr('data-parsley-required');
+      $('.card-form__message').removeAttr('data-parsley-required-message');
+
+      $('.card-form__from').removeAttr('data-parsley-required');
+      $('.card-form__from').removeAttr('data-parsley-required-message');
+
+      cardValidationRecipientOptional();
+    }
+
+    function cardValidationRecipientRequired() {
+      $('.card-form__to').attr('data-parsley-required', '');
+      $('.card-form__to').attr('data-parsley-required-message', 'Gåvobeviset måste ha en mottagare.');
+    }
+
+    function cardValidationRecipientOptional() {
+      $('.card-form__to').removeAttr('data-parsley-required');
+      $('.card-form__to').removeAttr('data-parsley-required-message');
+    }
+
+    function cardFormInit() {
+      cardAmount();
+      cardDonationsExamples();
+      cardType();
+      cardDeliverTo();
+    }
+
+    cardFormInit();
+
+    $('.card-form__amount').on('input', function() {
+      cardAmount();
+      cardDonationsExamples();
+    });
+
+    $('.card-form__type__choice').change(function() {
+      cardType();
+    });
+
+    $('.card-form__deliver-to').change(function() {
+      cardDeliverTo();
+    });
+
+    // Check email address with mailcheck
+    $('.card-form__to').on('blur', function() {
+      $(this).mailcheck({
+        domains: ['hotmail.com', 'gmail.com', 'live.com', 'yahoo.com'],
+        topLevelDomains: ['se', 'com', 'net', 'org', 'nu'],
+        suggested: function(element, suggestion) {
+          $('.card-form__to-suggestion').html("Menade du <b><i>" + suggestion.full + "</b></i>?");
+        },
+        empty: function(element) {
+          $('.card-form__to-suggestion').html('');
+        }
+      });
+    });
+
+    // Set pickadate
+    $('.card-form__send-at').pickadate({
+      monthsFull: ['Januari', 'Februari', 'Mars', 'April', 'Maj', 'Juni', 'Juli', 'Augusti', 'September', 'Oktober', 'November', 'December'],
+      weekdaysShort: ['Söndag', 'Måndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lördag'],
+      today: 'Idag',
+      clear: 'Rensa',
+      close: 'Stäng',
+      format: 'yyyy-mm-dd',
+      firstDay: 1,
+      min: new Date(),
+    });
+  }
+
+  // ---------------------------------------------------------------------------
+  // View card page
+  // ---------------------------------------------------------------------------
+
+  $('.card__preview__back').click(function(e) {
+    history.go(-1);
+
+    e.preventDefault();
+  });
+
+  $('.download-card').click(function(e) {
+    mixpanel.track(
+      "Download card",
+      {
+        'card-id': $('.card').attr('data-card-id'),
+        'card-type': $('.card').attr('data-card-form-type')
+      }
+    );
+
+    ga('send', 'event', 'button', 'click', 'card-download');
+  });
+
+  $('.print-card').click(function(e) {
+    mixpanel.track(
+      "Print card",
+      {
+        'card-id': $('.card').attr('data-card-id'),
+        'card-type': $('.card').attr('data-card-form-type')
+      }
+    );
+
+    ga('send', 'event', 'button', 'click', 'card-print');
+
+    window.print();
+
+    e.preventDefault();
+  });
+
+  $('.fb-share-card').click(function(e) {
+    FB.ui({
+      method: 'share',
+      href: document.URL,
+    }, function(response){});
+
+    mixpanel.track(
+      "Share card on Facebook",
+      {
+        'card-id': $('.card').attr('data-card-id'),
+        'card-type': $('.card').attr('data-card-form-type')
+      }
+    );
+
+    ga('send', 'event', 'button', 'click', 'card-facebook-share');
+
+    e.preventDefault();
+  });
+
+  $('.twitter-share-card').click(function(e) {
+    mixpanel.track(
+      "Share card on Twitter",
+      {
+        'card-id': $('.card').attr('data-card-id'),
+        'card-type': $('.card').attr('data-card-form-type')
+      }
+    );
+
+    ga('send', 'event', 'button', 'click', 'card-twitter-share');
+  });
+});

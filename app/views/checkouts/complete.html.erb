@@ -1,0 +1,194 @@
+<%# title "Beställningen genomförd" %>
+
+<%# render partial: 'complete_card', locals: {order: @order, purchase: @purchase} if @order.payment_type.eql?(Order::PAYMENT_TYPES[:card]) %>
+<%# render partial: 'complete_invoice', locals: {order: @order, purchase: @purchase} if @order.payment_type.eql?(Order::PAYMENT_TYPES[:invoice]) %>
+
+<div id="purchase-tracking-info" data-order-id="<%= @order.id %>" data-order-payment-type="<%= @order.payment_type %>"></div>
+
+<!-- FB Pixel March 2018 -->
+<script>
+fbq('init', '<770236689764961>');
+fbq('track', "Purchase");
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=<770236689764961>&ev=Purchase&noscript=1"/></noscript>
+
+<!-- Google Code for G&aring;voshop Conversion Page -->
+<script type="text/javascript">
+  /* <![CDATA[ */
+  var google_conversion_id = <%= Rails.application.secrets.google_conversion_id %>;
+  var google_conversion_language = "en";
+  var google_conversion_format = "3";
+  var google_conversion_color = "ffffff";
+  var google_conversion_label = "<%= Rails.application.secrets.google_conversion_label %>";
+  var google_conversion_value = 1.00;
+  var google_conversion_currency = "SEK";
+  var google_remarketing_only = false;
+  /* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+  <div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/<%= Rails.application.secrets.google_conversion_id %>/?value=1.00&amp;currency_code=SEK&amp;label=<%= Rails.application.secrets.google_conversion_label %>&amp;guid=ON&amp;script=0"/>
+  </div>
+</noscript>
+
+<!-- Google Code for Order_G&aring;voshop Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 827922118;
+var google_conversion_label = "TlOpCLG41XgQxq3kigM";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/827922118/?label=TlOpCLG41XgQxq3kigM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<% unless @order.donor.donor_type == 'company' %>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1646744195606417'); // Insert your pixel ID here.
+fbq('track', 'Purchase');
+</script>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+<% end %>
+
+<script>
+  mixpanel.track(
+    "Purchase complete",
+    {
+      'order-payment-type': '<%= @order.payment_type %>',
+      'order-total': '<%= @order.total %>',
+      'order-id': '<%= @order.id %>'
+    }
+  );
+</script>
+
+<script>
+  ga('send', 'event', 'order', 'order-complete', '<%= @order.payment_type %>');
+
+  ga('ecommerce:addTransaction', {
+    'id': '<%= @order.id %>',
+    'revenue': '<%= @order.total %>',
+    'currency': 'SEK'
+  });
+
+  <% @purchase.each do |p| %>
+  ga('ecommerce:addItem', {
+    'id': '<%= @order.id %>',
+    <% if p.type == 'DigitalCard' %>
+    'name': 'Digitalt gåvobevis',
+    <% else %>
+    'name': 'Tryckt gåvobevis',
+    <% end %>
+    'category': '<%= p.type %>',
+    'price': '<%= p.quantity %>',
+    'quantity': '1',
+    'currency': 'SEK'
+  });
+  <% end %>
+
+  ga('ecommerce:send');
+  ga('ecommerce:clear');
+</script>
+
+<!-- Google Code for G&aring;voshop Conversion Page -->
+<script type="text/javascript">
+  /* <![CDATA[ */
+  var google_conversion_id = <%= Rails.application.secrets.google_conversion_id %>;
+  var google_conversion_language = "en";
+  var google_conversion_format = "3";
+  var google_conversion_color = "ffffff";
+  var google_conversion_label = "<%= Rails.application.secrets.google_conversion_label %>";
+  var google_conversion_value = 1.00;
+  var google_conversion_currency = "SEK";
+  var google_remarketing_only = false;
+  /* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+  <div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/<%= Rails.application.secrets.google_conversion_id %>/?value=1.00&amp;currency_code=SEK&amp;label=<%= Rails.application.secrets.google_conversion_label %>&amp;guid=ON&amp;script=0"/>
+  </div>
+</noscript>
+
+<!-- Adform Tracking Code BEGIN -->
+<script type="text/javascript">
+    window._adftrack = Array.isArray(window._adftrack) ? window._adftrack : (window._adftrack ? [window._adftrack] : []);
+    window._adftrack.push({
+        pm: 563271,
+        divider: encodeURIComponent('|'),
+        pagename: encodeURIComponent('')
+    });
+    (function () { var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://track.adform.net/serving/scripts/trackpoint/async/'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); })();
+
+</script>
+<noscript>
+    <p style="margin:0;padding:0;border:0;">
+        <img src="https://track.adform.net/Serving/TrackPoint/?pm=563271&ADFPageName=&ADFdivider=|" width="1" height="1" alt="" />
+    </p>
+</noscript>
+<!-- Adform Tracking Code END -->
+
+<!-- Google Code for G&aring;voshop Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 950792424;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "8YAMCIPU61wQ6OGvxQM";
+var google_conversion_value = 1.00;
+var google_conversion_currency = "SEK";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/950792424/?value=1.00&amp;currency_code=SEK&amp;label=8YAMCIPU61wQ6OGvxQM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<!-- Bing -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"41000045"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
+
+<!-- Christmas 2015 Tracking -->
+
+<script type='text/javascript'>
+var ebRev = '<%= @order.calculate_total.to_f %>';
+var ebOrderID = '<%= @order.order_id %>';
+var ebActivityID = '<%= @order.donor.donor_type == "company" ? 708447 : 708450 %>';
+var ebProductID = '';
+var ebProductInfo = '';
+var ebQuantity = '<%= @order.cards.count %>';
+var ebRand = Math.random()+'';
+ebRand = ebRand * 1000000;
+//<![CDATA[
+document.write('<scr'+'ipt src="HTTPS://bs.serving-sys.com/Serving/ActivityServer.bs?cn=as&amp;ActivityID='+ebActivityID+'&amp;rnd=' + ebRand + '&amp;Value='+ebRev+'&amp;OrderID='+ebOrderID+'&amp;ProductID='+ebProductID+'&amp;ProductInfo='+ebProductInfo+'&amp;Quantity='+ebQuantity+'"></scr' + 'ipt>');
+//]]>
+</script>
+<noscript>
+  <img width="1" height="1" style="border:0" src="HTTPS://bs.serving-sys.com/Serving/ActivityServer.bs?cn=as&amp;ActivityID=<%= @order.donor.donor_type == "company" ? 708447 : 708450 %>&amp;Value=<%= @order.calculate_total.to_f %>&amp;OrderID=<%= @order.order_id %>&amp;ProductID=&amp;ProductInfo=&amp;Quantity=<%= @order.cards.count %>&amp;ns=1"/>
+</noscript>
+
+<% if @order.donor.donor_type == "company" %>
+  <img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=110236&conversionId=186562&fmt=gif" />
+<% end %>
+
+<script>
+  setTimeout(function() { window.location.replace("<%= customer_url(@customer.token) %>"); }, 2000);
+</script>

@@ -1,0 +1,643 @@
+// -----------------------------------------------------------------------------
+// Card landing page GFX
+// -----------------------------------------------------------------------------
+
+html.card-bg {
+  height: auto;
+
+  body {
+    //background: #afc8cc image-url('drop/drop-1x.jpg') top center no-repeat;
+    //background-color: #afc8cc;
+    //background-position: center -360px;
+    background-repeat: no-repeat;
+    height: auto;
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      //background-image: image-url('drop/drop-2x-small.jpg');
+      //background-size: 600px;
+      //background-position: center -250px;
+    }
+  }
+
+  .header {
+    background: none;
+    border-bottom: 0;
+  }
+
+  .text-link {
+    color: $ds-color-campaign-blue;
+    font-family: $ds-font-family-bold;
+    text-decoration: underline;
+  }
+}
+
+.card-form-holder {
+  min-height: 800px;
+}
+
+%card-bg-padding {
+  padding-top: 300px;
+}
+
+.card-landing {
+  @extend %card-bg-padding;
+  padding-bottom: 80px;
+
+  .js & {
+    display: none;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Card form
+// -----------------------------------------------------------------------------
+
+.card-form {
+  @include grid-row;
+
+  h2 {
+    letter-spacing: -1px;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  h2,
+  label,
+  input[type='text'],
+  input[type='email'],
+  input[type='file'],
+  input[type='date'],
+  textarea,
+  .card-form__donation__meta,
+  .card-form__donation-info {
+    border-width: 2px;
+    color: $ds-color-campaign-blue;
+  }
+
+  input[type='text'],
+  input[type='email'],
+  input[type='file'],
+  input[type='date'],
+  textarea {
+    //background: rgba($ds-color-campaign-blue, .2);
+    background: rgba(#fff, .25);
+  }
+
+  /*.card-form__to,
+  .card-form__message,
+  .card-form__from,
+  .card-form__image,
+  .card-form__send-at {
+    color: darken($ds-color-campaign-blue, 10) !important;
+  }*/
+
+  .label--inline {
+    font-family: $ds-font-family-bold;
+    margin-left: 10px;
+  }
+
+  &__cancel {
+    margin-right: 10px;
+  }
+
+  input[type='submit'] {
+    background-color: $ds-color-yellow;
+
+    &:hover {
+      background-color: $ds-color-yellow;
+    }
+  }
+}
+
+.card-bg {
+  .form-item__description {
+    color: $ds-color-campaign-blue;
+  }
+}
+
+.card-form__header {
+  @include grid-row;
+  margin-bottom: $column-gutter;
+}
+
+.card-form__header__info {
+  @include grid-column(12);
+
+  @media #{$medium-up} {
+    @include grid-column($columns: 8, $push: 4);
+  }
+
+  p {
+    @extend %h2;
+    color: $ds-color-campaign-blue;
+    letter-spacing: -1px;
+    line-height: 1.3;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 600px;
+
+    &:first-child {
+      margin-top: -3px;
+    }
+  }
+}
+
+.card-form__header__actions {
+  @include grid-column(12);
+  padding-top: $column-gutter/2;
+
+  @media #{$medium-up} {
+    @include grid-column($columns: 4, $pull: 8);
+    padding-top: 0;
+    text-align: right;
+  }
+
+  .button {
+    background-color: $ds-color-campaign-blue;
+    margin-bottom: 10px;
+
+    &:hover {
+      background-color: $ds-color-yellow;
+    }
+  }
+}
+
+.card-form__donation__content {
+  @include grid-column(12);
+
+  @media #{$medium-up} {
+    @include grid-column(8);
+  }
+}
+
+.card-form__donation__heading {
+  @media #{$medium-up} {
+    h2 {
+      padding-top: 10px;
+    }
+  }
+}
+
+.card-form__amount {
+  color: $ds-color-campaign-blue;
+  display: inline-block;
+  font-size: $ds-h2-font-size;
+  font-family: $ds-font-family-bold;
+  margin: 0 10px 0 0;
+  max-width: 150px;
+}
+
+.card-form__donation__meta {
+  @extend %h2;
+  display: inline-block;
+  letter-spacing: -1px;
+  margin-top: 0;
+}
+
+.card-form__donation__meta-info {
+  color: $ds-color-campaign-blue;
+  padding-top: 5px;
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.card-form__donation-info {
+  @include grid-row;
+  .js & {
+    display: none;
+  }
+}
+
+.card-form__donation-overview,
+.card-form__donation-examples {
+  @include grid-column(12);
+
+  @media #{$medium-up} {
+    @include grid-column($columns: 8, $push: 4);
+  }
+
+  @media #{$large-up} {
+    @include grid-column($columns: 4, $push: 4);
+  }
+}
+
+.card-form__donation-overview {
+  font-family: $ds-font-family-bold;
+}
+
+.card-form__donation-total {
+  font-family: $ds-font-family-black;
+  font-size: 1.3em;
+}
+
+.card-form__donation-examples {
+  clear: both;
+  list-style: none;
+  margin-bottom: 0;
+
+  li {
+    margin-left: -26px;
+    padding-left: 52px;
+    position: relative;
+    &:before {
+      color: $ds-color-campaign-blue;
+      content: '✔';
+      font-family: $ds-font-family-black;
+      left: 26px;
+      position: absolute;
+      top: 2px;
+    }
+  }
+
+  .js & {
+    li {
+      display: none;
+    }
+  }
+}
+
+.card-form__donation,
+.card-form__donation-info,
+.card-form__type,
+.card-form__type__digital {
+  @include grid-row;
+  margin-bottom: $column-gutter;
+}
+
+.card-form__heading {
+  @include grid-column(12);
+
+  @media #{$medium-up} {
+    @include grid-column(4);
+    text-align: right;
+  }
+
+  @media #{$large-up} {
+    text-align: right;
+  }
+}
+
+.card-form__content {
+  @include grid-column(12);
+
+  @media #{$medium-up} {
+    @include grid-column(8);
+  }
+
+  @media #{$large-up} {
+    @include grid-column($columns: 4);
+  }
+}
+
+.card-form__type__digital__options {
+  .card-form--company & {
+    .form-item {
+      div:first-child {
+        margin-bottom: $column-gutter/2;
+      }
+    }
+  }
+}
+
+.card-form__type__print {
+  @include grid-column(12);
+  padding-bottom: $column-gutter;
+
+  @media #{$medium-up} {
+    @include grid-column($columns: 8, $push: 4);
+  }
+
+  @media #{$large-up} {
+    @include grid-column($columns: 4, $push: 4);
+  }
+
+  .js & {
+    display: none;
+  }
+
+  .card-bg & {
+    color: $ds-color-campaign-blue;
+  }
+
+  img {
+    border: 6px solid $ds-color-yellow;
+  }
+}
+
+.card-form__xmas-info {
+  display: inline-block;
+  padding-top: 0;
+}
+
+.card-form__company-package-info {
+  .card-bg & {
+    color: $ds-color-campaign-blue;
+  }
+}
+
+.card-form__footer {
+  @include grid-row;
+  clear: both;
+}
+
+.card-form__actions {
+  @include grid-column(12);
+
+  @media #{$medium-up} {
+    @include grid-column($columns: 8, $push: 4);
+  }
+
+  @media #{$large-up} {
+    @include grid-column($columns: 4, $push: 4);
+    text-align: center;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Date picker
+// -----------------------------------------------------------------------------
+
+.picker--opened .picker__holder {
+  background: none;
+}
+
+.picker__month,
+.picker__year {
+  color: $ds-color-blue-light;
+  font-family: $ds-font-family-bold;
+}
+
+.picker__year {
+  font-style: normal;
+  font-size: 1em;
+}
+
+.picker__nav--prev:before {
+  border-right-color: $ds-color-blue-light;
+}
+
+.picker__nav--prev.picker__nav--disabled:before {
+  border-right-color: #f5f5f5;
+}
+
+.picker__nav--next:before {
+  border-left-color: $ds-color-blue-light;
+}
+
+.picker__day--today:before {
+  border-top-color: $ds-color-blue-light;
+}
+
+.picker__day--selected {
+  background: $ds-color-blue-light;
+  color: #fff;
+}
+
+.picker__footer {
+  button {
+    color: $ds-color-text;
+  }
+}
+
+.picker__button--today:before {
+  border-top-color: $ds-color-blue-light;
+}
+
+// -----------------------------------------------------------------------------
+// Card edit page
+// -----------------------------------------------------------------------------
+
+.card-edit {
+  @extend %ds-page-gutter;
+}
+
+.card-edit__title {
+  padding-left: $column-gutter/2;
+  padding-right: $column-gutter/2;
+
+  @media #{$large-up} {
+    text-align: center;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Card page
+// -----------------------------------------------------------------------------
+
+.card__preview {
+  background: white;
+  background: $ds-color-yellow;
+  color: white;
+  padding: 20px 40px;
+  position: fixed;
+  text-align: left;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 40px 0 rgba(0,0,0,0.05), 0 6px 10px 0 rgba(0,0,0,0.10);
+
+  @media #{$large-up} {
+    padding: 40px 60px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: bold;
+    margin: 0;
+    max-width: calc(100% - 65px);
+
+    @media #{$medium-up} { font-size: 18px; }
+    @media #{$large-up} {
+      font-size: 24px;
+      line-height: 45px;
+    }
+  }
+
+  .close {
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    background: $ds-color-yellow;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    margin: 0;
+
+    @media #{$large-up} {
+      top: 40px;
+      width: 45px;
+      height: 45px;
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      width: 60%;
+      height: 2px;
+      background: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &:hover {
+      background: white;
+      &:before,
+      &:after {
+        background: $ds-color-yellow;
+      }
+    }
+  }
+}
+
+.card-holder {
+  min-height: 1200px;
+  padding-top: 440px;
+}
+
+.card {
+  @include grid-row;
+}
+
+.card__print-image {
+  display: none;
+}
+
+.card__title {
+  @include grid-column($columns: 10, $push: 1);
+  padding-bottom: $column-gutter*2;
+
+  h1 {
+    @extend h2;
+    color: $ds-color-campaign-blue;
+    text-align: center;
+    margin: 0;
+    position: relative;
+
+    &:after {
+      background: $ds-color-yellow;
+      bottom: -30px;
+      display: inline-block;
+      content: ' ';
+      height: 10px;
+      left: 40%;
+      position: absolute;
+      text-align: center;
+      width: 20%;
+
+      @media #{$medium-up} {
+        left: 45%;
+        width: 10%;
+      }
+    }
+  }
+}
+
+.card__image {
+  margin-bottom: 0;
+  text-align: center;
+
+  @media #{$large-up} {
+    @include grid-column($columns: 10, $push: 1);
+  }
+
+  img {
+    float: none;
+  }
+}
+
+.card__message,
+.card__info,
+.card__actions,
+.card__footer {
+  clear: both;
+
+  @media #{$medium-up} {
+    @include grid-column($columns: 10, $push: 1);
+  }
+
+  @media #{$large-up} {
+    @include grid-column($columns: 6, $push: 3);
+  }
+}
+
+.card__message {
+  background: rgba(#fff, .25);
+  color: $ds-color-black;
+  font-family: $ds-font-family-bold;
+  padding: $column-gutter/2;
+
+  @media #{$medium-up} {
+    padding: $column-gutter;
+  }
+
+  @media #{$large-up} {
+    padding: $column-gutter*2;
+  }
+
+  p {
+    text-align: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.card__info {
+  padding-top: $column-gutter*2;
+  padding-left: $column-gutter/2;
+  padding-right: $column-gutter/2;
+
+  p {
+    color: $ds-color-campaign-blue;
+    font-family: $ds-font-family-bold;
+    text-align: center;
+  }
+}
+
+.card__actions {
+  color: $ds-color-campaign-blue;
+  font-family: $ds-font-family-bold;
+  padding-top: $column-gutter;
+  padding-bottom: $column-gutter*2;
+  text-align: center;
+}
+
+.card__footer {
+  color: #3b3b3b;
+  font-size: 14px;
+  padding-top: $column-gutter*3;
+  text-align: center;
+
+  a {
+    color: #3b3b3b;
+    text-decoration: underline;
+  }
+}
+
+.card__download {
+  /*width: 100%;
+  display: block;
+  text-align: center;
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  background: transparent;*/
+
+  text-align: center;
+  padding: 40px 0;
+}

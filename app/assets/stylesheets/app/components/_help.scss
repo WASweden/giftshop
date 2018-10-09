@@ -1,0 +1,12 @@
+.faq__questions {
+  list-style: none;
+  margin-left: 0;
+}
+
+.faq__question {
+  max-width: grid-calc(8,12);
+}
+
+.faq__question__title {
+  @extend %h3;
+}

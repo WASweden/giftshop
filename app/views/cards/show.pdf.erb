@@ -1,0 +1,33 @@
+<style>
+  @page {
+    size: A4;
+    margin: 0; // full-bleed
+    }
+  .digital-card.xmas {
+    background-color: #7694b0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: image_url('card/card-xmas.jpg');
+    background-repeat: no-repeat;
+    background-size: auto 70%;
+    background-position: center top;
+  }
+  .digital-card.xmas2 .digital-card-content {
+    margin-top: 20pt;
+  }
+  .digital-card.xmas2 .digital-card-header {
+    padding: 35pt;
+    padding-bottom: 0pt;
+  }
+  .digital-card.xmas .digital-card-header__title {
+    margin-top: 300pt;
+  }
+  .digital-card .digital-card-footer small {
+    text-align: center;
+    margin-left: 35pt;
+  }
+  </style>
+
+<%= render @card.subtype.try(:underscore) || "regular" %>
+

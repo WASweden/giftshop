@@ -1,0 +1,31 @@
+// -----------------------------------------------------------------------------
+// Layout helper classes
+// -----------------------------------------------------------------------------
+
+%l-left {
+  float: left;
+}
+.l-left {
+  @extend %l-left;
+}
+
+%l-right {
+  float: right;
+}
+.l-right {
+  @extend %l-right;
+}
+
+%l-no-margin {
+  margin: 0;
+}
+.l-no-margin {
+  @extend %l-no-margin;
+}
+
+%l-no-padding {
+  padding: 0;
+}
+.l-no-padding {
+  @extend %l-no-padding;
+}

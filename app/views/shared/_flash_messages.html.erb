@@ -1,0 +1,7 @@
+<% if flash.any? %>
+  <% flash.each do |key, value| %>
+    <%= content_tag(:div, value, :class => "alert-box #{key} reveal-modal large", data: { alert: '' }) do %>
+      <a href="#" class="close">&times;</a><p><%= value %></p>
+    <% end %>
+  <% end %>
+<% end %>

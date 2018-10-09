@@ -1,0 +1,98 @@
+<%= form_for @order, url: cart_path, :html => { :class => 'checkout' }, :data => {'parsley-validate' => '', 'rr-name' => 'checkout-form' } do |order_form| %>
+  <%= order_form.hidden_field :stripe_token %>
+
+  <div class="checkout">
+    <%= order_form.fields_for :donor do |donor_form| %>
+      <div class="form-item checkout__company">
+        <%= donor_form.check_box :donor_type, {disabled: disabled}, 'company', 'person' %>
+        <%= donor_form.label :donor_type, 'Vi är ett företag/organisation', class: 'label--inline' %>
+      </div>
+
+      <div class="checkout__company-fields row" id="checkout-company-info">
+        <div class="medium-6 column form-item">
+          <h5><%= donor_form.label :company, 'Företagsnamn' %></h5>
+          <%= donor_form.text_field :company, disabled: disabled, class: 'checkout__company-name' %>
+        </div>
+
+        <div class="medium-6 column form-item">
+          <h5><%= donor_form.label :org_number, 'Organisationsnummer' %></h5>
+          <%= donor_form.text_field :org_number, disabled: disabled, class: 'checkout__company-orgnr' %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="medium-6 column form-item">
+          <h5><%= donor_form.label :first_name, 'Förnamn' %></h5>
+          <%= donor_form.text_field :first_name, disabled: disabled, class: 'checkout__firstname', :data => {'parsley-required' => '', 'parsley-required-message' => 'Ange ditt förnamn.'} %>
+        </div>
+        <div class="medium-6 column form-item">
+          <h5><%= donor_form.label :last_name, 'Efternamn' %></h5>
+          <%= donor_form.text_field :last_name, disabled: disabled, class: 'checkout__lastname', :data => {'parsley-required' => '', 'parsley-required-message' => 'Ange ditt efternamn.'} %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="medium-6 column form-item">
+          <h5><%= donor_form.label :email, 'E-post' %></h5>
+          <%= donor_form.email_field :email, disabled: disabled, class: 'checkout__email', :data => {'parsley-required' => '', 'parsley-required-message' => 'Ange din e-postadress.', 'parsley-type-message' => 'Ange en giltig e-postadress.'} %>
+        </div>
+        <div class="medium-6 column form-item">
+          <h5><%= donor_form.label :phone, 'Telefon' %></h5>
+          <%= donor_form.text_field :phone, disabled: disabled, class: 'checkout__phone' %>
+        </div>
+      </div>
+
+      <div class="medium-8 column form-item">
+        <h5><%= donor_form.label :address, 'Adress' %></h5>
+        <%= donor_form.text_field :address, disabled: disabled, class: 'checkout__adress', :data => {'parsley-required' => '', 'parsley-required-message' => 'Ange din adress.'} %>
+      </div>
+
+      <div class="row">
+        <div class="medium-4 column form-item">
+          <h5><%= donor_form.label :post_code, 'Postnummer' %></h5>
+          <%= donor_form.text_field :post_code, maxlength: 5, disabled: disabled, class: 'checkout__postal-code', :data => {'parsley-required' => '', 'parsley-required-message' => 'Ange ditt postnr.', 'parsley-type' => 'integer', 'parsley-type-message' => 'Postnr får bara innehålla siffror', 'parsley-minlength' => '5', 'parsley-minlength-message' => 'Postnr måste innehålla minst 5 siffror'} %>
+        </div>
+        <div class="medium-8 column end form-item">
+          <h5><%= donor_form.label :city, 'Ort' %></h5>
+          <%= donor_form.text_field :city, disabled: disabled, class: 'checkout__city', :data => {'parsley-required' => '', 'parsley-required-message' => 'Ange din ort.'} %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="medium-6 column form-item">
+          <h5><%= donor_form.label :country_code, 'Land' %></h5>
+          <%= donor_form.country_code_select :country_code, [[ 'Sverige', 'SE' ]], disabled: disabled, class: 'checkout__country' %>
+        </div>
+      </div>
+    <% end %>
+
+    <footer class="checkout-footer">
+      <div class="checkout-payment form-item">
+        <h5>Betala med</h5>
+
+        <div class="checkout-payment-option">
+          <%= order_form.radio_button :payment_type, :card, disabled: disabled, class: 'checkout__payment checkout__payment--card' %>
+          <%= order_form.label :payment_type, 'Kort', value: :card, :class => 'label--inline' %>
+        </div>
+
+        <div class="checkout-payment-option">
+          <%= order_form.radio_button :payment_type, :invoice, disabled: (!@order.invoicable? || disabled), :class => 'checkout__payment checkout__payment--invoice' %>
+          <%= order_form.label :payment_type, 'Rekvisition', value: :invoice, class: 'label--inline' %>
+          <% unless @order.invoicable? %>
+            <div class="t-meta">
+              För att kunna betala mot rekvisition måste det totala ordervärdet överstiga <%= number_with_delimiter(Order::INVOICABLE_MINIMUM, delimiter: ' ')  %> kr.
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <%= order_form.submit 'Fortsätt till kortbetalning', data: { email: donor.email, cards_count: donor.order.cards.count, amount: number_to_currency(donor.order.calculate_total) }, :class => 'checkout__submit-card', style: 'display: none;' %>
+      <%= order_form.submit 'Genomför beställning', :class => 'checkout__submit-invoice', style: 'display: none;' %>
+
+      <div class="checkout-stripe">
+        <p class="checkout-stripe__info"><img src="<%= image_url "stripe-check.svg" %>" alt="" data-fallback="<%= image_url "stripe-check.png" %>"> Alla transaktioner krypteras för säker betalning.</p>
+        <p class="checkout-stripe__logo"><img src="<%= image_url "stripe-logo.svg" %>" alt="Betalningen sker via Stripe" data-fallback="<%= image_url "stripe-logo.png" %>">
+        </p>
+      </div>
+    </footer>
+  <% end %>

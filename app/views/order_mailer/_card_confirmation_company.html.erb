@@ -1,0 +1,27 @@
+<div>
+  <p>Hej <%= @order.donor.first_name %>!</p>
+
+  <p>Vi har nu skickat ert digitala gåvobevis till <%= @card.receiver %>, som vi hoppas blir riktigt glad!</p>
+
+  <p>Stort tack för att ni har bidragit till vårt arbete för allas rätt till rent vatten. Er gåva kommer leda till att ni både räddar och förändrar liv.</p>
+
+  <p>Klicka på länken nedan för att se hur ert gåvobevis ser ut:</p>
+  <p>
+    <%= link_to "Till gåvobeviset", card_url(@card.token), style: 'background:#0092c6;border-radius:28px;color:#fff;display:inline-block;font-size: 18px; font-weight: bold;padding:13px 22px;text-decoration:none;' %>
+  </p>
+
+  <p>Allt börjar med vatten!</p>
+
+  <p>
+    Vänliga hälsningar,<br>
+    Cecilia Chatterjee-Martinsen<br>
+    Generalsekreterare, WaterAid
+  </p>
+
+  <p>P.S. Ni följer väl vårt arbete på <a href="https://www.facebook.com/wateraidswe" style="color:#0092c6;">Facebook?</a>
+  <p>
+    <i>
+      <a href="http://www.wateraid.org/se" style="color:#0092c6;">Läs mer om WaterAid</a><br>
+    </i>
+  </p>
+</div>

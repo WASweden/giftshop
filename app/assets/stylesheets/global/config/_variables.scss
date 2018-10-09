@@ -1,0 +1,114 @@
+//
+// EM CALCULATOR
+// This function must be here since it's used below.
+$ds-em: 18px !default;
+@function ds-em-calc($pixels, $em-size: $ds-em) {
+  @return $pixels / $em-size * 1em;
+}
+
+//
+// GLOBALS
+//
+
+// Breakpoints
+$ds-breakpoint-smartphone: ds-em-calc(480px) !default;
+$ds-breakpoint-tablet-small: ds-em-calc(600px) !default;
+$ds-breakpoint-tablet: ds-em-calc(768px) !default;
+$ds-breakpoint-laptop: ds-em-calc(992px) !default;
+$ds-breakpoint-desktop: ds-em-calc(1200px) !default;
+$ds-breakpoint-desktop-large: ds-em-calc(1600px) !default;
+$ds-breakpoint-cinema: ds-em-calc(2146px) !default;
+
+// Breakpoints: Device specifc
+$ds-breakpoint-iphone-portrait: ds-em-calc(320px) !default;
+$ds-breakpoint-iphone-landscape: ds-em-calc(480px) !default;
+$ds-breakpoint-ipad-portrait: ds-em-calc(768px) !default;
+$ds-breakpoint-ipad-landscape: ds-em-calc(1024px) !default;
+
+// WaterAid Base Colors
+$ds-color-white: #fff !default;
+$ds-color-blue-light: #00aeef !default;
+
+// WaterAid Accent Colors
+$ds-color-blue-dark: #004e95 !default;
+$ds-color-yellow: #ffb500 !default;
+$ds-color-teal-background: #afc8cc;
+
+// Varje droppe räknas campaign colors
+$ds-color-campaign-blue: #009FDF !default;
+
+// WaterAid Web Colors
+$ds-color-black: #000 !default;
+$ds-color-grey-border: #b6b6b8 !default;
+$ds-color-grey-text: #6D6E72 !default;
+$ds-color-grey-text-light: #B0B0B0 !default;
+$ds-color-grey-background: #E5E5E5 !default;
+$ds-color-grey-background-border: #7F7F7F !default;
+
+$ds-color-background: $ds-color-white !default;
+$ds-color-background-light: #e7e7e7 !default;
+$ds-color-border: $ds-color-grey-border !default;
+$ds-color-heading: $ds-color-blue-light !default;
+$ds-color-heading-vibrant: $ds-color-blue-dark !default;
+$ds-color-highlight: $ds-color-black !default;
+$ds-color-link: $ds-color-blue-light !default;
+$ds-color-link-hover: $ds-color-blue-dark !default;
+$ds-color-link-focus: darken($ds-color-blue-dark, 10%) !default;
+$ds-color-text: $ds-color-grey-text !default;
+$ds-color-text-dark: $ds-color-black !default;
+$ds-color-text-light: $ds-color-grey-text !default;
+
+// Directions
+$ds-float: left !default;
+$ds-float-opposite: right !default;
+$ds-text-direction: ltr !default;
+
+// Fonts
+$ds-font-family: "MetaCompPro-NormalRegular", 'Helvetica Neue', Arial, sans-serif !default;
+
+$ds-font-family-bold: "MetaCompPro-BoldRegular", 'Helvetica Neue', Arial, sans-serif !default;
+$ds-font-family-black: "MetaCompPro-blackRegular", 'Helvetica Neue', Arial, sans-serif !default;
+
+$ds-font-family-complementary: Georgia, serif !default;
+$ds-font-size: 18px !default;
+$ds-font-smoothing: antialiased !default;
+$ds-font-style: normal !default;
+$ds-font-weight-light: 300 !default;
+$ds-font-weight: 400 !default;
+$ds-font-weight-bold: 600 !default;
+
+// Headings Base
+$ds-h1-font-size: ds-em-calc(60px) !default;
+$ds-h2-font-size: 1.6em !default;
+$ds-h3-font-size: ds-em-calc(22px) !default;
+$ds-h4-font-size: 1em !default;
+$ds-h5-font-size: .75em !default;
+$ds-h6-font-size: .75em !default;
+$ds-headings-line-height: 1.4 !default;
+
+// Headings Extra
+$ds-heading-hero-size: ds-em-calc(96px) !default;
+$ds-heading-page-size: ds-em-calc(60px) !default;
+$ds-heading-module-size: ds-em-calc(48px) !default;
+$ds-heading-module-2-size: ds-em-calc(30px) !default;
+$ds-heading-content-size: ds-em-calc(24px) !default;
+$ds-heading-content-2-size: ds-em-calc(18px) !default;
+$ds-heading-content-3-size: ds-em-calc(14px) !default;
+
+// Measure
+$ds-line-height: 1.666 !default;
+$ds-margin: ds-em-calc(20px) !default;
+$ds-padding: ds-em-calc(20px) !default;
+$ds-radius: ds-em-calc(5px);
+
+$ds-padding-smartphone-h: ds-em-calc(20px);
+$ds-padding-smartphone-v: ds-em-calc(20px);
+$ds-padding-smartphone: $ds-padding-smartphone-h $ds-padding-smartphone-v;
+
+$ds-padding-tablet-h: ds-em-calc(30px);
+$ds-padding-tablet-v: ds-em-calc(30px);
+$ds-padding-tablet: $ds-padding-tablet-h $ds-padding-tablet-v;
+
+$ds-padding-laptop-h: ds-em-calc(40px);
+$ds-padding-laptop-v: ds-em-calc(40px);
+$ds-padding-laptop: $ds-padding-laptop-h $ds-padding-laptop-v;

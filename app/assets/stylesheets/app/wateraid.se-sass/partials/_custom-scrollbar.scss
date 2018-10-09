@@ -1,0 +1,43 @@
+
+div.scroll-content {
+  position: relative;
+  
+  div.scrollbar-content-holder {
+    overflow: hidden;
+  
+  }
+  
+  div.custom-scrollbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    background-color: #ccc;
+    
+    a.scroll-up {
+      display: block;
+      width: 10px;
+      height: 10px;
+      background-color: #00ADEE;
+    }
+    
+    a.scroll-down {
+      display: block;
+      width: 10px;
+      height: 10px;
+      background-color: #00ADEE;
+    }
+    
+    div.dragger-holder {
+      
+      div.scroll-dragger {
+        width: 10px;
+        height: 20px;
+        background-color: #FEB913;
+      }
+      
+    }
+    
+  }
+  
+}

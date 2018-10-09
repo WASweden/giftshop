@@ -1,0 +1,53 @@
+// -----------------------------------------------------------------------------
+// Customer related pages
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+// Page: Your orders
+// URL: /kund
+// -----------------------------------------------------------------------------
+.your-orders__email {
+  max-width: 320px;
+}
+
+// -----------------------------------------------------------------------------
+// Page: Order overview
+// URL: /kund/bestallningar/[SECRET ID]
+// -----------------------------------------------------------------------------
+.orders {
+  margin-bottom: $column-gutter;
+
+  tr {
+    td {
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.orders__caption {
+  th {
+    padding-top: $column-gutter;
+  }
+
+  &:first-child {
+    th {
+      padding-top: 0;
+    }
+  }
+}
+
+.order__item__type {
+  img {
+    vertical-align: middle;
+  }
+}
+
+.order__item__type__not-created {
+  //color: red;
+}
+
+.orders__digital-sent {
+  color: $ds-color-blue-light;
+}

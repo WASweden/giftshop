@@ -1,0 +1,35 @@
+
+.intro {
+  background: image-url("intro-bg.jpg") no-repeat bottom center;
+  background-size: cover;
+  color: $ds-color-white;
+  //margin-top: $column-gutter;
+  margin-top: -1px;
+  padding-bottom: $column-gutter*2;
+  padding-top: $column-gutter*2;
+  position: relative;
+}
+
+.intro__content {
+  overflow: hidden;
+  position: relative;
+}
+
+.intro__title {
+  color: $ds-color-white;
+  font-family: $ds-font-family-black;
+  font-size: ds-em-calc(56px);
+  margin: 0 0 10px;
+}
+
+.intro__lead {
+  font-family: $ds-font-family-bold;
+  font-size: 1.3em;
+  margin-bottom: 0;
+}
+
+.intro__actions {
+  @extend %t-list-inline;
+  margin: 0;
+  padding-top: 1.5em;
+}

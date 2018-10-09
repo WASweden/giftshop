@@ -1,0 +1,85 @@
+@media print {
+  // ---------------------------------------------------------------------------
+  // General stuff
+  // ---------------------------------------------------------------------------
+  .header__cart,
+  .footer {
+    display: none;
+  }
+
+  // ---------------------------------------------------------------------------
+  // Card
+  // ---------------------------------------------------------------------------
+  .card {
+    font-family: sans-serif !important;
+  }
+
+  .card-holder {
+    min-height: 0;
+    padding-top: 0;
+  }
+
+  .card__print-image {
+    display: block;
+  }
+
+  .arg-jul {
+    left: 100px;
+    margin-left: 0;
+    img {
+
+    }
+  }
+
+  .card__title {
+    padding-top: 0;
+    padding-bottom: 0;
+    h1 {
+      font-size: 16pt;
+      margin-bottom: .5em;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  .card__message {
+    font-family: sans-serif !important;
+    padding: 0 0 $column-gutter 0;
+    text-align: center;
+  }
+
+  .card__info {
+    font-family: sans-serif !important;
+    padding-top: 0;
+
+    p {
+      font-family: sans-serif !important;
+      margin: 0;
+    }
+  }
+
+  .card__footer {
+    font-family: sans-serif !important;
+    padding-top: $column-gutter/2;
+
+    a:after {
+      content: '';
+    }
+
+    img {
+      float: none;
+      max-width: 130px;
+    }
+
+    p {
+      font-size: 8pt;
+    }
+  }
+
+  .card__actions,
+  .card__download {
+    display: none;
+  }
+}

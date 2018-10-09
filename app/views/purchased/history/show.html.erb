@@ -1,0 +1,14 @@
+<h1> Your purchase history </h1>
+<p> Orders </p>
+<ul>
+  <% @orders.each do |o| %>
+    <li>
+    <p>Placed at: <%= o.created_at %></p>
+    <ul>
+    <li>Number of cards: <%= o.cards.count %></li>
+    <li> <%= link_to 'link', purchased_order_path(o.id) %>
+    </ul>
+    </li>
+    <br/>
+  <% end %>
+</ul>

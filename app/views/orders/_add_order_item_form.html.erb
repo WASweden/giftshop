@@ -1,0 +1,43 @@
+<%= form_for(OrderItem.new) do |f| %>
+  <%= f.hidden_field :order_id, value: @order.id %>
+
+  <!-- TODO: Must be giftcard.subtype instead of hardcoded value -->
+  <%= f.hidden_field :subtype, value: "regular" %>
+
+  <div class="add-item__content">
+  <h2>Välj antal och typ av gåvobevis</h2>
+  Jag vill ha
+  <%= f.number_field :product_quantity, min: 1, max: 50, value: 1, class: "add-item__input--product_quantity", required: true %>
+  <%= f.select :product,{}, {}, { class: "add-item__input--product" } do %>
+    <%= options_for_select([["Digitalt gåvobevis", "DigitalCard"], ["Tryckt gåvobevis (+30kr avgift)", "AnalogCard"]]) %>
+  <% end %>
+
+  <div class="add-item__cards">
+    <div data-card="" class="add-item__card selected" data-subtype="regular">
+      <div class="add-item__card-title">Standard</div>
+      <div class="add-item__card-image">
+        <%= image_tag "cards/digital.jpg" %>
+      </div>
+      <div class="add-item__card-preview">
+        <span class="zoom-image" data-image="default">Förstora</span>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  Gåvobevis á
+  <%# This should be done in a better way %>
+  <% if quantity == "custom" %>
+    <!-- <%= f.number_field :quantity, min: Card::MINIMUM_QUANTITY, id: "new_custom_amount", class: "add-item__input--quantity" %> -->
+    <%= f.number_field :quantity, min: 1, id: "new_custom_amount", class: "add-item__input--quantity" %>
+  <% else %>
+    <%= f.hidden_field :quantity, value: quantity %>
+    <%= quantity %>
+  <% end %>
+  kr
+  </div>
+  <footer class="add-item__footer">
+    <%= f.submit "Lägg i varukorgen", class: "btn" %>
+  </footer>
+<% end %>
+<a class="close-reveal-modal" aria-label="Stäng">&#215;</a>

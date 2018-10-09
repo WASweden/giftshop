@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="49px" height="67px" viewBox="0 0 49 67" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path id="path-1" d="M0,0.163927273 L48.4155636,0.163927273 L48.4155636,66.8181818 L0,66.8181818"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Clip-2"></g>
+            <path d="M46.5935655,0.163481818 C18.0087473,0.880663636 3.15551091,17.1860818 0.34202,38.5313727 C-2.47236182,59.8793364 12.7408018,66.8177364 21.7229473,66.8177364 C30.7050927,66.8177364 46.6541473,61.0589 44.1765291,37.7001545 C41.72742,14.6193727 47.3713291,5.1793 48.23462,2.93955455 C49.0979109,0.699809091 46.5935655,0.163481818 46.5935655,0.163481818" id="Fill-1" fill="#0092c6" mask="url(#mask-2)"></path>
+        </g>
+    </g>
+</svg>

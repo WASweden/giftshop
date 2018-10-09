@@ -1,0 +1,115 @@
+<% title "Varukorg" %>
+<% description "Dina gåvobevis" %>
+
+<script src="https://checkout.stripe.com/checkout.js"></script>
+<script type="text/javascript">
+  var handler = StripeCheckout.configure({
+    key: '<%= Rails.application.secrets.stripe_publishable_key %>',
+    name: 'WaterAid Gåvoshop',
+    currency: 'SEK',
+    allowRememberMe: false,
+    image: '<%= image_path "wateraid-drop.png" %>',
+    token: function(token) {
+      $('#order_stripe_token').val(token.id);
+      $('form.checkout').submit();
+    }
+  });
+</script>
+
+<% if @cart.nil? || @cart.empty? %>
+  <div class="row cart-empty">
+    <div class="medium-10 medium-push-1 column">
+      <h1>Varukorg</h1>
+      <p class="t-meta">Din varukorg är tom. <br>Ge en gåva:</p>
+      <p><%= link_to 'Privatpersoner', root_path, class: 'button'%> <%= link_to 'Företag', company_path, class: 'button'%></p>
+
+      <hr>
+
+      <h3>Vill du veta mer?</h3>
+      <p><%= link_to 'Så fungerar det', info_path, class: 'button tiny'%> <%= link_to 'Frågor och svar', help_path, class: 'button tiny'%></p>
+    </div>
+  </div>
+
+<% else %>
+  <div class="cart row">
+    <div class="medium-10 medium-push-1 column">
+      <h1>Varukorg</h1>
+      <hr>
+      <h2>Gåvobevis</h2>
+
+      <table class="order__items">
+        <tr>
+          <th>Typ</th>
+          <th>Summa</th>
+          <th></th>
+        </tr>
+
+        <% has_analog = false %>
+        <% @cart.cards.order(created_at: :asc).each do |card| %>
+          <% has_analog = true if card.type == 'AnalogCard' %>
+          <% @donor.donor_type = :company if card.form_type == 'company' && @donor.new_record? %>
+          <tr class="order__item">
+            <td class="order__item__type">
+              <%= card %>
+
+              <% if card.type == 'DigitalCard' %>
+                <small>
+                  Gåvobeviset skickas
+
+                  <% if card.send_at == Date.today %>
+                    omgående
+                  <% else %>
+                    <%= card.send_at.strftime('%Y-%m-%d') %>
+                  <% end %>
+
+                  till
+
+                  <% if card.send_to_donor == true %>
+                    dig själv.
+                  <% else %>
+                    <%= card.receiver %>.
+                  <% end %>
+                </small>
+              <% end %>
+            </td>
+            <td class="order__item__price"><%= card.price %> kr</td>
+            <td class="order__item__actions">
+              <% if card.type == 'DigitalCard' %>
+                <%= link_to 'visa', preview_card_path(card.token), class: 'button-pill' %>
+              <% end %>
+              <%= link_to 'redigera', edit_card_path(card.token), class: 'button-pill' %>
+
+              <% if card.type == 'DigitalCard' %>
+                <%= link_to 'ta bort', card_path(card.token), class: 'button-pill', method: :delete, data: { confirm: "Vill du ta bort detta digitala gåvobevis för #{card.price} kr?" } %>
+              <% else %>
+                <%= link_to 'ta bort', card_path(card.token), class: 'button-pill', method: :delete, data: { confirm: "Vill du ta bort detta tryckta gåvobevis för #{card.price} kr?" } %>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </table>
+
+      <% if has_analog %>
+        <div class="cart__print-delivery">
+          Tryckta kort skickas hem till dig inom fyra arbetsdagar.
+        </div>
+      <% end %>
+
+      <div class="cart__total">
+        <h5>Totalt <%= @order.calculate_total %> kr</h5>
+      </div>
+
+      <div class="cart__buy-more">
+        <hr>
+        <h2>Beställ fler gåvobevis</h2>
+        <%= link_to 'Privatperson', root_path, class: 'button'%> <%= link_to 'Företag', company_path, class: 'button'%>
+      </div>
+
+
+    </div>
+  </div>
+
+  <%= render partial: 'form', locals: {donor: @donor, cart: @cart, disabled: false} %>
+<% end %>
+
+<div id='response-info'></div>

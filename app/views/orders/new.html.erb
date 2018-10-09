@@ -1,0 +1,171 @@
+<% html_classes "card-bg" %>
+<div class="row">
+  <div class="col-md-12" style="margin-top:20px;">
+    <div class="steps">
+      <ol>
+        <li class="steps__step steps__step--active">Välj antal <span>och typ</span></li>
+        <li class="steps__step">Betala</li>
+        <% unless @order.empty? %>
+          <% if @order.has_digital_cards? %>
+            <li class="steps__step">Skriv din hälsning</li>
+          <% else %>
+            <li class="steps__step">Klart!</li>
+          <% end %>
+        <% else %>
+          <li class="steps__step">Klart!</li>
+        <% end %>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <% unless @order.empty? %>
+      <section class="index__cart">
+        <div class="cart">
+          <%= render partial: "cart", locals: { order: @order, order_type: 'private' } %>
+        </div>
+      </section>
+
+      <section class="index__checkout-form--toggle">
+        <a href="#" class="button action show-checkout-form">Till betalning</a>
+      </section>
+
+      <div class="steps index__checkout-steps">
+        <ol>
+          <li class="steps__step">Beställ</li>
+          <li class="steps__step steps__step--active">Betala</li>
+          <% if @order.has_digital_cards? %>
+            <li class="steps__step">Skapa gåvobevis</li>
+          <% else %>
+            <li class="steps__step">Klart!</li>
+          <% end %>
+        </ol>
+      </div>
+
+      <section class="index__checkout-form">
+        <%= render partial: "donor", locals: { order: @order, order_type: 'private', donor: @donor } %>
+      </section>
+    <% else %>
+      <!-- <section class="index__empty">
+        <div class="index__empty__info">
+          <%= image_tag 'arrow-up.svg', alt: '', class: 'index__empty__arrow', data: { 'fallback': image_path('arrow-up.png') } %>
+
+          <p>
+            Din varukorg är tom.<br>Välj ett eller flera gåvobevis ovan.
+          </p>
+        </div>
+      </section> -->
+    <% end %>
+
+</div>
+
+
+<!-- Modals -->
+<div class="index">
+  <section class="cards">
+
+  <!-- List of giftcards -->
+    <ul class="index__products" data-equalizer>
+      <li data-equalizer-watch>
+        <article class="product product--card">
+          <div class="product__picture">
+            <%= image_tag "order-items/200.jpg" %>
+          </div>
+          <div class="product__description">
+            <p>Ge <strong>1</strong> person tillgång till rent vatten och förändra liv.</p>
+          </div>
+          <div class="product__price">
+            200 kr
+          </div>
+          <div class="product__actions">
+            <button class="button product__actions__button card-200" data-reveal-id="modal-card-200">Beställ</button>
+          </div>
+        </article>
+      </li>
+      <li data-equalizer-watch>
+        <article class="product product--card">
+          <div class="product__picture">
+            <%= image_tag "order-items/400.jpg" %>
+          </div>
+          <div class="product__description">
+            <p>Ge <strong>2</strong> personer tillgång till rent vatten och förändra liv.</p>
+          </div>
+          <div class="product__price">
+            400 kr
+          </div>
+          <div class="product__actions">
+            <button class="button product__actions__button card-400" data-reveal-id="modal-card-400">Beställ</button>
+          </div>
+        </article>
+      </li>
+      <li data-equalizer-watch>
+        <article class="product product--card">
+          <div class="product__picture">
+            <%= image_tag "order-items/600.jpg" %>
+          </div>
+          <div class="product__description">
+            <p>Ge <strong>3</strong> personer tillgång till rent vatten och förändra liv.</p>
+          </div>
+          <div class="product__price">
+            600 kr
+          </div>
+          <div class="product__actions">
+            <button class="button product__actions__button card-600" data-reveal-id="modal-card-600">Beställ</button>
+          </div>
+        </article>
+      </li>
+      <li data-equalizer-watch>
+        <article class="product product--card">
+          <div class="product__picture">
+            <%= image_tag "order-items/valfritt.jpg" %>
+          </div>
+          <div class="product__description">
+            <p>Valfritt belopp (minimum 50 kr)</p>
+          </div>
+          <div class="product__price">
+            <input type="number" id="custom_amount" name="custom_amount" value="50">
+          </div>
+          <div class="product__actions">
+            <button class="button product__actions__button card-custom" data-reveal-id="modal-card-custom">Beställ</button>
+          </div>
+        </article>
+      </li>
+    </ul>
+
+    <!-- /. end list of giftcards -->
+  </section>
+
+
+  <!-- List all giftcards -->
+  <% @giftcards.each do |g| %>
+    <% if g.in_which_store == 'privat' %>
+      <%= g.name %>
+    <% end %>
+  <% end %>
+
+<!-- Modals for each giftcard -->
+  <section class="product__modals">
+    <div id="modal-card-200" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+      <%= render partial: 'add_order_item_form', locals: { quantity: 200 } %>
+    </div>
+    <div id="modal-card-400" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+      <%= render partial: 'add_order_item_form', locals: { quantity: 400 } %>
+    </div>
+    <div id="modal-card-600" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+      <%= render partial: 'add_order_item_form', locals: { quantity: 600 } %>
+    </div>
+    <%# Should have an input %>
+    <div id="modal-card-custom" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+      <%= render partial: 'add_order_item_form', locals: { quantity: "custom" } %>
+    </div>
+
+    <div id="modal-zoom-default" class="modal-zoom">
+      <%= image_tag "cards/digital.jpg" %>
+    </div>
+  </section>
+
+  <!-- /. end modals for each giftcard -->
+</div>
+<!-- ./Modals -->

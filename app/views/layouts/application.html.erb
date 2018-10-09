@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html class="no-js <%= content_for?(:html_classes) ? yield(:html_classes) : '' %>" lang="sv">
+  <head>
+    <%= render 'shared/head' %>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="/app.css" crossorigin="anonymous">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+
+  </head>
+  <body>
+    <header>
+    <div class="container">
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <div class="row">
+          <div class="col">
+            <a href="/"><img src="/img/WATERAID_WHI_LOGO.png" alt="WaterAid Sverige Gåvoshop"></a>
+          </div>
+          <div class="col">
+            <span class="cart-box text-center invisible">
+              <span class="cart-icon"><i class="fas fa-shopping-cart fa-2x align-middle"></i></div>
+            </span>
+          </div>
+        </div>
+      <!-- /Toolbar -->
+      <div class="messaging">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="wateraid-text-bubble bg-primary text-white">
+                <h1>WaterAid | Gåvoshop</h1>
+                <% if request.path == '/foretag' %>
+                <p>Beställ ett gåvobevis och ge bort rent vatten som present till en medarbetare, kund eller som ett talartack.</p>
+                <% else %>
+                <p>Ge bort rent vatten. En gåva som garanterat förandrar liv! Du får ett fint gåvobevis att ge bort.</p>
+                <% end %>
+              </div>
+            </div>
+            <div class="col-md-2 offset-md-6 text-right">
+              <% if request.path == '/foretag' %>
+                <%= link_to "För privatpersoner", root_path, class: 'btn btn-primary', style: "margin-top:130px;" %>
+              <% else %>
+                <%= link_to "Beställ som företag", company_path, class: 'btn btn-primary', style: "margin-top:130px;" %>
+              <% end %>
+
+            </div>
+          </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <%= yield %>
+  </div>
+
+
+
+    <%= render 'shared/footer' %>
+
+    <%= javascript_include_tag 'application' %>
+  </body>
+</html>

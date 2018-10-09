@@ -1,0 +1,26 @@
+article.news-resources{
+  
+  @include border-left-grid(#ccc);
+  h3{
+    margin: 0 0 15px 0;
+    font-family: $font-family-bold;
+  }
+  
+  ul{
+    display:block;
+    list-style: none;
+    padding:0;
+    margin:0;
+    margin-bottom: 30px;
+    
+    li{
+      margin-bottom:10px;
+      line-height:1;
+      
+      a{
+        @include list-link-style($font-family-default);
+      }
+    }
+  }
+  
+}

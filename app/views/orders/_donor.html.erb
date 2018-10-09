@@ -1,0 +1,164 @@
+<h2>Kontaktuppgifter</h2>
+<script src="https://checkout.stripe.com/checkout.js"></script>
+<script type="text/javascript">
+  var handler = StripeCheckout.configure({
+    key: '<%= Rails.application.secrets.stripe_publishable_key %>',
+    name: 'WaterAid Gåvoshop',
+    currency: 'SEK',
+    allowRememberMe: false,
+    image: '<%= image_path "wateraid-drop.png" %>',
+    token: function(token) {
+      $('#order_stripe_token').val(token.id);
+      $('form.checkout').submit();
+    }
+  });
+</script>
+<% is_company_order = order_type == 'company' %>
+
+<%= form_for order, url: cart_path, :html => { :class => 'checkout' }, :data => {'parsley-validate' => '', 'rr-name' => 'checkout-form' } do |order_form| %>
+  <%= order_form.hidden_field :stripe_token %>
+
+  <%= order_form.fields_for :donor do |donor_form| %>
+    <div class="row">
+      <% if is_company_order %>
+        <div class="column form-item">
+          <p class="t-center">Vid en gåva på minst <%= number_with_delimiter(Order::INVOICABLE_MINIMUM, delimiter: ' ') %> kr kan ni betala via rekvisition.</p>
+        </div>
+      <% end %>
+
+      <div class="column form-item checkout__company">
+        <% if is_company_order %>
+          <%= donor_form.check_box :donor_type, {disabled: false, checked: true}, 'company', 'person' %>
+        <% else %>
+          <%= donor_form.check_box :donor_type, {disabled: false}, 'company', 'person' %>
+        <% end %>
+        <%= donor_form.label :donor_type, 'Vi är ett företag/organisation', class: 'label--inline' %>
+      </div>
+
+      <div class="checkout__company-fields row" id="checkout-company-info">
+        <div class="medium-6 column form-item">
+          <h5><%= donor_form.label :company, 'Företagsnamn' %> *</h5>
+          <%= donor_form.text_field :company, disabled: false, class: 'checkout__company-name' %>
+        </div>
+
+        <div class="medium-6 column form-item">
+          <h5><%= donor_form.label :org_number, 'Organisationsnummer' %> *</h5>
+          <%= donor_form.text_field :org_number, disabled: false, class: 'checkout__company-orgnr' %>
+        </div>
+      </div>
+
+      <% unless is_company_order %>
+      <div class="column form-item ">
+        <label>Personnummer (12 siffror)</label>
+        <input id="fetch-personal-number-input" maxlength="12" placeholder="ÅÅÅÅMMDDXXXX">
+        <div class="checkout--prefill-button">
+          <button id="fetch-personal-number-button" class="button" disabled>Hämta information</button>
+        </div>
+      </div>
+      <% end %>
+
+      <div class="medium-6 column form-item">
+        <h5><%= donor_form.label :first_name, 'Förnamn' %> *</h5>
+        <%= donor_form.text_field :first_name, disabled: false, class: 'checkout__firstname', :data => {'parsley-required' => '', 'parsley-required-message' => 'Ange ditt förnamn.'} %>
+      </div>
+      <div class="medium-6 column form-item">
+        <h5><%= donor_form.label :last_name, 'Efternamn' %> *</h5>
+        <%= donor_form.text_field :last_name, disabled: false, class: 'checkout__lastname', :data => {'parsley-required' => '', 'parsley-required-message' => 'Ange ditt efternamn.'} %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="medium-6 column form-item">
+        <h5><%= donor_form.label :email, 'E-post' %> *</h5>
+        <%= donor_form.email_field :email, disabled: false, class: 'checkout__email', :data => {'parsley-required' => '', 'parsley-required-message' => 'Ange din e-postadress.', 'parsley-type-message' => 'Ange en giltig e-postadress.'} %>
+      </div>
+      <div class="medium-6 column form-item">
+        <h5><%= donor_form.label :phone, 'Telefon' %> <span class="checkout__phone--star"></span></h5>
+        <%= donor_form.text_field :phone, disabled: false, class: 'checkout__phone' %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="medium-12 column form-item">
+        <h5><%= donor_form.label :address, 'Adress' %> *</h5>
+        <%= donor_form.text_field :address, disabled: false, class: 'checkout__adress', :data => {'parsley-required' => '', 'parsley-required-message' => 'Ange din adress.'} %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="medium-5 column form-item">
+        <h5><%= donor_form.label :post_code, 'Postnummer' %> *</h5>
+        <%= donor_form.text_field :post_code, maxlength: 5, disabled: false, class: 'checkout__postal-code', :data => {'parsley-required' => '', 'parsley-required-message' => 'Ange ditt postnr.', 'parsley-type' => 'integer', 'parsley-type-message' => 'Postnr får bara innehålla siffror', 'parsley-minlength' => '5', 'parsley-minlength-message' => 'Postnr måste innehålla minst 5 siffror'} %>
+      </div>
+      <div class="medium-7 column form-item">
+        <h5><%= donor_form.label :city, 'Ort' %> *</h5>
+        <%= donor_form.text_field :city, disabled: false, class: 'checkout__city', :data => {'parsley-required' => '', 'parsley-required-message' => 'Ange din ort.'} %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="medium-6 column form-item">
+        <h5><%= donor_form.label :country_code, 'Land' %> *</h5>
+        <%= donor_form.country_code_select :country_code, [[ 'Sverige', 'SE' ]], disabled: false, class: 'checkout__country' %>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="checkout-payment column form-item">
+      <h3>Betala med</h3>
+
+      <div class="checkout-payment-option">
+        <%= order_form.radio_button :payment_type, :card, disabled: false, class: 'checkout__payment checkout__payment--card' %>
+        <label for="payment_type" class="label--inline" value="card">Kort <span style="font-size:0.7rem;">(Nordea-kunder: Läs <a href="http://www.nordea.se/privat/vardagstjanster/kort/Internetkop.html" target="_blank">dessa instruktioner</a> innan ni påbörjar betalningen)</span></label>
+        <% #order_form.label :payment_type, '', value: :card, :class => 'label--inline' %>
+      </div>
+
+      <div class="checkout-payment-option">
+        <%= order_form.radio_button :payment_type, :swish, disabled: false, class: 'checkout__payment checkout__payment--swish' %>
+        <%= order_form.label :payment_type, 'Swish', value: :swish, :class => 'label--inline' %>
+      </div>
+
+      <% if is_company_order %>
+        <div class="checkout-payment-option">
+          <%= order_form.radio_button :payment_type, :invoice, disabled: (!@order.invoicable? || false), :class => 'checkout__payment checkout__payment--invoice' %>
+          <%= order_form.label :payment_type, 'Rekvisition', value: :invoice, class: 'label--inline' %>
+
+        </div>
+        <% #unless @order.invoicable? %>
+          <div class="text-muted" style="font-size:0.7rem;">
+            Vid en gåva på minst <%= number_with_delimiter(Order::INVOICABLE_MINIMUM, delimiter: ' ') %> kr kan ni betala via rekvisition. Men vi föredrar kortbetalning för att hålla våra administrationskostnader nere. Rekvisition skickas till beställarens e-post.
+          </div>
+        <% #end %>
+      <% end %>
+    </div>
+  </div>
+
+
+  <div class="row checkout-swish-number" style="display: none;">
+    <div class="medium-6 column form-item">
+      <h5><%= order_form.label :swish_number, 'Telefonnummer för Swish-betalning' %> *</h5>
+      <%= order_form.text_field :swish_number, class: 'checkout__phone-swish' %>
+    </div>
+  </div>
+
+  <footer class="checkout-footer">
+
+  <%= order_form.submit 'Fortsätt med Swish', data: { email: donor.email, cards_count: donor.order.total_card_count, amount: number_to_currency(donor.order.calculate_total) }, :class => 'checkout__submit-swish', style: 'display: none;' %>
+  <%= order_form.submit 'Fortsätt till kortbetalning', data: { email: donor.email, cards_count: donor.order.total_card_count, amount: number_to_currency(donor.order.calculate_total) }, :class => 'checkout__submit-card', style: 'display: none;' %>
+  <%= order_form.submit 'Genomför beställning', :class => 'checkout__submit-invoice', style: 'display: none;' %>
+
+  <div class="checkout-stripe">
+    <p class="checkout-stripe__info" style="display:none;">
+      OBS! För dig som är Nordeakund, vänligen läs <a target="_blank" href="http://www.nordea.se/privat/vardagstjanster/kort/Internetkop.html" rel="noopener noreferrer">dessa instruktioner</a> innan ni påbörjar betalningen.
+    </p>
+    <p class="checkout-stripe__info"><img src="<%= image_url "stripe-check.svg" %>" alt="" data-fallback="<%= image_url "stripe-check.png" %>"> Alla transaktioner krypteras för säker betalning.</p>
+    <p class="checkout-stripe__logo"><img src="<%= image_url "stripe-logo.svg" %>" alt="Betalningen sker via Stripe" data-fallback="<%= image_url "stripe-logo.png" %>">
+    </div>
+  </div>
+<hr>
+  <p class="checkout-footer__privacy-notice" style="font-size:0.7rem;">
+    För att uppdatera dig med relevant information och om hur dina pengar används registrerar vi dina uppgifter i vår databas. Vi behandlar dina personuppgifter i enlighet med dataskyddsförordningen (GDPR) med den rättsliga grunden berättigat intresse. Du har alltid rätt att kontakta oss för att ändra eller ta bort information. Läs mer om hur vi hanterar personuppgifter i vår integritetspolicy på vår hemsida, <a href="https://www.wateraid.org/se/integritetspolicy" target="_blank">wateraid.se/integritet</a>.
+  </p>
+  </footer>
+<% end %>

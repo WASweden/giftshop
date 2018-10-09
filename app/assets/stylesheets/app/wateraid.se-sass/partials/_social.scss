@@ -1,0 +1,68 @@
+#share-toolbar {
+  float: right;
+}
+
+.article-description ul.social-bar li {
+	padding-right:8px;
+}
+
+ul.social-bar {
+  display: block;
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  
+  li {
+    display: block;
+    float: left;
+    
+    &.share {
+      font-size: $share-font-size;
+      line-height:1;
+      color: #00adee;
+
+	  span {
+		margin-top:5px;
+		display:inline-block;
+	  }
+    }
+  }
+  
+  a {
+    display: block;
+    width: 26px;
+    height: 20px;
+	margin-top:5px;
+  }
+  
+  .twitter {
+    background: url('/img/common/social/twitter.jpg') no-repeat;
+  }
+  
+  .facebook {
+    background: url('/img/common/social/facebook.jpg') no-repeat;
+  }
+  
+  .email {
+    background: url('/img/common/social/email.jpg') no-repeat;
+  }
+  
+  li.last {
+    @include border-left(#ccc, 10px);
+    padding: 0 10px;
+    
+    a {
+      width: auto;
+    }
+  }
+}
+
+#share-toolbar .facebook .fb-like,
+#share-toolbar .twitter .twitter-share-button {
+  visibility:hidden;
+}
+
+// hide the fb comment box
+.fb-like.fb_edge_widget_with_comment {
+  position: absolute;
+}

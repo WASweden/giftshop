@@ -1,0 +1,187 @@
+.digital-card {
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem 1rem 2.5rem;
+
+  @media #{$medium-up} {
+    padding: 2.5rem;
+  }
+
+  p {
+    margin: 1.25rem 0;
+    font-size: ds-em-calc(20px);
+    color: $ds-color-campaign-blue;
+    text-align: center;
+
+    @media #{$medium-up} {
+      font-size: ds-em-calc(30px);
+    }
+  }
+
+  &-header {
+    width: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &-content {
+    max-width: 650px;
+    margin: 0 auto;
+
+    &__title {
+      margin: 2.25rem 0!important;
+    }
+
+    &__generated {
+      p { color: $ds-color-black; }
+      line-height: normal;
+      margin-bottom: 2.25rem;
+    }
+
+    &__message {
+      font-style: italic;
+      line-height: normal;
+    }
+  }
+
+  &-footer {
+    margin-top: 3.125rem;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+    small {
+      display: block;
+      width: 100%;
+      max-width: 700px;
+      margin: 1rem auto 0;
+      font-size: ds-em-calc(12px);
+      text-align: justify;
+      color: $ds-color-black;
+
+      @media #{$medium-up} {
+        font-size: ds-em-calc(14px);
+      }
+
+      span { display: inline-block /* Opera */; padding-left: 100%; }
+    }
+    a {
+      color: $ds-color-black;
+    }
+  }
+
+
+  &.xmas {
+    background-color: #7694b0;
+    background-image: image_url('card/card-xmas.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: auto 700px;
+
+     @media #{$medium-up} {
+      background-size: auto;
+      background-position: center -220px;
+     }
+
+    .digital-card-header__title {
+      margin-top: ds-em-calc(140px);
+      font-weight: normal;
+      font-size: ds-em-calc(45px);
+      text-align: center;
+      color: $ds-color-campaign-blue;
+
+      @media #{$medium-up} {
+        margin-top: ds-em-calc(105px);
+        font-size: ds-em-calc(75px);
+      }
+
+      &.english {
+        margin-top: ds-em-calc(215px);
+        font-size: ds-em-calc(30px);
+
+        @media #{$medium-up} {
+          margin-top: ds-em-calc(150px);
+          font-size: ds-em-calc(55px);
+        }
+      }
+    }
+
+    .digital-card-content {
+      position: relative;
+      margin: 75px auto 0;
+
+      @media #{$medium-up} {
+        max-width: 620px;
+        margin: 150px auto 0;
+      }
+
+      &__generated {
+        p { color: $ds-color-black; }
+        margin-top: 3.25rem;
+        margin-bottom: 0;
+      }
+
+      &__message {
+        font-style: italic;
+        line-height: normal;
+
+        p {
+          font-size: ds-em-calc(20px);
+          margin: 1.25rem 0;
+          color: $ds-color-black;
+
+          br {
+            display: none;
+
+            @media #{$medium-up} {
+              display: inline;
+            }
+          }
+
+          @media #{$medium-up} {
+            font-size: ds-em-calc(25px);
+          }
+        }
+      }
+    }
+
+    .digital-card-footer {
+      margin-top: ds-em-calc(50px);
+    }
+  }
+}
+
+.digital-card.xmas2 {
+  .digital-card-header {
+    text-align: center;
+
+    img {
+      display: inline-block;
+      width: auto;
+      max-height: 500px;
+    }
+  }
+
+  .digital-card-content__message {
+    font-style: normal;
+
+    p {
+      font-size: ds-em-calc(16px);
+
+      @media #{$medium-up} {
+        font-size: ds-em-calc(22px);
+      }
+    }
+
+    h3 {
+      text-align: center;
+      font-size: ds-em-calc(42px);
+    }
+  }
+
+}

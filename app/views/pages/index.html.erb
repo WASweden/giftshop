@@ -1,0 +1,141 @@
+<% html_classes "card-bg" %>
+
+<div class="index">
+
+  <ul class="index__products">
+    <li>
+    <article class="product product--card">
+      <div class="product__picture"></div>
+      <div class="product__price">
+        100 kr
+      </div>
+      <div class="product__actions">
+        <button class="button card-100" data-reveal-id="modal-card">+</button>
+      </div>
+    </article>
+  </li>
+  <li>
+    <article class="product product--card">
+      <div class="product__picture"></div>
+      <div class="product__price">
+        200 kr
+      </div>
+      <div class="product__actions">
+        <button class="button card-200" data-reveal-id="modal-card">+</button>
+      </div>
+    </article>
+  </li>
+  <li>
+    <article class="product product--card">
+      <div class="product__picture"></div>
+      <div class="product__price">
+        500 kr
+      </div>
+      <div class="product__actions">
+        <button class="button card-500" data-reveal-id="modal-card">+</button>
+      </div>
+    </article>
+  </li>
+  <li>
+    <article class="product product--card">
+      <div class="product__picture"></div>
+      <div class="product__price">
+        <input>
+      </div>
+      <div class="product__actions">
+        <button class="button card-custom" data-reveal-id="modal-card">+</button>
+      </div>
+    </article>
+  </li>
+  </ul>
+
+  <div id="modal-card" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+    <%# This should be a form to create a new card %>
+    <h2 id="modalTitle">Hur många kort vill du beställa?</h2>
+    <p>
+      Jag vill ha
+      <input type="number" style="width: 60px; display: inline-block"> st och vill ha dom som
+
+      <select style="width: 200px; display: inline-block">
+        <option>digitalt kort</option>
+        <option>tryckt (+20 kr/st)</option>
+      </select>
+    </p>
+    <a href="#" class="button">Beställ</a>
+    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+  </div>
+
+  <section class="index__cart">
+    <div class="cart">
+      <h2>Varukorg</h2>
+      <table class="order__items">
+        <thead>
+          <tr>
+            <th width="60px">Antal</th>
+            <th>Typ</th>
+            <th width="100px">Kostnad</th>
+            <th width="25px"></th>
+          </tr>
+        </thead>
+
+        <% unless @cart.empty? %>
+          <tfoot>
+            <tr>
+              <td></td>
+              <td></td>
+              <td><%= @order.calculate_total %> Kr</td>
+              <td></td>
+            </tr>
+          </tfoot>
+        <% end %>
+
+        <tbody>
+        <% if @cart.empty? %>
+          <tr class="order__item--empty-cart">
+            <td colspan="4"><em>Din varukorg är tom</em></td>
+          </tr>
+        <% else %>
+          <% has_analog = false %>
+          <% @cart.cards.order(created_at: :asc).each do |card| %>
+            <% has_analog = true if card.type == 'AnalogCard' %>
+            <% @donor.donor_type = :company if card.form_type == 'company' && @donor.new_record? %>
+            <tr class="order__item">
+              <td class="order__item__quantity">
+                <%# form for changing quantity of card %>
+                <input>
+              </td>
+              <td class="order__item__type"><%= card %></td>
+              <td class="order__item__price"><%= card.price %> Kr</td>
+              <td class="order__item__actions">
+                <%# need to fix redirect %>
+                <%= link_to 'X', card_path(card.token), class: 'button-pill', method: :delete, data: { confirm: "Vill du ta bort detta digitala gåvobevis för #{card.price} kr?" } %>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+        </tbody>
+      </table>
+
+      <% if has_analog %>
+        <div class="cart__print-delivery">
+          Tryckta kort skickas hem till dig inom fyra arbetsdagar.
+        </div>
+      <% end %>
+
+      <div class="cart__actions">
+        <button class="button">Uppdatera</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="index__checkout-form--toggle">
+    <a href="#" class="button show-checkout-form">Till Betalning</a>
+  </section>
+
+
+
+  <section class="index__checkout-form">
+    <h2>Betalning</h2>
+    <%= render partial: 'form', locals: {donor: @donor, cart: @cart, disabled: false} %>
+  </section>
+

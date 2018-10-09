@@ -1,0 +1,144 @@
+#detail-page {
+  
+  section.detail-page-header {
+    width: 998px;
+    margin-top: -120px;
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+    padding: 36px;
+    
+    &:first-child{
+      background: transparent url("/img/common/brush-section-header.png") no-repeat center 0;
+      margin-top: 0;
+      padding: 85px 110px 50px 110px;
+
+      .detail-page-donation {
+        top: 90px;
+        right: 130px;
+      }
+    }
+        
+    h2 {
+      color: #00adee;
+      font-size: 72px;
+      line-height: 72px;
+      font-family: $font-family-black;
+      letter-spacing: $page-header-letter-spacing;
+      margin-bottom: 20px;
+      width: 680px;
+    }
+    
+    p {
+      font-family: $font-family-normal;
+      color: #00adee;
+      font-size: 1.6em;
+      line-height: 1.2;
+      width: 680px;
+      margin-bottom: 0;
+    }
+    
+    div.detail-page-donation {
+      position: absolute;
+      top: 40px;
+      right: 50px;
+      width: 200px;
+      
+      h3 {
+        color: $font-color-loud;
+        font-size: $font-size-medium;
+        margin-bottom: 0;
+      }
+      
+      span{
+        display: block;
+      }
+      
+      .button-donate span.caret{
+        display: inline-block;
+      }
+    }
+  }
+
+  .content-with-sidebar {
+    padding-top: 50px;
+    border-top: 5px solid #ccc;
+    
+    section.main-content {
+      
+      section.detail-page-content {
+        @include column(8);
+        display:block;
+        float: none;
+        
+        article {
+        
+          h3 {
+            margin-top:0;
+            font-size: $h3-detail-font-size;
+            line-height: $h3-detail-font-size + 2px;
+          }
+          
+          ul.detail-list{
+            background: #f7f7f7;
+            padding: 15px 30px;
+            font-family: $font-family-normal;
+            
+            li{
+              
+              span{
+                font-family: $font-family-bold;
+              }
+            }
+          }
+          
+          &.first {
+            padding-top: 0;
+          }
+          
+          &.last {
+            padding-bottom: 0;
+            border-bottom: none;
+          }
+        }
+      }
+      
+      section.gallery {
+        div.section-header {
+          margin-bottom: 40px;
+        }
+      }
+    }
+    
+    aside.sidebar {
+      article {
+        border-bottom: none;
+        overflow: visible;
+        margin-bottom: 20px;
+        
+        &.border{
+          @include border-bottom;
+        }
+
+        &.support-we-give{
+          @include border-top-hairline(#B6B6B8);
+          font-size:$font-size-small;
+          
+          h3{
+            padding: 15px 0;
+          }
+          
+          ul{
+            margin-top:10px;
+          }
+        }
+      }
+    }
+    
+    &.no-border{
+      @include no-border;
+      padding-top:0;
+    }
+  }
+  
+}

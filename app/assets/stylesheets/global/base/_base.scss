@@ -1,0 +1,342 @@
+// -----------------------------------------------------------------------------
+// Setup
+// -----------------------------------------------------------------------------
+
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+  @include font-smoothing();
+}
+
+html,
+body {
+  background: $ds-color-background;
+  color: $ds-color-text;
+  font-family: $ds-font-family;
+  font-size: $ds-font-size;
+  font-style: $ds-font-style;
+  font-weight: $ds-font-weight;
+  height: auto;
+}
+
+html {
+  direction: $ds-text-direction;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: $ds-line-height;
+  position: relative;
+}
+
+// -----------------------------------------------------------------------------
+// Links
+// -----------------------------------------------------------------------------
+
+a,
+a:active {
+  @include ds-transition;
+  color: $ds-color-link;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: $ds-color-link-hover;
+  outline: none;
+}
+
+a:focus {
+  color: $ds-color-link-focus;
+}
+
+a:link {
+  -webkit-tap-highlight-color: $ds-color-highlight;
+}
+
+// -----------------------------------------------------------------------------
+// Headings
+// -----------------------------------------------------------------------------
+
+%h1-6 {
+  color: $ds-color-heading;
+  font-family: $ds-font-family-bold;
+  font-weight: normal;
+  line-height: $ds-headings-line-height;
+  margin: .5em 0 .2em;
+
+  a {
+    //color: $ds-color-link;
+    font-weight: inherit;
+  }
+
+  small {
+    color: $ds-color-text;
+  }
+}
+
+%h1 {
+  @extend %h1-6;
+  color: #000;
+  font-family: $ds-font-family-black;
+  font-size: $ds-h1-font-size;
+  font-weight: normal;
+  letter-spacing: -2px;
+  line-height: 1.2;
+  margin-bottom: .75em;
+  text-transform: none;
+}
+h1 {
+  @extend %h1;
+}
+
+%h2 {
+  @extend %h1-6;
+  color: $ds-color-blue-light;
+  font-family: $ds-font-family-bold;
+  font-size: $ds-h2-font-size;
+  letter-spacing: -1px;
+}
+h2 {
+  @extend %h2;
+}
+
+%h3 {
+  @extend %h1-6;
+  font-size: $ds-h3-font-size;
+  font-family: $ds-font-family-bold;
+  letter-spacing: -1px;
+  text-transform: none;
+}
+h3 {
+  @extend %h3;
+}
+
+%h4,
+%h5,
+%h6 {
+  @extend %h1-6;
+  color: $ds-color-text;
+  font-size: $ds-h4-font-size;
+  font-family: $ds-font-family-bold;
+  margin: 0;
+}
+h4,
+h5,
+h6 {
+  @extend %h4;
+}
+
+// -----------------------------------------------------------------------------
+// Body text
+// -----------------------------------------------------------------------------
+
+p {
+  margin: 0 0 $ds-margin;
+}
+
+hr {
+  border: 1px solid #e9e8e8;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: ($ds-margin*2) 0 (($ds-margin*2) - ds-em-calc(1px));
+  height: 0;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+q:before {
+  //content: '“';
+}
+
+blockquote:after,
+q:after {
+  //content: '”';
+}
+
+blockquote {
+  font-size: 1.4em;
+  font-style: italic;
+  font-weight: $ds-font-weight;
+  line-height: 1.6;
+  margin: 0 0 $ds-margin;
+  position: relative;
+
+  cite {
+    display: block;
+  }
+
+  a,
+  a:visited {
+    color: #666;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+q {
+  font-style: italic;
+}
+
+strong,
+b {
+  color: #000;
+  font-family: $ds-font-family-bold;
+  font-weight: normal;
+  line-height: inherit;
+}
+
+em,
+dfn,
+i {
+  font-style: italic;
+  line-height: inherit;
+}
+
+dfn {
+  font-weight: $ds-font-weight-bold;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted $ds-color-text;
+  color: $ds-color-text;
+  cursor: help;
+  text-transform: uppercase;
+}
+
+abbr {
+  text-transform: none;
+}
+
+cite {
+  font-style: normal;
+}
+
+del {
+  color: $ds-color-text-light;
+  text-decoration: line-through;
+}
+
+mark {
+  background: $ds-color-highlight;
+  color: $ds-color-text;
+  font-weight: $ds-font-weight;
+  padding: 0 ds-em-calc(3px);
+}
+
+ins {
+  background: $ds-color-highlight;
+  color: $ds-color-text;
+  font-style: italic;
+  font-weight: $ds-font-weight;
+  padding: 0 ds-em-calc(3px);
+  text-decoration: none;
+}
+
+pre {
+  margin: $ds-margin 0;
+  padding: ds-em-calc(12px);
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+
+pre,
+code,
+tt,
+kbd,
+samp {
+  font-family: monospace, sans-serif;
+  font-weight: normal;
+}
+
+sup,
+sub {
+  line-height: 90%;
+}
+
+sub {
+  font-size: smaller;
+  vertical-align: sub;
+}
+
+sup {
+  font-size: smaller;
+  vertical-align: super;
+}
+
+small {
+  font-size: ds-em-calc(14px);
+}
+
+kbd {
+  background: $ds-color-background-light;
+  border: 1px solid $ds-color-border;
+  border-radius: ds-em-calc(4px);
+  font: normal normal 0.8em/90% sans-serif;
+  margin: 0 ds-em-calc(4px);
+  padding: ds-em-calc(2px) ds-em-calc(6px);
+}
+
+address {
+  font-style: normal;
+}
+
+::selection {
+  background: $ds-color-text;
+  color: #fff;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: $ds-color-text;
+  color: #fff;
+  text-shadow: none;
+}
+
+// -----------------------------------------------------------------------------
+// Lists
+// -----------------------------------------------------------------------------
+
+ul,
+ol {
+  list-style: disc inside;
+  margin: 0 0 $ds-margin;
+  padding: 0;
+}
+
+li ul,
+li ol {
+  margin-#{$ds-float}: $ds-margin;
+  margin-bottom: 0;
+}
+
+dl {
+  margin: 0 0 $ds-margin;
+}
+
+dt {
+  font-weight: $ds-font-weight-bold;
+}
+
+dd {
+  margin: 0 0 $ds-margin;
+
+  dl &:last-child {
+    margin: 0;
+  }
+}

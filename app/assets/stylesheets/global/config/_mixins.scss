@@ -1,0 +1,22 @@
+
+// Global transition
+@mixin ds-transition {
+  //@include transition-duration(0.4s);
+}
+
+// Global border border-radius
+@mixin ds-border-radius {
+  @include border-radius(3px);
+}
+
+// http://maximilianhoffmann.com/posts/better-font-rendering-on-osx
+@mixin font-smoothing($value: on) {
+    @if $value == on {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}

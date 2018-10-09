@@ -1,0 +1,29 @@
+  <p>Hej!</p>
+
+  <p>Utan vatten kan ingen överleva, men visste du att 844 miljoner människor i världen faktiskt inte har rent vatten? Det vill <%= @order.donor.first_name %> ändra på och därför har <%= @order.donor.first_name %> valt att ge en gåva till rent vatten i ditt namn och skickat dig ett fint gåvobevis.</p>
+
+  <p>Gåvan betyder att om några månader kommer någons barn, förälder eller syskon för första gången i sitt liv få smaka rent vatten. Och det kommer förändra den personens liv för alltid. Du ska veta att du har bidragit till det – var stolt.</p>
+
+  <p>Klicka på länken nedan för att se ditt gåvobevis:</p>
+  <p>
+    <%= link_to "Till gåvobeviset", card_url(@card.token), style: 'background:#0092c6;border-radius:28px;color:#fff;display:inline-block;font-size: 18px; font-weight: bold;padding:13px 22px;text-decoration:none;' %>
+  </p>
+
+  <p>Vill du också ge bort en lika viktig present? Besök WaterAids gåvoshop. https://gavoshop.wateraid.se</p>
+
+  <p>Allt börjar med vatten!</p>
+
+  <p>
+    Vänliga hälsningar,<br>
+    Cecilia Chatterjee-Martinsen<br>
+    Generalsekreterare, <a href="http://www.wateraid.se" style="color:#0092c6;">WaterAid</a>
+  </p>
+
+  <p>
+   P.S. Glöm inte att <a href="https://www.facebook.com/wateraidswe" style="color:#0092c6;">följa oss på Facebook</a> för att se hur din gåva gör skillnad!
+  </p>
+  <p>
+    <i>
+      <a href="http://www.wateraid.org/se" style="color:#0092c6;">Läs mer om WaterAid här</a><br>
+    </i>
+  </p>

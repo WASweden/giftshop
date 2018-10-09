@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html class="no-js <%= content_for?(:html_classes) ? yield(:html_classes) : '' %>" lang="sv">
+  <head>
+    <%= render 'shared/head' %>
+  </head>
+
+  <body>
+    <%= render 'shared/header_tracking' %>
+    <%= yield %>
+    <%= javascript_include_tag 'application' %>
+  </body>
+</html>

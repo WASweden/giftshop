@@ -1,0 +1,81 @@
+
+fieldset {
+  border: 0;
+  border-top: 2px solid $ds-color-border;
+  margin: 0 0 ($ds-margin*2);
+  padding: 0;
+}
+
+legend {
+  font-size: $ds-heading-content-size;
+  font-weight: $ds-font-weight-bold;
+  line-height: 1.3333;
+  margin: 0;
+  padding: $ds-padding $ds-padding 0;
+  text-transform: uppercase;
+
+  fieldset & {
+    margin-left: -($ds-padding);
+  }
+}
+
+label {
+  @extend %h4;
+  color: $ds-color-blue-light;
+  display: block;
+  font-weight: normal;
+  margin-bottom: 3px;
+}
+
+input,
+textarea,
+select {
+  background: none;
+  border: 1px solid $ds-color-yellow;
+  color: $ds-color-blue-light;
+  font-family: $ds-font-family;
+  font-size: 1em;
+  margin: 0 0 $ds-margin;
+  max-width: 100%;
+  padding: ds-em-calc(7px) ds-em-calc(10px);
+  width: 100%;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  border: 0;
+  margin: 0;
+  max-width: auto;
+  padding: 0;
+  width: auto;
+}
+
+button {
+  background: none;
+  border: 0;
+  color: $ds-color-text;
+  cursor: pointer;
+  overflow: hidden;
+  width: auto;
+}
+
+button[type="submit"],
+input[type="submit"] {
+  @extend %ds-button;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: $ds-font-weight-bold;
+}

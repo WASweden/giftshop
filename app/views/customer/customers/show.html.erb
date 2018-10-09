@@ -1,0 +1,125 @@
+<% html_classes "card-bg about" %>
+<% title "Skapa dina gåvobevis" %>
+
+<main class="page" role="main">
+  <article>
+    <div class="page__intro">
+    <% if @customer.orders.first.payment_type == 'sms' %>
+      <%= render "orders_intro_sms" %>
+    <% elsif @customer.orders.first.donor.donor_type == "company" %>
+      <%= render "orders_intro_company" %>
+    <% else %>
+      <%= render "orders_intro" %>
+    <% end %>
+    </div>
+
+    <div class="page__orders">
+      <table class="orders order__items">
+      <tbody>
+        <% @customer.orders.each do |order| %>
+          <tr class="orders__caption">
+            <th colspan="5">
+              <h3>#<%= order.id %> <small><% order.created_at %> / Totalt: <%= order.total %> kr</small></h3>
+            </th>
+          </tr>
+          <tr>
+            <th>Typ</th>
+            <th>Summa</th>
+            <th></th>
+          </tr>
+
+          <% order.cards.each do |card| %>
+            <tr class="order__item">
+              <td class="order__item__type">
+                <% if card.class.model_name == "Extra" %>
+                  Extra gåva
+                <% else %>
+                  <%= card_title(card) %>
+
+                  <small>
+                  <% if card.type == 'DigitalCard' %>
+                      <% if card.receiver.blank? %>
+                        <%= image_tag 'icons/new.svg', data: { 'fallback': image_path('icons/new.png') } %>
+                        Lägg in innehåll och välj datum.
+                      <% else %>
+                        <% if card.sent_at %>
+                          <%= image_tag 'icons/check.svg', data: { 'fallback': image_path('icons/check.png') } %>
+                          Skickat
+                          <%= card.sent_at.strftime('%Y-%m-%d') %>
+                        <% else %>
+                          <%= image_tag 'icons/clock.svg', data: { 'fallback': image_path('icons/clock.png') } %>
+                          Skickas
+
+                          <% if card.send_at == Date.today %>
+                            omgående
+                          <% else %>
+                            <%= card.send_at.strftime('%Y-%m-%d') %>
+                          <% end %>
+                        <% end %>
+
+                        till
+
+                        <% if card.send_to_donor == true %>
+                          dig själv.
+                        <% else %>
+                          <%= card.receiver %>.
+                        <% end %>
+                      <% end %>
+                  <% else %>
+                    Skickas inom fyra arbetsdagar från orderdatumet.
+                  <% end %>
+                  </small>
+                <% end %>
+              </td>
+              <td class="order__item__price"><%= card.price %> kr</td>
+              <td class="order__item__actions">
+                <% if card.type == 'DigitalCard' %>
+                  <% if card.receiver.blank? %>
+                    <%= link_to('skapa gåvobevis', edit_customer_card_path(@customer.token, card.token), class: 'button-pill button-pill--action') unless card.sent_at %>
+                  <% else %>
+                    <% if card.sent_at %>
+                      <%= link_to('visa', card_path(card.token), class: 'button-pill', target: '_blank') %>
+                    <% else %>
+                      <%= link_to('förhandsvisa / ladda ner', card_path(card.token, :preview => "true", :customer => @customer.token), class: 'button-pill') %>
+                    <% end %>
+                    <%= link_to('redigera', edit_customer_card_path(@customer.token, card.token), class: 'button-pill') unless card.sent_at %>
+                  <% end %>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+      </tbody>
+    </table>
+    </div>
+
+
+  </article>
+</main>
+
+<script>
+  mixpanel.track("Show orders overview", {
+    'user-email': '<%= @customer.donor.email %>',
+    'user-type': '<%= @customer.donor.donor_type %>'
+  });
+
+  ga('send', 'event', 'order-overview', 'view', '<%= @customer.donor.donor_type %>');
+</script>
+
+<!-- Adform Tracking Code BEGIN -->
+<script type="text/javascript">
+    window._adftrack = Array.isArray(window._adftrack) ? window._adftrack : (window._adftrack ? [window._adftrack] : []);
+    window._adftrack.push({
+        pm: 563271,
+        divider: encodeURIComponent('|'),
+        pagename: encodeURIComponent('')
+    });
+    (function () { var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://track.adform.net/serving/scripts/trackpoint/async/'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); })();
+
+</script>
+<noscript>
+    <p style="margin:0;padding:0;border:0;">
+        <img src="https://track.adform.net/Serving/TrackPoint/?pm=563271&ADFPageName=&ADFdivider=|" width="1" height="1" alt="" />
+    </p>
+</noscript>
+<!-- Adform Tracking Code END -->

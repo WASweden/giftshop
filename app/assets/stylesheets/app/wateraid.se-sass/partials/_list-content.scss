@@ -1,0 +1,295 @@
+
+section {
+  
+  article {
+    font-family: $font-family-default;
+    
+    a{
+      @include list-link-style;
+      
+      .fact {
+        @include link-style($h3-font-size);
+        margin-bottom: 0;
+        display: block;
+        cursor:pointer;
+      }	
+
+
+      
+      &.toggle-content {
+        display: block;
+        position: relative;
+        
+        img.default {
+          display: block;
+        }
+        
+        img.active {
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        
+        span {
+          position: absolute;
+          display: none;
+          bottom: 20px;
+          width: 100%;
+          text-align: center;
+          color: #fff;
+          font-family: $font-family-bold;
+          font-size: 13px;
+        }
+      }
+    }
+
+	.light{
+		font-family:$font-family-light;
+	}
+
+    &.group-header {
+      padding-bottom:5px;
+      margin-bottom: 25px;
+      
+      h3 {
+        font-family: $font-family-thin;
+        font-size: 36px;
+        color: $group-header-color;
+        text-align: left;
+        line-height: 1;
+        margin-bottom: 15px;
+        margin-top:0;
+      }
+      
+      img {
+        display:block;
+        margin: 40px auto 30px auto;
+      }
+    }
+    
+    &.article-tile {
+//      @include clearfix;
+      margin-bottom: 25px;
+      padding-bottom: 5px;
+      
+      h3 {
+        @include article-header();
+        
+        small {
+          line-height: 14px;
+
+          em {
+            color: #083f77;
+            font-family: $font-family-bold;
+            display:inline;
+          }
+        }
+        
+        span.list-number {
+          display: block;
+          color: $font-color-secondary;
+          font-size: 40px;
+          font-family: $font-family-thin;
+          margin-bottom: 24px;
+        }
+        
+        a.download {
+          
+          .filetype {
+            @include pdf-font;
+            margin-left: 5px;
+          }
+        }
+        
+      }
+      
+      a.fact{
+        display: block;
+        @include link-style($font-size-xlarge, $font-family-bold);
+      }
+      
+      strong{
+        margin-bottom:0;
+        color:$font-color-normal;
+      }
+
+      &.article-narrow-col a img{
+        width:190px;
+        height:145px;
+      }
+      
+      p:last-child{
+        margin-bottom:0;
+      }
+    }
+    
+    &.article-list {
+	  /* standard clearfix doesn't allow overflow which we need for facebook like button */
+	  &:after { 
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	  }
+
+      margin-bottom: 10px;
+      
+      h3 {
+        @include article-header();
+        margin-top: 0;
+        
+        em{
+          color:$font-color;
+          font-style:normal;
+        }
+        
+        small {
+          line-height: $line-height-normal;
+          letter-spacing: normal;
+        }
+      }
+      
+      img {
+        float: left;
+        margin-left: 0 !important;
+        margin-bottom: 20px;
+      }
+      
+      p{
+        margin: 0 0 20px 0;
+        
+        .bp & a{
+          @include link-style;
+          @include nowrap;
+        }
+      }
+      
+      &.article-summary-floated{
+        
+        div.article-description {
+          margin-left: 180px;
+          
+          &:first-child{
+            margin-left: 0;
+          }
+          
+          a{
+            @include nowrap;
+          }
+        
+          h3 a{
+            white-space:normal;
+          }
+        }
+      }
+      
+      &.article-summary{
+        padding-bottom: 10px;
+        
+        div.article-description {
+          margin-left: 180px;
+          
+          a{
+            @include nowrap;
+            @include inline-block;
+			font-family: $font-family-bold;
+          }
+          
+          h3 a{
+            white-space:normal;
+            margin-bottom: 0;
+            font-size:22px;
+			font-family: $font-family-black;
+          }
+          
+          p{
+            margin-bottom:10px;
+            
+            a{
+              margin-bottom: 0;
+              display: inline;
+              vertical-align: baseline;
+            }
+          }
+        }
+      }
+      
+      &.article-4col,
+      &.article-6col {
+        div.article-summary {
+          margin-left: 162px;
+        }
+      }
+      
+      &.no-image {
+        div.article-summary {
+          margin-left: 0;
+        }
+      }
+      
+      &.featured{
+        background: #e5f6fd;
+        padding: 20px;
+        border: 1px solid #b3e6f9;
+        
+        em{
+          color: $font-color-secondary;
+          font-size: $font-size-small;
+        }
+        
+        h3 em{
+          color: $font-color;
+        }
+        
+        img{
+          margin: 0 0 20px 0 !important;
+        }
+        
+        &.divider{
+          @include border-bottom-hairline(#b3e6f9);
+        }
+      }
+      
+      &.divider{
+        @include border-bottom-hairline(#ddd);
+      }
+      
+      &.last{
+        border:0 none;
+      }
+    }
+  }
+
+  &.main-content .article-list.featured .article-summary{
+    margin-left: 180px;
+  }
+  
+  &.main-content .article-list.featured{
+    padding: 20px;
+  }
+  
+  &.main-content .article-list.article-summary div a{
+    margin-bottom:20px;
+  }
+  
+  &.main-content .article-list.article-summary div p a{
+    margin-bottom: 0;
+  }
+  
+  &.main-content .article-list.article-summary div h3 a{
+    margin-bottom: 0;
+  }
+  
+  &.main-content .article-list{
+    padding: 0 20px 0 0;
+  }
+  &.recent-news .article-list .article-summary a{
+    @include link-style($h3-font-size + 2px);
+    display:block;
+    font-family: $font-family-bold;
+    //font-size:$h3-font-size;
+    //line-height: $line-height;
+  }
+}

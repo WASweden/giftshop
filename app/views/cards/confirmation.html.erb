@@ -1,0 +1,103 @@
+<% title "Gåvobeviset lagt i varukorgen" %>
+
+<main class="page" role="main">
+  <article>
+    <% if @card.type == 'AnalogCard' %>
+      <h1 class="page__title">Tack!</h1>
+
+      <hr>
+
+      <p class="t-lead">
+        Ett tryckt gåvobevis på <%= @card.quantity %> kr ligger nu i varukorgen.
+      </p>
+
+      <hr>
+
+      <p>
+        <%= link_to 'Beställ fler gåvobevis', @card.form_type == 'company' ? :company : :root, class: 'button' %>
+        <%= link_to 'Slutför beställningen', :cart, class: 'button action' %>
+      </p>
+
+      <script>
+        mixpanel.track(
+          "Add to cart",
+          {
+            'card-type': 'analog',
+            'card-price': '<%= @card.quantity %>',
+            'card-id': '<%= @card.id %>',
+            'card-form-type': '<%= @card.form_type %>'
+          }
+        );
+
+        ga('send', 'event', 'cart', 'add-product', 'card-analog');
+      </script>
+    <% else %>
+      <h1 class="page__title">Tack!</h1>
+
+      <hr>
+
+      <p class="t-lead">
+        Ett digitalt gåvobevis på <strong><%= @card.quantity %> kr</strong> ligger nu i varukorgen.
+      </p>
+
+      <p>
+        När betalningen genomförts skickas gåvobeviset
+
+        <strong>
+        <% if @card.send_at == Date.today %>
+          omgående
+        <% else %>
+          <%= @card.send_at.strftime('%Y-%m-%d') %>
+        <% end %>
+        </strong>
+
+        till
+
+        <% if @card.send_to_donor == true %>
+          <strong>den e-postadress du anger vid betalningen</strong>.
+        <% else %>
+          <strong><%= @card.receiver %></strong>.
+        <% end %>
+
+        <br>
+        Det belopp du valt att skänka kommer <strong>inte</strong> att visas på gåvobeviset.
+      </p>
+
+      <hr>
+
+      <p>
+        <%= link_to 'Redigera', edit_card_path(@card.token), class: 'button' %>
+        <%= link_to 'Förhandsgranska', preview_card_path(@card.token), class: 'button' %>
+      </p>
+
+      <hr>
+
+      <p>
+        <%= link_to 'Beställ fler gåvobevis', @card.form_type == 'company' ? :company : :root, class: 'button' %>
+        <%= link_to 'Slutför beställningen', :cart, class: 'button action' %>
+      </p>
+
+      <script>
+        mixpanel.track(
+          "Add to cart",
+          {
+            'card-type': 'digital',
+
+            'card-price': '<%= @card.quantity %>',
+
+            <% if @card.send_to_donor == true %>
+            'card-send-to-donor': true,
+            <% end %>
+
+            'card-id': '<%= @card.id %>',
+            'card-form-type': '<%= @card.form_type %>'
+          }
+        );
+
+        ga('send', 'event', 'cart', 'add-product', 'card-digital');
+      </script>
+    <% end %>
+
+
+  </article>
+</main>

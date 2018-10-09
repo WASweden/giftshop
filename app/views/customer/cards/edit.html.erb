@@ -1,0 +1,17 @@
+<%
+if @card.receiver.blank?
+  title "Skapa gåvobevis"
+else
+  title "Redigera gåvobevis"
+end
+%>
+
+<main class="card-edit" role="main">
+  <% if @card.receiver.blank? %>
+    <h1 class="card-edit__title">Skapa gåvobevis</h1>
+  <% else %>
+    <h1 class="card-edit__title">Redigera gåvobevis</h1>
+  <% end %>
+
+  <%= render partial: 'form', locals: {card: @card, form_type: 'edit'} %>
+</main>

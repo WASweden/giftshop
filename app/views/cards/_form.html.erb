@@ -1,0 +1,144 @@
+<%= form_for(card, as: :card, url: card.new_record? ? cards_path : card_path(card.token), :html => { :class => "card-form card-form--#{card.form_type}" }, :data => {'parsley-validate' => '', 'rr-name' => "card-form-#{card.form_type}" }) do |f| %>
+  <%= render('shared/error_messages', object: card) %>
+
+  <%= f.hidden_field :form_type %>
+
+  <div class="card-form__donation">
+    <div class="card-form__heading card-form__donation__heading">
+      <h2>
+        <% if card.form_type == 'company' %>
+          Vårt företag vill ge:
+        <% else %>
+          Jag vill ge:
+        <% end %>
+      </h2>
+    </div>
+
+    <div class="card-form__content card-form__donation__content">
+      <%= f.text_field(:quantity, class: 'card-form__amount', :data => {'parsley-type' => 'number', 'parsley-min' => '20', 'parsley-min-message' => 'Du kan skänka minst 20 droppar…'}, 'autocomplete' => 'off') %>
+      <span class="card-form__donation__meta">vattendroppar</span>
+      <div class="card-form__donation__meta-info">
+        <p>Välj antalet droppar du vill ge per gåvobevis.</p>
+        <p>1 droppe = 1 krona.</p>
+      </div>
+    </div>
+  </div>
+  <!-- / .card-form__donation -->
+
+  <div class="card-form__donation-info">
+    <p class="card-form__donation-overview">
+    <% if card.form_type == 'company' %>
+      Ert företags
+    <% else %>
+      Din
+    <% end %>
+
+    gåva för detta gåvobevis blir då <span class="card-form__donation-total">200 kr</span>.<br> Det kan räcka till:</p>
+
+    <ul class="card-form__donation-examples">
+      <% @examples.each do |example| %>
+        <li data-amount="<%= example.amount %>"><%= simple_format(example.description) %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="card-form__options">
+    <% if card.form_type == 'private' %>
+      <div class="card-form__type">
+        <div class="card-form__heading">
+          <h2>Jag vill ha gåvobeviset:</h2>
+        </div>
+
+        <div class="card-form__type__options card-form__content">
+          <div>
+            <%= f.radio_button(:type, Card::DigitalCard, class: 'card-form__type__choice') %>
+            <%= f.label :type, 'Digitalt', value: Card::DigitalCard, class: 'label--inline' %>
+          </div>
+
+          <div>
+            <%= f.radio_button(:type, Card::AnalogCard, class: 'card-form__type__choice') %>
+            <%= f.label :type, "Tryckt (+#{Card::PRINTED_PRICE} kr)", value: Card::AnalogCard, class: 'label--inline' %>
+          </div>
+        </div>
+      </div>
+      <!-- / .card-form__type -->
+    <% end %>
+
+    <div class="card-form__type__digital">
+      <div class="card-form__heading">
+        <h2>
+          <% if card.form_type == 'company' %>
+            Skicka material till:
+          <% else %>
+            Skicka gåvobeviset till:
+          <% end %>
+        </h2>
+      </div>
+      <!-- / .card-form__type__digital__heading -->
+
+      <div class="card-form__type__digital__options card-form__content">
+        <div class="form-item">
+          <div>
+            <%= f.radio_button(:send_to_donor, :true, class: 'card-form__deliver-to') %>
+            <%= f.label :send_to_donor, 'Mig själv', value: true, class: 'label--inline' %>
+            <% if card.form_type == 'company' %>
+              <div class="form-item__description">Så kan jag själv skicka vidare gåvobevis till de/den jag vill.</div>
+            <% end %>
+          </div>
+          <div>
+            <%= f.radio_button(:send_to_donor, :false, class: 'card-form__deliver-to') %>
+            <%= f.label :send_to_donor, 'Annan mottagare', value: false, class: 'label--inline' %>
+            <% if card.form_type == 'company' %>
+              <div class="form-item__description">Så skickas gåvobeviset direkt till mottagaren.</div>
+            <% end %>
+          </div>
+        </div>
+        <!-- / .card-form__send-to -->
+
+        <div class="form-item card-form__recipient">
+          <h4><%= f.label :receiver, 'Mottagarens e-postadress' %></h4>
+          <%= f.email_field(:receiver, class: 'card-form__to', :data => {'parsley-type' => 'email', 'parsley-required' => '', 'parsley-required-message' => 'Gåvobeviset måste ha en mottagare.'}) %>
+          <div class="card-form__to-suggestion"></div>
+        </div>
+
+        <div class="form-item">
+          <h4><%= f.label :text, 'Meddelande' %></h4>
+          <%= f.text_area(:text, class: 'card-form__message', :data => {'parsley-required' => '', 'parsley-required-message' => 'Glöm inte att skriva ett meddelande!'}) %>
+        </div>
+
+        <div class="form-item">
+          <h4><%= f.label :send_at, 'När ska det skickas?' %></h4>
+          <%= f.date_field(:send_at, class: 'card-form__send-at', placeholder: 'Välj ett datum') %>
+          <div class="form-item__description">
+            <% if card.form_type == 'company' %>
+              Sker inget val av datum skickas gåvobeviset efter 5 minuter.
+            <% else %>
+              Om du inte väljer ett datum skickas det efter 5 minuter.
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <!-- / .card-form__type__digital__options -->
+    </div>
+    <!-- / .card-form__type__digital -->
+
+    <div class="card-form__type__print">
+      <p><%= image_tag 'print-card.jpg' %></p>
+      <p>Kortets storlek är 145x200 mm.</p>
+    </div>
+    <!-- / .card-form__type__print -->
+  </div>
+  <!-- / .card-form__options -->
+
+  <div class="card-form__footer">
+    <div class="card-form__actions">
+      <% if f.object.persisted? %>
+        <%= f.submit "Spara", class: "card-form__submit card-form__submit--update" %>
+      <% else %>
+        <%= f.submit "Lägg gåvobeviset i varukorgen", class: "card-form__submit card-form__submit--new" %>
+      <% end %>
+    </div>
+    <!-- / .card-form__actions -->
+  </div>
+  <!-- / .card-form__footer -->
+<% end %>

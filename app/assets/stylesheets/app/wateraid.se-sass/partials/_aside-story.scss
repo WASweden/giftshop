@@ -1,0 +1,13 @@
+.sidebar-story{
+  @include border-bottom-hairline(#00aeef);
+  padding-bottom: 20px;
+  margin-bottom: 20px !important;
+  
+  p{
+    font-size: $font-size-small;
+  }
+  
+  &.no-border{
+    border:0 none;
+  }
+}

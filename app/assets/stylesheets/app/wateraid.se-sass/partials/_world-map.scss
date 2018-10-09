@@ -1,0 +1,132 @@
+section.world-map-header {
+  margin-bottom: 40px;
+
+  h2 {
+    color: $font-color-secondary;
+    font-family: $font-family-black;
+    font-size: 70px;
+    letter-spacing: -4px;
+    line-height: 62px;
+    margin-bottom: 0px;
+    padding-top: 5px;
+    z-index: 1;
+  }
+}
+
+section.world-map {
+  width: $max-width;
+  height: 560px;
+  position:relative;
+  margin: 0 0 50px 0;
+  overflow: visible;
+  
+  img {
+    z-index: 2;
+  }
+  
+  canvas {
+    
+  }
+  
+  hr {
+    position: relative;
+    z-index: 2;
+    line-height: 1px;
+    height: 1px;
+    margin-top: -6px;
+    margin-top: -7px\9;
+    *margin-top: -7px;
+  }
+  
+  .status-bar-wrapper{
+     @include container;
+     @include clearfix;
+     @include border-top;
+     position: absolute;
+     left:108px;
+     bottom:0;
+     left: 108px;
+     z-index: 3;
+
+    .status-bar{
+      @include container;
+      @include border-top($status-bar-top-border-color);
+      background: #FFF;
+//      border-bottom:1px solid $status-bar-border-color;
+      width: span(10);
+      height: 128px;
+      *filter: progid:DXImageTransform.Microsoft.Shadow(Color=#eeeeee, Strength=50, Direction=90),progid:DXImageTransform.Microsoft.Shadow(Color=#eeeeee, Strength=50, Direction=270);
+      // for IE8
+      filter /*\**/: progid:DXImageTransform.Microsoft.Shadow(Color=#eeeeee, Strength=50, Direction=90),progid:DXImageTransform.Microsoft.Shadow(Color=#eeeeee, Strength=50, Direction=270)\9;
+      margin /*\**/:  0 36px\9;
+      // for all browsers that supports box shadow
+      box-shadow: 1px 30px 90px #999;
+      position: relative;
+      bottom: 0;
+      display: none;
+      
+      .country-flag{
+        float: left;
+        @include min-height(45px);
+        width: 50px;
+        background: #F2F2F2;
+        margin: 15px;
+        img{
+          display: block;
+          padding: 15px 10px;
+          width: 30px;
+          height: 20px;
+        }
+      }
+    
+      .country-data {
+        @include border;
+        @include min-height(98px);
+        width: 512px;
+        float: left;
+        margin:15px 0 15px;
+      
+        h2{
+          font-family: $font-family-bold;
+          font-size: $h3-font-size;
+          margin-bottom: 5px;
+        }
+      
+        p{
+          font-family: $font-family-default;
+          margin: 0;
+        }
+      }
+    
+      .country-link{
+        @include column(2,true);
+        margin: 15px 15px 15px -1px;
+        padding: 8px 0 0 15px;
+        width: 164px;
+        border-left:1px solid $status-bar-border-color;
+      
+        a{
+          @include link-style;
+          display:block;
+          line-height: 1;
+          text-align:left;
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+  
+  // for IE9
+  :root & {
+    .status-bar-wrapper {
+      .status-bar {
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled = false) \0;
+        margin: 0 auto \0;
+      }
+    }
+  }
+}
+
+div[data-name="country-links"] {
+  display: none;
+}

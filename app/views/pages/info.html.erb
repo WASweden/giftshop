@@ -1,0 +1,106 @@
+<% html_classes "card-bg about" %>
+<% title "Gör så här" %>
+
+
+<div class="info-holder">
+<main class="page info" role="main">
+  <article>
+
+    <div class="info-section">
+      <div class="info-section__heading">
+        <%= image_tag 'bottle.png', class: 'info-section__bottle' %>
+      </div>
+      <!-- / .info-section__heading -->
+      <div class="info-section__content">
+        <h1 class="page__title white">Gör så här:</h1>
+
+        <p class="white">Vatten är avgörande för alla människors överlevnad - ändå saknar 844 miljoner människor tillgång till rent vatten. Varje dag dör runt 800 barn av sjukdomar som skulle kunna förhindras om det fanns tillgång till rent vatten. Genom att beställa gåvobevis ger du människor tillgång till rent vatten på platser där det behövs som allra mest.</p>
+
+        <h2 class="white">
+          1. Ge bort vatten och förändra liv
+        </h2>
+        <p class="white">Beställ ett vackert gåvobevis som räddar och förändrar liv. För endast 200 kr kan du ge en person tillgång till rent vatten. Tillgång till rent vatten är grundläggande för människors hälsa och framförallt barns överlevnad. Läs mer under frågor och svar.</p>
+      </div>
+    </div>
+
+    <hr class="white">
+
+    <div class="info-section">
+      <div class="info-section__heading">
+        <p>
+          <%= image_tag 'cards/digital.jpg' %>
+        </p>
+      </div>
+      <!-- / .info-section__heading -->
+      <div class="info-section__content">
+        <h2 class="white">
+          2. Som tack får du ett gåvobevis att ge bort
+        </h2>
+        <p class="white">Du kan välja mellan ett <strong>digitalt</strong> gåvobevis som skickas med e-post till dig eller till personen som du vill ge det till, eller väljer du ett <strong>tryckt</strong> gåvobevis med kuvert som skickas hem till dig. För det tryckta gåvobeviset ger du en extra gåva på 30 kr. I gåvobevisen kan du skriva en personlig hälsning. Betalning sker med kreditkort.</p>
+
+        <h3 class="white">För företag:</h3>
+        <p class="white">Företag som ger en gåva på minst <%= number_with_delimiter(Order::INVOICABLE_MINIMUM, delimiter: ' ') %> kr kan välja att få en rekvisition skickad via e-post.</p>
+      </div>
+      <!-- / .info-section__content -->
+    </div>
+    <!-- / .info-section -->
+
+    <hr>
+
+    <div class="info-section">
+      <div class="info-section__heading">
+         <p>
+          <%= image_tag 'wateraid-work.jpg', class: 'info-section__image' %>
+        </p>
+      </div>
+      <!-- / .info-section__heading -->
+      <div class="info-section__content">
+        <h2>3. Du ger människor tillgång till rent vatten</h2>
+        <p>Din gåva kommer att ge människor rent vatten på en plats där det behövs som allra mest. WaterAid är en av världens ledande organisationer med fokus på rent vatten, sanitet och hygien. Din gåva kommer hjälpa oss att borra brunnar, säkra rent vatten i bostäder, på sjukhus och skolor. Tillgång till rent vatten är livsavgörande och ger hela samhällen en chans att ta sig ur fattigdom.</p>
+
+      </div>
+      <!-- / .info-section__content -->
+    </div>
+    <!-- / .info-section -->
+
+    <hr>
+
+    <div class="info-section">
+      <div class="info-section__heading">
+        &nbsp;
+      </div>
+      <!-- / .info-section__heading -->
+      <div class="info-section__content">
+        <p>
+          <%= link_to 'Beställ som privatperson', root_path, class: 'btn btn-primary'%>
+        </p>
+
+        <p>
+          <%= link_to 'Beställ som företag', company_path, class: 'btn btn-primary'%>
+        </p>
+      </div>
+      <!-- / .info-section__content -->
+    </div>
+    <!-- / .info-section -->
+
+    <hr>
+
+    <div class="info-section">
+      <div class="info-section__heading">
+        &nbsp;
+      </div>
+      <!-- / .info-section__heading -->
+      <div class="info-section__content">
+        <p>Dela på Facebook och berätta för dina vänner. Då hjälper du oss att ge ännu fler människor tillgång till rent vatten som räddar liv – tack.</p>
+
+        <p>Har du frågor eller behöver mer hjälp?<br>Se våra <%= link_to "frågor och svar", help_path, class: 'text-link' %> eller hör av dig till <a href="mailto:info@wateraid.se" class="text-link">info@wateraid.se</a>.</p>
+      </div>
+      <!-- / .info-section__content -->
+    </div>
+    <!-- / .info-section -->
+
+  </article>
+</main>
+<!-- / .info -->
+</div>
+<!-- / .info-holder -->

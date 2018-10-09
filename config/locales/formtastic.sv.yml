@@ -1,0 +1,8 @@
+sv:
+  formtastic:
+    :yes: 'Ja'
+    :no: 'Nej'
+    :create: 'Ny %{model}'
+    :update: 'Uppdatera %{model}'
+    :submit: 'Skicka %{model}'
+    :required: 'Obligatorisk'

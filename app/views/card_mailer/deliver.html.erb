@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+  <h1>Hi, <%= "#{@card.receiver}" %></h1>
+    <p>
+      A friend of yours, <%= @card.order.donor.full_name %> just donated to Wateraid!
+    </p>
+  </body>
+</html>

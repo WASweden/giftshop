@@ -1,0 +1,93 @@
+sv:
+  activerecord:
+    models:
+      admin_user:
+        one: Administratör
+        other: Administratörer
+      order:
+        one: Order
+        other: Ordrar
+      donor:
+        one: Givare
+        other: Givare
+      card:
+        one: Gåvobevis
+        other: Gåvobevis
+      analog_card:
+        one: Tryckt
+        other: Tryckt
+      digital_card:
+        one: Digitalt
+        other: Digitalt
+      extra:
+        one: Extra
+        other: Extras
+      example:
+        one: Prisexempel
+        other: Prisexemplen
+    attributes:
+      admin_user:
+        name: Namn
+        email: E-post
+        current_sign_in_at: Senast inloggad
+        sign_in_count: Antal inloggningar
+        created_at: Skapad
+        updated_at: Uppdaterad
+      order:
+        cid: Id
+        order_type: Betalsätt
+        stripe_charge_id: Stripe ID
+        payment_type: Betaltyp
+        paid_at: Betalt
+        total: Belopp
+        digital_cards_count: Digitalt
+        analog_cards_count: Tryckt
+        created_at: Skapad
+        updated_at: Uppdaterad
+      donor:
+        donor_type: Typ
+        first_name: Förnamn
+        last_name: Efternamn
+        company: Bolag
+        email: E-post
+        org_number: Orgnummer
+        phone: Telefon
+        address: Adress
+        post_code: Postkod
+        city: Ort
+        country_code: Land
+        newsletter: Nyhetsbrev
+        created_at: Skapad
+        updated_at: Uppdaterad
+      card:
+        text: Text
+        quantity: Antal
+        receiver: Mottagare
+        send_at: Skickas
+        sent_at: Skickat
+        send_to_donor: Skicka till givare
+        from: Från
+        hide_amount: Göm antal
+        printed: Tryckt
+        image: Bild
+        token: Token
+        created_at: Skapad
+        updated_at: Uppdaterad
+      example:
+        description: Beskrivning
+        amount: Belopp
+        country: Land
+        active: Aktiv
+        created_at: Skapad
+        updated_at: Uppdaterad
+    errors:
+      password:
+        no_spaces: får inte innehålla mellanslag
+    constants:
+      donor_type:
+        person: Privatperson
+        company: Bolag
+      payment_type:
+        card: Kort
+        invoice: Faktura
+        sms: SMS

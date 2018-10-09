@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'MetaCompPro-NormalRegular';
+  src: url(font-path("metacomppro-normal-webfont.eot"));
+  src: local("☺"), url(font-path("metacomppro-normal-webfont.eot?#iefix")) format("embedded-opentype"), url(font-path("metacomppro-normal-webfont.woff")) format("woff"), url(font-path("metacomppro-normal-webfont.ttf")) format("truetype"), url(font-path("metacomppro-normal-webfont.svg#MetaCompPro-NormalRegular")) format("svg");
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: 'MetaCompPro-NormalRegular';
+    src: url(font-path("metacomppro-normal-webfont.svg#MetaCompPro-NormalRegular")) format("svg");
+  }
+}
+@font-face {
+  font-family: 'MetaCompPro-ThinRegular';
+  src: url(font-path("metacomppro-thin-webfont.eot"));
+  src: local("☺"), url(font-path("metacomppro-thin-webfont.eot?#iefix")) format("embedded-opentype"), url(font-path("metacomppro-thin-webfont.woff")) format("woff"), url(font-path("metacomppro-thin-webfont.ttf")) format("truetype"), url(font-path("metacomppro-thin-webfont.svg#MetaCompPro-ThinRegular")) format("svg");
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: 'MetaCompPro-ThinRegular';
+    src: url(font-path("metacomppro-thin-webfont.svg#MetaCompPro-ThinRegular")) format("svg");
+}
+}
+@font-face {
+  font-family: 'MetaCompPro-BoldRegular';
+  src: url(font-path("metacomppro-bold-webfont.eot"));
+  src: local("☺"), url(font-path("metacomppro-bold-webfont.eot?#iefix")) format("embedded-opentype"), url(font-path("metacomppro-bold-webfont.woff")) format("woff"), url(font-path("metacomppro-bold-webfont.ttf")) format("truetype"), url(font-path("metacomppro-bold-webfont.svg#MetaCompPro-BoldRegular")) format("svg");
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: 'MetaCompPro-BoldRegular';
+    src: url(font-path("metacomppro-bold-webfont.svg#MetaCompPro-BoldRegular")) format("svg");
+  }
+}
+@font-face {
+  font-family: 'MetaCompPro-BlackRegular';
+  src: url(font-path("MetaCompPro-Black.eot"));
+  src: local("☺"), url(font-path("MetaCompPro-Black.eot?#iefix")) format("embedded-opentype"), url(font-path("MetaCompPro-Black.woff")) format("woff"), url(font-path("MetaCompPro-Black.ttf")) format("truetype");
+}
+
+@font-face {
+  font-family: 'MetaSerifCompPro-Book';
+  src: url(font-path("MetaSerifWebPro-Book.eot"));
+  src: local("☺"), url(font-path("MetaSerifWebPro-Book.eot?#iefix")) format("embedded-opentype"), url(font-path("MetaSerifWebPro-Book.woff")) format("woff"), url(font-path("MetaSerifCompPro-Book.ttf")) format("truetype");
+}
+
+@font-face {
+  font-family: 'MetaWebPro-Light';
+  src: url(font-path("MetaWebPro-Light.eot"));
+  src: local("☺"), url(font-path("MetaWebPro-Light.eot?#iefix")) format("embedded-opentype"), url(font-path("MetaWebPro-Light.woff")) format("woff"), url(font-path("MetaWebPro-Light.ttf")) format("truetype");
+}

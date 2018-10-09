@@ -1,0 +1,199 @@
+
+// START CONFIG
+
+// Here is where you can define your constants for your application and to configure the blueprint framework.
+// Feel free to delete these if you want keep the defaults:
+
+$blueprint-grid-columns: 12;
+$blueprint-grid-margin: 40px;
+$blueprint-grid-width: 46px;
+
+// Use this to calculate the width based on the total width.
+// Or you can set $blueprint-grid-width to a fixed value and unset $blueprint-container-size -- it will be calculated for you.
+//$blueprint-grid-width: ($blueprint-container-size + $blueprint-grid-margin) / $blueprint-grid-columns - $blueprint-grid-margin;
+
+// default font family
+$blueprint-font-family: "MetaCompPro-NormalRegular", Arial, Helvetica, sans-serif;  // TODO: Change to actual fonts used
+
+// default font size
+$blueprint-font-size: 14px;
+$standard-line-height: 1.2;
+
+// default color
+$font-color: #6d6e72;
+$header-color: #6d6e72;
+$header-font-color: #00aeef;
+$emphasis-font-color: #feb913;
+
+// default colors for anchor links
+$link-color: #00adee;
+$link-hover-color: #005899;
+$link-focus-color: #00adee;
+$link-active-color: #00adee;
+$link-visited-color: #00adee;
+
+// border color
+$blueprint-border-color: #dadada;
+// END CONFIG
+
+
+// START VARS
+
+// font family
+$font-family-normal: $blueprint-font-family;
+$font-family-bold: "MetaCompPro-BoldRegular", Arial, Helvetica, sans-serif;
+$font-family-black: "MetaCompPro-blackRegular", Arial, Helvetica, sans-serif;
+$font-family-thin: "MetaCompPro-ThinRegular", Arial, Helvetica, sans-serif; 
+$font-family-default: Arial, Helvetica, sans-serif;
+$font-family-light: "MetaWebPro-Light", Arial, Helvetica, sans-serif; 
+$font-family-quote: "MetaSerifCompPro-Book", Arial, Helvetica, sans-serif; 
+
+// font size
+$font-size-small: 12px;
+$font-size-normal: $blueprint-font-size;
+$font-size-medium: 16px;
+$line-height-normal: 1.2;
+$font-size-large: 1.2em;
+$line-height-large: 1.4;
+$font-size-xlarge: 26px;
+
+$font-size-intro-medium: 34px;
+
+// footer
+$footer-font-size-small: 12px;
+$font-size-header: 72px;
+
+// font colors
+$country-info-label-font-color: #00adee;
+$country-info-font-color: #005899;
+$pdf-font-color: #feb913;
+
+// generic variables
+$max-width: 1212px;
+
+// font colors generic
+$font-color-light: #6d6e72;
+$font-color-normal: $font-color;
+$font-color-secondary: #00adee; 
+$font-color-loud: #fdbb30;
+ 
+// default button
+$button-font-size: 1.1em;
+$button-normal-bg-color: #00adee;
+$button-hover-bg-color: #005899;
+$button-normal-color: #fff;
+$button-hover-color: #fff;
+
+// banner button
+$button-banner-normal-bg-color: #feb913;
+$button-banner-hover-bg-color: #feb913;
+$button-banner-normal-color: #fff;
+$button-banner-hover-color: #333;
+
+// donate button
+$button-donate-normal-bg-color: #feb913;
+$button-donate-hover-bg-color: #feb913;
+$button-donate-normal-color: #fff;
+$button-donate-hover-color: #231f20;
+
+// homepage button
+$button-homepage-normal-bg-color: #feb913;
+$button-homepage-hover-bg-color: #333;
+$button-homepage-normal-color: #fff;
+$button-homepage-hover-color: #feb913;
+
+// misc buttons
+$button-misc1-normal-bg-color: #b0b0b0;
+$button-misc2-normal-bg-color: #00aeef;
+
+// main header fonts
+$h2-color: #00aeef;
+$h2-line-height: 1.05;
+$h2-font-size: 3.3em;
+$h2-font-family: $font-family-bold;
+
+$h3-color: #6d6e72;
+$h3-font-size: 20px;
+$h3-font-family: $font-family-bold;
+
+$h3-detail-font-size: 28px;
+
+// recent news header
+$recent-news-header-font-size: 3.3em;
+
+// 36px
+
+// sidebar fonts
+$h2-color-sidebar: #00aeef;
+$h2-font-size-sidebar: 1.8em;
+$h2-line-height-sidebar: 1.1;
+
+$sidebar-font-color: #00aeef;
+
+// List Content Fonts
+$group-header-color: #00aeef;
+
+// Nav Fonts
+$nav-font-size: 1.1em;
+$nav-font-color: #000000;
+$nav-font-hover-color: #00adef;
+$nav-font-active-color: #00adef;
+$sub-nav-font-size: 0.9em;
+$breadcrumb-font-size: 0.9em;
+$breadcrumb-line-height: 1.2;
+$share-font-size: 13px;
+
+// breadcrumb Font
+$breadcrumb-font-color: #000;
+$breadcrumb-font-hover-color: #00adee;
+
+// small text
+$small-color: #6d6e72;
+
+// Borders
+$border-color: #b6b6b8;
+$status-bar-top-border-color: #00adee;
+$status-bar-border-color: $blueprint-border-color;
+
+// quotes
+$quote-font-size: 36px;
+$quote-font-size-medium: 18px;
+$quote-font-color: #00adee;
+$quote-font-color-em: #fea710;
+
+// Section intro
+$section-intro-color: #00aeef;
+$section-intro-font-size: 2.6em;
+
+$fact-font-color: #00aeef;
+$fact-em-font-color: #fdc130;
+$fact-desc-font-color: #6d6e72;
+
+// Article
+$article-title-line-height: 1.1;
+$article-title-font-size: 1.6em;
+$article-title-font-color: $h3-color;
+$article-title-font-family: $font-family-black;
+
+// Background Color variables
+$donate-colored-bg: #00aeef;
+
+// tab variables
+$tab-default-bg-color: #e5e5e5;
+$tab-default-font-color: #7f7f7f;
+$tab-rollover-bg-color: #00aeef;
+$tab-active-bg-color: #fff;
+$tab-active-font-color: #00aeef;
+
+// filter
+$selected-filter-font-color: #00adee;
+// END VARS
+
+// confirmation reference number
+$reference-number-font-color: #00aeef;
+
+// letter spacing
+$page-header-letter-spacing:-4px;
+
+$search-background-color: #00aeef;
+$search-input-color: #1eb8ef;

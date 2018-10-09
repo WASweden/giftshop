@@ -1,0 +1,130 @@
+body {
+  background-color: #f3f5f7;
+  font-family: 'Noto Sans', sans-serif !important;
+}
+
+/* Colors */
+.btn-primary, .bg-primary {
+  background-color: #00aef3 !important;
+  border: #00aef3 !important;
+}
+
+.text-primary {
+  color: #00aef3 !important;
+}
+
+header {
+  height:450px;
+  background-image: url('/img/gavoshop_bg_q2_2018.jpg');
+  background-position: center center;
+  background-size: 110% auto;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+}
+.messaging {
+  margin-top:100px;
+}
+
+.wateraid-text-bubble {
+  border-radius: 10px;
+}
+
+.wateraid-text-bubble>h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding:15px;
+}
+.wateraid-text-bubble>p {
+  padding:15px;
+}
+
+.nav .nav-link {
+  display: inline-block !important;
+  padding: .5rem 1rem;
+}
+
+/* .step::before {
+  border: 2px solid #009FDF;
+  background-color: #fff;
+  color: #009FDF;
+  border-radius: 50%;
+  content: " ";
+  display: inline-block;
+  font-size: 0.9rem;
+  height: 30px;
+  line-height: 26px;
+  margin-right: 10px;
+  text-align: center;
+  width: 30px;
+
+} */
+
+
+.nav {
+  margin: 30px 0;
+}
+
+.nav-footer-icons {
+  float:right;
+  margin:0px;
+}
+.nav-footer-icons a.nav-link {
+  color: #6c757d!important;
+}
+
+.card {
+  background: transparent;
+  border: none;
+  margin-top:25px;
+}
+
+.card-img-top {
+  border-radius:7px;
+}
+
+.input-any-amount {
+  border: 2px solid #fd6c00;
+  line-height: 30px;
+  background: transparent;
+  color: #fd6c00;
+}
+.input-any-amount::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fd6c00;
+    opacity: 1; /* Firefox */
+}
+
+.input-any-amount:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #fd6c00;
+}
+
+.input-any-amount::-ms-input-placeholder { /* Microsoft Edge */
+    color: #fd6c00;
+}
+.footer {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 150px 0 24px;
+  text-align:left !important;
+}
+
+.cart-box {
+  float:right;
+  background-color: #ffb400;
+  color:  #ffffff;
+  display:  block;
+  width:  4rem;
+  height: 4rem;
+  border-radius: 5px;
+  cursor:pointer;
+}
+.cart-icon {
+  color:  #ffffff;
+  display:  inline-block;
+  position: relative;
+  line-height: 4rem;
+}
+
+.checkout__company-fields {
+  width: 100% !important;
+}

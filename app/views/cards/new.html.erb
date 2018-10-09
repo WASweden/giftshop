@@ -1,0 +1,44 @@
+<% html_classes "card-bg" %>
+
+<div class="card-form-holder">
+<main class="card-landing card-landing--private" role="main">
+
+  <div class="card-form__header">
+    <div class="card-form__header__info">
+      <p>Här kan du ge bort vattendroppar. De ger tillgång till rent vatten och toaletter som räddar liv. Och varje liten droppe räknas. Som tack får du ett gåvobevis att ge bort.</p>
+    </div>
+    <div class="card-form__header__actions">
+      <%= link_to "Så funkar det", info_path, class: 'button' %><br>
+      <%= link_to "För företag", company_path, class: 'button' %>
+    </div>
+  </div>
+
+  <%= render partial: 'form', locals: {card: @card} %>
+</main>
+</div>
+
+<!-- Tag for Activity Group: WaterAid(RET), Activity Name: WaterAid - Kampanjsida - Gåvoshop - Privat (RET), Activity ID: 1977720 -->
+<!-- Expected URL: https://gavoshop.wateraid.se/ -->
+
+<!--
+Activity ID: 1977720
+Activity Name: WaterAid - Kampanjsida - Gåvoshop - Privat (RET)
+Activity Group Name: WaterAid(RET)
+-->
+
+<!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: WaterAid - Kampanjsida - Gåvoshop - Privat (RET)
+URL of the webpage where the tag is expected to be placed: https://gavoshop.wateraid.se/
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 11/03/2014
+-->
+<script type="text/javascript">
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+document.write('<iframe src="https://4402018.fls.doubleclick.net/activityi;src=4402018;type=Water0;cat=water002;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+</script>
+<noscript>
+<iframe src="https://4402018.fls.doubleclick.net/activityi;src=4402018;type=Water0;cat=water002;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+</noscript>
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->

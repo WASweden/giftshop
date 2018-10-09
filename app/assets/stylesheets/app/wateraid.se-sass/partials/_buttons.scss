@@ -1,0 +1,129 @@
+
+a.button {
+  @include call-to-action-button();
+  @include call-to-action-button-hover();
+}
+
+.donation {
+  a.button {
+    @include call-to-action-button($button-banner-normal-color, $button-banner-normal-bg-color, -11px);
+    @include call-to-action-button-hover($button-banner-hover-color, $button-banner-hover-bg-color, -23px);
+  }
+}
+
+a.button-donate {
+  @include call-to-action-button($button-donate-normal-color, $button-donate-normal-bg-color);
+  @include call-to-action-button-hover($button-donate-hover-color, $button-donate-hover-bg-color, -11px);
+}
+
+footer {
+  a.button-donate {
+    @include float-right();
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+a.main-nav-donate {
+  @include call-to-action-button($button-donate-normal-color, $button-donate-normal-bg-color);
+  @include call-to-action-button-hover($button-donate-hover-color, $button-donate-hover-bg-color, -11px);
+  
+  @include float-right();
+  width: 160px !important;
+  height: 31px;
+  margin-top: 0;
+  padding-top: 64px;
+  line-height: 16px;
+}
+
+a.button-homepage {
+  @include call-to-action-button($button-homepage-normal-color, #{'transparent'}, -36px);
+  @include call-to-action-button-hover($button-homepage-hover-color, #{'transparent'}, -36px);
+  width: auto;
+  line-height: 30px;
+  vertical-align: top;
+  
+  span.caret {
+    width: 29px;
+    height: 29px;
+    vertical-align: bottom;
+    *margin-top: -7px;
+  }
+}
+
+
+a.button-misc-1 {
+  @include call-to-action-button($button-donate-normal-color, $button-misc1-normal-bg-color);
+  @include call-to-action-button-hover($button-donate-hover-color, $button-donate-hover-bg-color, -11px);
+}
+
+a.button-misc-2 {
+  @include call-to-action-button($button-donate-normal-color, $button-misc2-normal-bg-color);
+  @include call-to-action-button-hover($button-donate-hover-color, $button-donate-hover-bg-color, -11px);
+}
+
+a.button-prev {
+  @include call-to-action-button($button-donate-normal-color, $button-misc2-normal-bg-color, -94px);
+  @include call-to-action-button-hover($button-donate-hover-color, $button-donate-hover-bg-color, -105px);
+  margin-right: 10px;
+  *float: left;
+  
+  span.caret {
+    margin-left: -6px;
+    margin-right: 10px;
+  }
+}
+
+a.button-next {
+  @include call-to-action-button($button-donate-normal-color, $button-misc2-normal-bg-color);
+  @include call-to-action-button-hover($button-donate-hover-color, $button-donate-hover-bg-color, -11px);
+  margin-right: 10px;
+  *float: left;
+}
+
+a.print-receipt {
+  @extend a.button-next;
+}
+
+a.print-receipt.no-margin {
+  margin: 0;
+}
+
+a.button-cancel {
+  @include call-to-action-button($button-donate-normal-color, $button-misc1-normal-bg-color);
+  @include call-to-action-button-hover();
+  float: right;
+  
+  &.button-left{
+    float:left;
+    margin-right:10px;
+  }
+}
+
+a.button-right{
+  float:right;
+}
+
+a.loading-spinner {
+  @include call-to-action-button($button-donate-normal-color, $button-misc1-normal-bg-color);
+  
+  span,
+  span.caret {
+    @include inline-block;
+    background: url("/img/common/loading-spinner.gif") 0 0 no-repeat;
+    width: 24px;
+    height: 24px;
+    margin: 0 0 0 2px;
+  }
+  
+  &:hover {
+    color: $button-donate-normal-color !important;
+    background-color: $button-misc1-normal-bg-color;
+    
+    span,
+    span.caret {
+      background-position: 0 0;
+      margin: 0 0 0 2px;
+    }
+  }
+}

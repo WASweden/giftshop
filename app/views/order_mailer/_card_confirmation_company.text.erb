@@ -1,0 +1,18 @@
+Hej <%= @card.order.donor.first_name %>!
+
+Vi har nu skickat ert digitala gåvobevis till <%= @card.receiver %>, som vi hoppas blir riktigt glad!
+
+Stort tack för att ni har bidragit till vårt arbete för allas rätt till rent vatten. Er gåva kommer leda till att ni både räddar och förändrar liv.
+
+Klicka på länken nedan för att se hur ert gåvobevis ser ut:
+<%= card_url(@card.token) %>
+
+Allt börjar med vatten!
+
+Vänliga hälsningar,
+Cecilia Chatterjee-Martinsen
+Generalsekreterare, WaterAid
+
+P.S. Ni följer väl vårt arbete på Facebook? https://www.facebook.com/wateraidswe
+
+Läs mer om WaterAid här http://www.wateraid.se

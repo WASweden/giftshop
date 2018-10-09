@@ -1,0 +1,19 @@
+<h1> Order details </h1>
+
+<p> Cards </p>
+<ul>
+  <% @order.cards.each do |c| %>
+    <li>
+    <p> Created at: <%= c.created_at %> </p>
+    <ul>
+      <li><%= c.text %></li>
+      <li><%= c.quantity %></li>
+      <li><%= c.receiver %></li>
+      <li><%= c.send_at %></li>
+      <li><%= link_to 'View', purchased_card_path(c.id) %>
+    </ul>
+    </li>
+    <br/>
+  <% end %>
+</ul>
+

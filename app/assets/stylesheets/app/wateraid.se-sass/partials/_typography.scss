@@ -1,0 +1,80 @@
+/* Typography css
+----------------------------------------------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'MetaCompPro-NormalRegular';
+    src: url('/fonts/metacomppro-normal-webfont.eot');
+    src: local('☺'),
+         url('/fonts/metacomppro-normal-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/metacomppro-normal-webfont.woff') format('woff'),
+         url('/fonts/metacomppro-normal-webfont.ttf') format('truetype'),
+         url('/fonts/metacomppro-normal-webfont.svg#MetaCompPro-NormalRegular') format('svg');
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+		font-family: 'MetaCompPro-NormalRegular';
+		src: url('/fonts/metacomppro-normal-webfont.svg#MetaCompPro-NormalRegular') format('svg');
+	}
+}
+
+@font-face {
+    font-family: 'MetaCompPro-ThinRegular';
+    src: url('/fonts/metacomppro-thin-webfont.eot');
+    src: local('☺'),
+         url('/fonts/metacomppro-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/metacomppro-thin-webfont.woff') format('woff'),
+         url('/fonts/metacomppro-thin-webfont.ttf') format('truetype'),
+         url('/fonts/metacomppro-thin-webfont.svg#MetaCompPro-ThinRegular') format('svg');
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+		font-family: 'MetaCompPro-ThinRegular';
+		src: url('/fonts/metacomppro-thin-webfont.svg#MetaCompPro-ThinRegular') format('svg');
+	}
+}
+
+@font-face {
+    font-family: 'MetaCompPro-BoldRegular';
+    src: url('/fonts/metacomppro-bold-webfont.eot');
+    src: local('☺'),
+         url('/fonts/metacomppro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/metacomppro-bold-webfont.woff') format('woff'),
+         url('/fonts/metacomppro-bold-webfont.ttf') format('truetype'),
+         url('/fonts/metacomppro-bold-webfont.svg#MetaCompPro-BoldRegular') format('svg');
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+		font-family: 'MetaCompPro-BoldRegular';
+		src: url('/fonts/metacomppro-bold-webfont.svg#MetaCompPro-BoldRegular') format('svg');
+	}
+}
+
+@font-face {
+    font-family: 'MetaCompPro-BlackRegular';
+    src: url('/fonts/MetaCompPro-Black.eot');
+    src: local('☺'),
+         url('/fonts/MetaCompPro-Black.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/MetaCompPro-Black.woff') format('woff'),
+         url('/fonts/MetaCompPro-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MetaSerifCompPro-Book';
+    src: url('/fonts/MetaSerifWebPro-Book.eot');
+    src: local('☺'),
+         url('/fonts/MetaSerifWebPro-Book.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/MetaSerifWebPro-Book.woff') format('woff'),
+         url('/fonts/MetaSerifCompPro-Book.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MetaWebPro-Light';
+    src: url('/fonts/MetaWebPro-Light.eot');
+    src: local('☺'),
+         url('/fonts/MetaWebPro-Light.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/MetaWebPro-Light.woff') format('woff'),
+         url('/fonts/MetaWebPro-Light.ttf') format('truetype');
+}

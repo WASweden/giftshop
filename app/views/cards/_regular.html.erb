@@ -1,0 +1,61 @@
+<div class="digital-card">
+
+  <!--
+    <div class="row">
+      <div class="column">
+  -->
+  <div class="digital-card-header">
+    <%= image_tag "card/card-standard.jpg" %>
+  </div>
+  <!--
+      </div>
+    </div>
+  -->
+
+  <div class="row digital-card-content">
+    <p class="digital-card-content__title">Du har precis förändrat liv.</p>
+
+    <div class="digital-card-content__generated">
+      <%= simple_format(h(@card.text)) %>
+    </div>
+
+    <div class="digital-card-content__message">
+      <p>
+        Du får en gåva som är grunden till allt liv.<br>
+        Nämligen rent vatten. Idag saknar 844 miljoner människor på vår jord tillgång till just rent vatten.
+      </p>
+
+      <p>
+        Med denna gåva skänker du liv, hopp och framtidstro på en plats där det behövs som allra mest.
+      </p>
+    </div>
+  </div>
+
+  <div class="digital-card-footer">
+    <%= image_tag "wateraid-logo.png" %>
+    <small>
+      WaterAid är en internationell oberoende organisation som jobbar för att förändra människors liv genom att förbättra tillgången till rent vatten, bättre hygien och sanitet i världens fattigaste samhällen. Läs mer på <a href="www.wateraid.se" target="_self">www.wateraid.se</a><span><!-- --></span>
+    </small>
+  </div>
+
+</div>
+
+
+<!--
+<div class="card-info">
+  <div class="card-info__content">
+    <p>Du har fått ett gåvobevis från WaterAid.<br>Lorem ipsum</p>
+    <%= link_to "Så fungerar det", info_path, class: 'button' %>
+<%= link_to "Ge en gåva", root_path, class: 'button' %>
+  </div>
+</div>
+-->
+
+<!--
+<footer class="footer footer--card">
+  <div class="footer-content">
+    <%#= render 'shared/footer_links' %>
+<%= render 'shared/footer_registration' %>
+  </div>
+</footer>
+-->

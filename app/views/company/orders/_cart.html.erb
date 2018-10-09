@@ -1,0 +1,52 @@
+<h2>Varukorg</h2>
+<table class="order__items">
+  <thead>
+    <tr>
+      <th width="80px">Antal</th>
+      <th>Typ</th>
+      <th width="120px">Gåva</th>
+      <th width="25px"></th>
+    </tr>
+  </thead>
+
+  <% unless order.empty? %>
+    <tfoot>
+      <tr>
+        <td></td>
+        <td style="text-align: right">Totalt:&nbsp;</td>
+        <td><%= number_with_delimiter(order.calculate_total, delimiter: ' ') %> kr</td>
+        <td></td>
+      </tr>
+    </tfoot>
+  <% end %>
+
+  <tbody>
+    <%= form_for [:company, order] do |f| %>
+      <%= f.fields_for :order_items do |item| %>
+      <tr>
+        <td><%= item.number_field :product_quantity %></td>
+        <td>
+          <%= order_item_title(item.object) %>
+          á <%= item.object.quantity %> kr
+        </td>
+        <td><%= number_with_delimiter(item.object.price, delimiter: ' ') %> kr</td>
+        <td><%= link_to "&#215;".html_safe, company_order_item_path(item.object), method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% if order.has_digital_cards? %>
+  <p class="text-muted"><small>Du skapar dina digitala gåvobevis efter att betalningen är genomförd. För att betälla fler gåvobevis med annat värde, scrolla ner och beställ.</small>
+  </p>
+<% end %>
+
+<footer class="cart__footer">
+    <%= f.submit "Uppdatera varukorgen", class: "button" %>
+    <% if order.order_items.count > 7 %>
+      <br><%= link_to "Töm varukorgen", order, method: :delete, class: "cart__footer__delete" %>
+    <% end %>
+<% end %>
+</footer>
+
+<!-- <%= render "shared/extra_amount_form" %> -->
