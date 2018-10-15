@@ -220,7 +220,7 @@
       <!-- true -->
       <div class="col-md-3">
         <div class="card">
-          <img class="card-img-top" src="<%= root_path %>giftcard-images/<%= giftcard.thumbnail %>" alt="<%= giftcard.name %>">
+          <img class="card-img-top" src="<%= giftcard.thumbnail %>" alt="<%= giftcard.name %>">
           <div class="card-body">
             <h5 class="card-title" style="color:#00adb8;"><%= giftcard.amount %> kronor</h5>
             <p class="card-text"><%= giftcard.description %></p>
@@ -232,7 +232,7 @@
       </div>
       <!-- Modal for this giftcard -->
       <div id="modal-card-<%= giftcard.id %>" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-        <%= render partial: 'add_order_item_form', :locals => {:quantity => giftcard.amount, :giftcardId => giftcard.id, :description => giftcard.description} %>
+        <%= render partial: 'add_order_item_form', :locals => {:quantity => giftcard.amount, :giftcardId => giftcard.id, :description => giftcard.description, :previewImageSe => giftcard.preview_swedish, :previewImageEn => giftcard.preview_english} %>
       </div>
     <% end %>
   <% end %>

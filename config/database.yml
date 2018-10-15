@@ -22,9 +22,9 @@ default: &default
 
 development:
   <<: *default
-  database: giftshop 
-  username: postgres
-  password: postgres
+  database: wa_giftshop_dev #giftshop
+  username: #postgres
+  password: #postgres
 
 test:
   <<: *default

@@ -788,3 +788,51 @@
 [10/15/18 13:08:50 +0200 Marks-MacBook-Air.local (20995)] INFO : Installing Rails 4 Error instrumentation
 [10/15/18 13:08:50 +0200 Marks-MacBook-Air.local (20995)] INFO : Finished instrumentation
 [10/15/18 13:08:51 +0200 Marks-MacBook-Air.local (20995)] INFO : Doing deferred dependency-detection before Rack startup
+[10/15/18 13:12:31 +0200 Marks-MacBook-Air.local (21255)] INFO : Starting the New Relic agent in "development" environment.
+[10/15/18 13:12:31 +0200 Marks-MacBook-Air.local (21255)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[10/15/18 13:12:31 +0200 Marks-MacBook-Air.local (21255)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/giftshop)
+[10/15/18 13:12:31 +0200 Marks-MacBook-Air.local (21255)] INFO : New Relic Agent Developer Mode enabled.
+[10/15/18 13:12:31 +0200 Marks-MacBook-Air.local (21255)] ERROR : No application name configured.
+[10/15/18 13:12:31 +0200 Marks-MacBook-Air.local (21255)] ERROR : The Agent cannot start without at least one. Please check your 
+[10/15/18 13:12:31 +0200 Marks-MacBook-Air.local (21255)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[10/15/18 13:12:31 +0200 Marks-MacBook-Air.local (21255)] ERROR : value set for app_name in the development 
+[10/15/18 13:12:31 +0200 Marks-MacBook-Air.local (21255)] ERROR : environment.
+[10/15/18 13:12:31 +0200 Marks-MacBook-Air.local (21255)] INFO : Installing ActiveJob instrumentation
+[10/15/18 13:12:31 +0200 Marks-MacBook-Air.local (21255)] INFO : Installing ActiveRecord 4 instrumentation
+[10/15/18 13:12:31 +0200 Marks-MacBook-Air.local (21255)] INFO : Installing Net instrumentation
+[10/15/18 13:12:31 +0200 Marks-MacBook-Air.local (21255)] INFO : Installing Sinatra instrumentation
+[10/15/18 13:12:31 +0200 Marks-MacBook-Air.local (21255)] INFO : Installing deferred Rack instrumentation
+[10/15/18 13:12:31 +0200 Marks-MacBook-Air.local (21255)] INFO : Installing Rack::Builder middleware instrumentation
+[10/15/18 13:12:31 +0200 Marks-MacBook-Air.local (21255)] INFO : Installing Rails 3+ middleware instrumentation
+[10/15/18 13:12:31 +0200 Marks-MacBook-Air.local (21255)] INFO : Installing Redis Instrumentation
+[10/15/18 13:12:31 +0200 Marks-MacBook-Air.local (21255)] INFO : Installing Sidekiq instrumentation
+[10/15/18 13:12:31 +0200 Marks-MacBook-Air.local (21255)] INFO : Installing Typhoeus instrumentation
+[10/15/18 13:12:31 +0200 Marks-MacBook-Air.local (21255)] INFO : Installing Rails 4 Controller instrumentation
+[10/15/18 13:12:31 +0200 Marks-MacBook-Air.local (21255)] INFO : Installing Rails 4 view instrumentation
+[10/15/18 13:12:31 +0200 Marks-MacBook-Air.local (21255)] INFO : Installing Rails 4 Error instrumentation
+[10/15/18 13:12:31 +0200 Marks-MacBook-Air.local (21255)] INFO : Finished instrumentation
+[10/15/18 13:12:32 +0200 Marks-MacBook-Air.local (21255)] INFO : Doing deferred dependency-detection before Rack startup
+[10/15/18 13:14:30 +0200 Marks-MacBook-Air.local (21302)] INFO : Starting the New Relic agent in "development" environment.
+[10/15/18 13:14:30 +0200 Marks-MacBook-Air.local (21302)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[10/15/18 13:14:30 +0200 Marks-MacBook-Air.local (21302)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/giftshop)
+[10/15/18 13:14:30 +0200 Marks-MacBook-Air.local (21302)] INFO : New Relic Agent Developer Mode enabled.
+[10/15/18 13:14:30 +0200 Marks-MacBook-Air.local (21302)] ERROR : No application name configured.
+[10/15/18 13:14:30 +0200 Marks-MacBook-Air.local (21302)] ERROR : The Agent cannot start without at least one. Please check your 
+[10/15/18 13:14:30 +0200 Marks-MacBook-Air.local (21302)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[10/15/18 13:14:30 +0200 Marks-MacBook-Air.local (21302)] ERROR : value set for app_name in the development 
+[10/15/18 13:14:30 +0200 Marks-MacBook-Air.local (21302)] ERROR : environment.
+[10/15/18 13:14:30 +0200 Marks-MacBook-Air.local (21302)] INFO : Installing ActiveJob instrumentation
+[10/15/18 13:14:30 +0200 Marks-MacBook-Air.local (21302)] INFO : Installing ActiveRecord 4 instrumentation
+[10/15/18 13:14:30 +0200 Marks-MacBook-Air.local (21302)] INFO : Installing Net instrumentation
+[10/15/18 13:14:30 +0200 Marks-MacBook-Air.local (21302)] INFO : Installing Sinatra instrumentation
+[10/15/18 13:14:30 +0200 Marks-MacBook-Air.local (21302)] INFO : Installing deferred Rack instrumentation
+[10/15/18 13:14:30 +0200 Marks-MacBook-Air.local (21302)] INFO : Installing Rack::Builder middleware instrumentation
+[10/15/18 13:14:30 +0200 Marks-MacBook-Air.local (21302)] INFO : Installing Rails 3+ middleware instrumentation
+[10/15/18 13:14:30 +0200 Marks-MacBook-Air.local (21302)] INFO : Installing Redis Instrumentation
+[10/15/18 13:14:30 +0200 Marks-MacBook-Air.local (21302)] INFO : Installing Sidekiq instrumentation
+[10/15/18 13:14:30 +0200 Marks-MacBook-Air.local (21302)] INFO : Installing Typhoeus instrumentation
+[10/15/18 13:14:30 +0200 Marks-MacBook-Air.local (21302)] INFO : Installing Rails 4 Controller instrumentation
+[10/15/18 13:14:30 +0200 Marks-MacBook-Air.local (21302)] INFO : Installing Rails 4 view instrumentation
+[10/15/18 13:14:30 +0200 Marks-MacBook-Air.local (21302)] INFO : Installing Rails 4 Error instrumentation
+[10/15/18 13:14:30 +0200 Marks-MacBook-Air.local (21302)] INFO : Finished instrumentation
+[10/15/18 13:14:31 +0200 Marks-MacBook-Air.local (21302)] INFO : Doing deferred dependency-detection before Rack startup

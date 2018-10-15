@@ -48,12 +48,12 @@ class ImageUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
-  
-  def filename 
-    if original_filename 
-      current_time = Time.now.strftime("%Y-%m-%d").to_s
-      random_number = rand(10000..99999).to_s
-      "#{current_time}-#{file.basename}-#{random_number}.#{file.extension}"
+
+  def filename
+    if original_filename
+      current_time = Time.now.strftime("%Y-%m-%d-%M%S").to_s
+      random_number = rand(100..999)
+      "img-#{current_time}-#{file.basename}.#{file.extension}"
     end
   end
 end
