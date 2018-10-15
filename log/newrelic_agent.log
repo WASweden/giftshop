@@ -740,3 +740,422 @@
 [10/08/18 19:11:54 +0200 Marks-MacBook-Air.local (17093)] INFO : Installing Rails 4 Error instrumentation
 [10/08/18 19:11:54 +0200 Marks-MacBook-Air.local (17093)] INFO : Finished instrumentation
 [10/08/18 19:11:55 +0200 Marks-MacBook-Air.local (17093)] INFO : Doing deferred dependency-detection before Rack startup
+[10/12/18 14:26:22 +0700 root (9618)] INFO : Starting the New Relic agent in "development" environment.
+[10/12/18 14:26:22 +0700 root (9618)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[10/12/18 14:26:22 +0700 root (9618)] INFO : Reading configuration from config/newrelic.yml (/home/tma/Project/giftshop)
+[10/12/18 14:26:22 +0700 root (9618)] INFO : New Relic Agent Developer Mode enabled.
+[10/12/18 14:26:22 +0700 root (9618)] ERROR : No application name configured.
+[10/12/18 14:26:22 +0700 root (9618)] ERROR : The Agent cannot start without at least one. Please check your 
+[10/12/18 14:26:22 +0700 root (9618)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[10/12/18 14:26:22 +0700 root (9618)] ERROR : value set for app_name in the development 
+[10/12/18 14:26:22 +0700 root (9618)] ERROR : environment.
+[10/12/18 14:26:22 +0700 root (9618)] INFO : Installing ActiveRecord 4 instrumentation
+[10/12/18 14:26:22 +0700 root (9618)] INFO : Installing Typhoeus instrumentation
+[10/12/18 14:26:22 +0700 root (9618)] INFO : Installing Sinatra instrumentation
+[10/12/18 14:26:22 +0700 root (9618)] INFO : Installing Sidekiq instrumentation
+[10/12/18 14:26:22 +0700 root (9618)] INFO : Installing Redis Instrumentation
+[10/12/18 14:26:22 +0700 root (9618)] INFO : Installing deferred Rack instrumentation
+[10/12/18 14:26:22 +0700 root (9618)] INFO : Installing Rack::Builder middleware instrumentation
+[10/12/18 14:26:22 +0700 root (9618)] INFO : Installing Net instrumentation
+[10/12/18 14:26:22 +0700 root (9618)] INFO : Installing ActiveJob instrumentation
+[10/12/18 14:26:22 +0700 root (9618)] INFO : Installing Rails 3+ middleware instrumentation
+[10/12/18 14:26:22 +0700 root (9618)] INFO : Installing Rails 4 view instrumentation
+[10/12/18 14:26:22 +0700 root (9618)] INFO : Installing Rails 4 Controller instrumentation
+[10/12/18 14:26:22 +0700 root (9618)] INFO : Installing Rails 4 Error instrumentation
+[10/12/18 14:26:22 +0700 root (9618)] INFO : Finished instrumentation
+[10/12/18 14:26:23 +0700 root (9618)] INFO : Doing deferred dependency-detection before Rack startup
+[10/12/18 15:04:11 +0700 root (22365)] INFO : Starting the New Relic agent in "development" environment.
+[10/12/18 15:04:11 +0700 root (22365)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[10/12/18 15:04:11 +0700 root (22365)] INFO : Reading configuration from config/newrelic.yml (/home/tma/Project/giftshop)
+[10/12/18 15:04:11 +0700 root (22365)] INFO : New Relic Agent Developer Mode enabled.
+[10/12/18 15:04:12 +0700 root (22365)] ERROR : No application name configured.
+[10/12/18 15:04:12 +0700 root (22365)] ERROR : The Agent cannot start without at least one. Please check your 
+[10/12/18 15:04:12 +0700 root (22365)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[10/12/18 15:04:12 +0700 root (22365)] ERROR : value set for app_name in the development 
+[10/12/18 15:04:12 +0700 root (22365)] ERROR : environment.
+[10/12/18 15:04:12 +0700 root (22365)] INFO : Installing ActiveRecord 4 instrumentation
+[10/12/18 15:04:12 +0700 root (22365)] INFO : Installing Typhoeus instrumentation
+[10/12/18 15:04:12 +0700 root (22365)] INFO : Installing Sinatra instrumentation
+[10/12/18 15:04:12 +0700 root (22365)] INFO : Installing Sidekiq instrumentation
+[10/12/18 15:04:12 +0700 root (22365)] INFO : Installing Redis Instrumentation
+[10/12/18 15:04:12 +0700 root (22365)] INFO : Installing deferred Rack instrumentation
+[10/12/18 15:04:12 +0700 root (22365)] INFO : Installing Rack::Builder middleware instrumentation
+[10/12/18 15:04:12 +0700 root (22365)] INFO : Installing Net instrumentation
+[10/12/18 15:04:12 +0700 root (22365)] INFO : Installing ActiveJob instrumentation
+[10/12/18 15:04:12 +0700 root (22365)] INFO : Installing Rails 3+ middleware instrumentation
+[10/12/18 15:04:12 +0700 root (22365)] INFO : Installing Rails 4 view instrumentation
+[10/12/18 15:04:12 +0700 root (22365)] INFO : Installing Rails 4 Controller instrumentation
+[10/12/18 15:04:12 +0700 root (22365)] INFO : Installing Rails 4 Error instrumentation
+[10/12/18 15:04:12 +0700 root (22365)] INFO : Finished instrumentation
+[10/12/18 15:16:04 +0700 root (22656)] INFO : Starting the New Relic agent in "development" environment.
+[10/12/18 15:16:04 +0700 root (22656)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[10/12/18 15:16:04 +0700 root (22656)] INFO : Reading configuration from config/newrelic.yml (/home/tma/Project/giftshop)
+[10/12/18 15:16:04 +0700 root (22656)] INFO : New Relic Agent Developer Mode enabled.
+[10/12/18 15:16:04 +0700 root (22656)] ERROR : No application name configured.
+[10/12/18 15:16:04 +0700 root (22656)] ERROR : The Agent cannot start without at least one. Please check your 
+[10/12/18 15:16:04 +0700 root (22656)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[10/12/18 15:16:04 +0700 root (22656)] ERROR : value set for app_name in the development 
+[10/12/18 15:16:04 +0700 root (22656)] ERROR : environment.
+[10/12/18 15:16:04 +0700 root (22656)] INFO : Installing ActiveRecord 4 instrumentation
+[10/12/18 15:16:04 +0700 root (22656)] INFO : Installing Typhoeus instrumentation
+[10/12/18 15:16:04 +0700 root (22656)] INFO : Installing Sinatra instrumentation
+[10/12/18 15:16:04 +0700 root (22656)] INFO : Installing Sidekiq instrumentation
+[10/12/18 15:16:04 +0700 root (22656)] INFO : Installing Redis Instrumentation
+[10/12/18 15:16:04 +0700 root (22656)] INFO : Installing deferred Rack instrumentation
+[10/12/18 15:16:04 +0700 root (22656)] INFO : Installing Rack::Builder middleware instrumentation
+[10/12/18 15:16:04 +0700 root (22656)] INFO : Installing Net instrumentation
+[10/12/18 15:16:04 +0700 root (22656)] INFO : Installing ActiveJob instrumentation
+[10/12/18 15:16:04 +0700 root (22656)] INFO : Installing Rails 3+ middleware instrumentation
+[10/12/18 15:16:04 +0700 root (22656)] INFO : Installing Rails 4 view instrumentation
+[10/12/18 15:16:04 +0700 root (22656)] INFO : Installing Rails 4 Controller instrumentation
+[10/12/18 15:16:04 +0700 root (22656)] INFO : Installing Rails 4 Error instrumentation
+[10/12/18 15:16:04 +0700 root (22656)] INFO : Finished instrumentation
+[10/12/18 15:21:56 +0700 root (22703)] INFO : Starting the New Relic agent in "development" environment.
+[10/12/18 15:21:56 +0700 root (22703)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[10/12/18 15:21:56 +0700 root (22703)] INFO : Reading configuration from config/newrelic.yml (/home/tma/Project/giftshop)
+[10/12/18 15:21:56 +0700 root (22703)] INFO : New Relic Agent Developer Mode enabled.
+[10/12/18 15:21:56 +0700 root (22703)] ERROR : No application name configured.
+[10/12/18 15:21:56 +0700 root (22703)] ERROR : The Agent cannot start without at least one. Please check your 
+[10/12/18 15:21:56 +0700 root (22703)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[10/12/18 15:21:56 +0700 root (22703)] ERROR : value set for app_name in the development 
+[10/12/18 15:21:56 +0700 root (22703)] ERROR : environment.
+[10/12/18 15:21:56 +0700 root (22703)] INFO : Installing ActiveRecord 4 instrumentation
+[10/12/18 15:21:56 +0700 root (22703)] INFO : Installing Typhoeus instrumentation
+[10/12/18 15:21:57 +0700 root (22703)] INFO : Installing Sinatra instrumentation
+[10/12/18 15:21:57 +0700 root (22703)] INFO : Installing Sidekiq instrumentation
+[10/12/18 15:21:57 +0700 root (22703)] INFO : Installing Redis Instrumentation
+[10/12/18 15:21:57 +0700 root (22703)] INFO : Installing deferred Rack instrumentation
+[10/12/18 15:21:57 +0700 root (22703)] INFO : Installing Rack::Builder middleware instrumentation
+[10/12/18 15:21:57 +0700 root (22703)] INFO : Installing Net instrumentation
+[10/12/18 15:21:57 +0700 root (22703)] INFO : Installing ActiveJob instrumentation
+[10/12/18 15:21:57 +0700 root (22703)] INFO : Installing Rails 3+ middleware instrumentation
+[10/12/18 15:21:57 +0700 root (22703)] INFO : Installing Rails 4 view instrumentation
+[10/12/18 15:21:57 +0700 root (22703)] INFO : Installing Rails 4 Controller instrumentation
+[10/12/18 15:21:57 +0700 root (22703)] INFO : Installing Rails 4 Error instrumentation
+[10/12/18 15:21:57 +0700 root (22703)] INFO : Finished instrumentation
+[10/12/18 15:25:39 +0700 root (22752)] INFO : Starting the New Relic agent in "development" environment.
+[10/12/18 15:25:39 +0700 root (22752)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[10/12/18 15:25:39 +0700 root (22752)] INFO : Reading configuration from config/newrelic.yml (/home/tma/Project/giftshop)
+[10/12/18 15:25:39 +0700 root (22752)] INFO : New Relic Agent Developer Mode enabled.
+[10/12/18 15:25:39 +0700 root (22752)] ERROR : No application name configured.
+[10/12/18 15:25:39 +0700 root (22752)] ERROR : The Agent cannot start without at least one. Please check your 
+[10/12/18 15:25:39 +0700 root (22752)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[10/12/18 15:25:39 +0700 root (22752)] ERROR : value set for app_name in the development 
+[10/12/18 15:25:39 +0700 root (22752)] ERROR : environment.
+[10/12/18 15:25:39 +0700 root (22752)] INFO : Installing ActiveRecord 4 instrumentation
+[10/12/18 15:25:39 +0700 root (22752)] INFO : Installing Typhoeus instrumentation
+[10/12/18 15:25:39 +0700 root (22752)] INFO : Installing Sinatra instrumentation
+[10/12/18 15:25:39 +0700 root (22752)] INFO : Installing Sidekiq instrumentation
+[10/12/18 15:25:39 +0700 root (22752)] INFO : Installing Redis Instrumentation
+[10/12/18 15:25:39 +0700 root (22752)] INFO : Installing deferred Rack instrumentation
+[10/12/18 15:25:39 +0700 root (22752)] INFO : Installing Rack::Builder middleware instrumentation
+[10/12/18 15:25:39 +0700 root (22752)] INFO : Installing Net instrumentation
+[10/12/18 15:25:39 +0700 root (22752)] INFO : Installing ActiveJob instrumentation
+[10/12/18 15:25:39 +0700 root (22752)] INFO : Installing Rails 3+ middleware instrumentation
+[10/12/18 15:25:39 +0700 root (22752)] INFO : Installing Rails 4 view instrumentation
+[10/12/18 15:25:39 +0700 root (22752)] INFO : Installing Rails 4 Controller instrumentation
+[10/12/18 15:25:39 +0700 root (22752)] INFO : Installing Rails 4 Error instrumentation
+[10/12/18 15:25:39 +0700 root (22752)] INFO : Finished instrumentation
+[10/12/18 15:39:44 +0700 root (20728)] INFO : Starting the New Relic agent in "development" environment.
+[10/12/18 15:39:44 +0700 root (20728)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[10/12/18 15:39:44 +0700 root (20728)] INFO : Reading configuration from config/newrelic.yml (/home/tma/Project/giftshop)
+[10/12/18 15:39:44 +0700 root (20728)] INFO : New Relic Agent Developer Mode enabled.
+[10/12/18 15:39:44 +0700 root (20728)] ERROR : No application name configured.
+[10/12/18 15:39:44 +0700 root (20728)] ERROR : The Agent cannot start without at least one. Please check your 
+[10/12/18 15:39:44 +0700 root (20728)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[10/12/18 15:39:44 +0700 root (20728)] ERROR : value set for app_name in the development 
+[10/12/18 15:39:44 +0700 root (20728)] ERROR : environment.
+[10/12/18 15:39:44 +0700 root (20728)] INFO : Installing ActiveRecord 4 instrumentation
+[10/12/18 15:39:44 +0700 root (20728)] INFO : Installing Typhoeus instrumentation
+[10/12/18 15:39:44 +0700 root (20728)] INFO : Installing Sinatra instrumentation
+[10/12/18 15:39:44 +0700 root (20728)] INFO : Installing Sidekiq instrumentation
+[10/12/18 15:39:44 +0700 root (20728)] INFO : Installing Redis Instrumentation
+[10/12/18 15:39:44 +0700 root (20728)] INFO : Installing deferred Rack instrumentation
+[10/12/18 15:39:44 +0700 root (20728)] INFO : Installing Rack::Builder middleware instrumentation
+[10/12/18 15:39:44 +0700 root (20728)] INFO : Installing Net instrumentation
+[10/12/18 15:39:44 +0700 root (20728)] INFO : Installing ActiveJob instrumentation
+[10/12/18 15:39:44 +0700 root (20728)] INFO : Installing Rails 3+ middleware instrumentation
+[10/12/18 15:39:44 +0700 root (20728)] INFO : Installing Rails 4 view instrumentation
+[10/12/18 15:39:44 +0700 root (20728)] INFO : Installing Rails 4 Controller instrumentation
+[10/12/18 15:39:44 +0700 root (20728)] INFO : Installing Rails 4 Error instrumentation
+[10/12/18 15:39:44 +0700 root (20728)] INFO : Finished instrumentation
+[10/12/18 15:48:26 +0700 root (2640)] INFO : Starting the New Relic agent in "development" environment.
+[10/12/18 15:48:26 +0700 root (2640)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[10/12/18 15:48:26 +0700 root (2640)] INFO : Reading configuration from config/newrelic.yml (/home/tma/Project/giftshop)
+[10/12/18 15:48:26 +0700 root (2640)] INFO : New Relic Agent Developer Mode enabled.
+[10/12/18 15:48:26 +0700 root (2640)] ERROR : No application name configured.
+[10/12/18 15:48:26 +0700 root (2640)] ERROR : The Agent cannot start without at least one. Please check your 
+[10/12/18 15:48:26 +0700 root (2640)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[10/12/18 15:48:26 +0700 root (2640)] ERROR : value set for app_name in the development 
+[10/12/18 15:48:26 +0700 root (2640)] ERROR : environment.
+[10/12/18 15:48:26 +0700 root (2640)] INFO : Installing ActiveRecord 4 instrumentation
+[10/12/18 15:48:26 +0700 root (2640)] INFO : Installing Typhoeus instrumentation
+[10/12/18 15:48:26 +0700 root (2640)] INFO : Installing Sinatra instrumentation
+[10/12/18 15:48:26 +0700 root (2640)] INFO : Installing Sidekiq instrumentation
+[10/12/18 15:48:26 +0700 root (2640)] INFO : Installing Redis Instrumentation
+[10/12/18 15:48:26 +0700 root (2640)] INFO : Installing deferred Rack instrumentation
+[10/12/18 15:48:26 +0700 root (2640)] INFO : Installing Rack::Builder middleware instrumentation
+[10/12/18 15:48:26 +0700 root (2640)] INFO : Installing Net instrumentation
+[10/12/18 15:48:26 +0700 root (2640)] INFO : Installing ActiveJob instrumentation
+[10/12/18 15:48:26 +0700 root (2640)] INFO : Installing Rails 3+ middleware instrumentation
+[10/12/18 15:48:26 +0700 root (2640)] INFO : Installing Rails 4 view instrumentation
+[10/12/18 15:48:26 +0700 root (2640)] INFO : Installing Rails 4 Controller instrumentation
+[10/12/18 15:48:26 +0700 root (2640)] INFO : Installing Rails 4 Error instrumentation
+[10/12/18 15:48:26 +0700 root (2640)] INFO : Finished instrumentation
+[10/12/18 15:49:04 +0700 root (2672)] INFO : Starting the New Relic agent in "development" environment.
+[10/12/18 15:49:04 +0700 root (2672)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[10/12/18 15:49:04 +0700 root (2672)] INFO : Reading configuration from config/newrelic.yml (/home/tma/Project/giftshop)
+[10/12/18 15:49:04 +0700 root (2672)] INFO : New Relic Agent Developer Mode enabled.
+[10/12/18 15:49:04 +0700 root (2672)] ERROR : No application name configured.
+[10/12/18 15:49:04 +0700 root (2672)] ERROR : The Agent cannot start without at least one. Please check your 
+[10/12/18 15:49:04 +0700 root (2672)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[10/12/18 15:49:04 +0700 root (2672)] ERROR : value set for app_name in the development 
+[10/12/18 15:49:04 +0700 root (2672)] ERROR : environment.
+[10/12/18 15:49:04 +0700 root (2672)] INFO : Installing ActiveRecord 4 instrumentation
+[10/12/18 15:49:04 +0700 root (2672)] INFO : Installing Typhoeus instrumentation
+[10/12/18 15:49:04 +0700 root (2672)] INFO : Installing Sinatra instrumentation
+[10/12/18 15:49:04 +0700 root (2672)] INFO : Installing Sidekiq instrumentation
+[10/12/18 15:49:04 +0700 root (2672)] INFO : Installing Redis Instrumentation
+[10/12/18 15:49:04 +0700 root (2672)] INFO : Installing deferred Rack instrumentation
+[10/12/18 15:49:04 +0700 root (2672)] INFO : Installing Rack::Builder middleware instrumentation
+[10/12/18 15:49:04 +0700 root (2672)] INFO : Installing Net instrumentation
+[10/12/18 15:49:04 +0700 root (2672)] INFO : Installing ActiveJob instrumentation
+[10/12/18 15:49:04 +0700 root (2672)] INFO : Installing Rails 3+ middleware instrumentation
+[10/12/18 15:49:04 +0700 root (2672)] INFO : Installing Rails 4 view instrumentation
+[10/12/18 15:49:04 +0700 root (2672)] INFO : Installing Rails 4 Controller instrumentation
+[10/12/18 15:49:04 +0700 root (2672)] INFO : Installing Rails 4 Error instrumentation
+[10/12/18 15:49:04 +0700 root (2672)] INFO : Finished instrumentation
+[10/12/18 15:49:40 +0700 root (2732)] INFO : Starting the New Relic agent in "development" environment.
+[10/12/18 15:49:40 +0700 root (2732)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[10/12/18 15:49:40 +0700 root (2732)] INFO : Reading configuration from config/newrelic.yml (/home/tma/Project/giftshop)
+[10/12/18 15:49:40 +0700 root (2732)] INFO : New Relic Agent Developer Mode enabled.
+[10/12/18 15:49:40 +0700 root (2732)] ERROR : No application name configured.
+[10/12/18 15:49:40 +0700 root (2732)] ERROR : The Agent cannot start without at least one. Please check your 
+[10/12/18 15:49:40 +0700 root (2732)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[10/12/18 15:49:40 +0700 root (2732)] ERROR : value set for app_name in the development 
+[10/12/18 15:49:40 +0700 root (2732)] ERROR : environment.
+[10/12/18 15:49:40 +0700 root (2732)] INFO : Installing ActiveRecord 4 instrumentation
+[10/12/18 15:49:40 +0700 root (2732)] INFO : Installing Typhoeus instrumentation
+[10/12/18 15:49:40 +0700 root (2732)] INFO : Installing Sinatra instrumentation
+[10/12/18 15:49:40 +0700 root (2732)] INFO : Installing Sidekiq instrumentation
+[10/12/18 15:49:40 +0700 root (2732)] INFO : Installing Redis Instrumentation
+[10/12/18 15:49:40 +0700 root (2732)] INFO : Installing deferred Rack instrumentation
+[10/12/18 15:49:40 +0700 root (2732)] INFO : Installing Rack::Builder middleware instrumentation
+[10/12/18 15:49:40 +0700 root (2732)] INFO : Installing Net instrumentation
+[10/12/18 15:49:40 +0700 root (2732)] INFO : Installing ActiveJob instrumentation
+[10/12/18 15:49:40 +0700 root (2732)] INFO : Installing Rails 3+ middleware instrumentation
+[10/12/18 15:49:40 +0700 root (2732)] INFO : Installing Rails 4 view instrumentation
+[10/12/18 15:49:40 +0700 root (2732)] INFO : Installing Rails 4 Controller instrumentation
+[10/12/18 15:49:40 +0700 root (2732)] INFO : Installing Rails 4 Error instrumentation
+[10/12/18 15:49:40 +0700 root (2732)] INFO : Finished instrumentation
+[10/12/18 15:50:03 +0700 root (2765)] INFO : Starting the New Relic agent in "development" environment.
+[10/12/18 15:50:03 +0700 root (2765)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[10/12/18 15:50:03 +0700 root (2765)] INFO : Reading configuration from config/newrelic.yml (/home/tma/Project/giftshop)
+[10/12/18 15:50:03 +0700 root (2765)] INFO : New Relic Agent Developer Mode enabled.
+[10/12/18 15:50:03 +0700 root (2765)] ERROR : No application name configured.
+[10/12/18 15:50:03 +0700 root (2765)] ERROR : The Agent cannot start without at least one. Please check your 
+[10/12/18 15:50:03 +0700 root (2765)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[10/12/18 15:50:03 +0700 root (2765)] ERROR : value set for app_name in the development 
+[10/12/18 15:50:03 +0700 root (2765)] ERROR : environment.
+[10/12/18 15:50:03 +0700 root (2765)] INFO : Installing ActiveRecord 4 instrumentation
+[10/12/18 15:50:03 +0700 root (2765)] INFO : Installing Typhoeus instrumentation
+[10/12/18 15:50:03 +0700 root (2765)] INFO : Installing Sinatra instrumentation
+[10/12/18 15:50:03 +0700 root (2765)] INFO : Installing Sidekiq instrumentation
+[10/12/18 15:50:03 +0700 root (2765)] INFO : Installing Redis Instrumentation
+[10/12/18 15:50:03 +0700 root (2765)] INFO : Installing deferred Rack instrumentation
+[10/12/18 15:50:03 +0700 root (2765)] INFO : Installing Rack::Builder middleware instrumentation
+[10/12/18 15:50:03 +0700 root (2765)] INFO : Installing Net instrumentation
+[10/12/18 15:50:03 +0700 root (2765)] INFO : Installing ActiveJob instrumentation
+[10/12/18 15:50:03 +0700 root (2765)] INFO : Installing Rails 3+ middleware instrumentation
+[10/12/18 15:50:03 +0700 root (2765)] INFO : Installing Rails 4 view instrumentation
+[10/12/18 15:50:03 +0700 root (2765)] INFO : Installing Rails 4 Controller instrumentation
+[10/12/18 15:50:03 +0700 root (2765)] INFO : Installing Rails 4 Error instrumentation
+[10/12/18 15:50:03 +0700 root (2765)] INFO : Finished instrumentation
+[10/12/18 15:52:42 +0700 root (2881)] INFO : Starting the New Relic agent in "development" environment.
+[10/12/18 15:52:42 +0700 root (2881)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[10/12/18 15:52:42 +0700 root (2881)] INFO : Reading configuration from config/newrelic.yml (/home/tma/Project/giftshop)
+[10/12/18 15:52:42 +0700 root (2881)] INFO : New Relic Agent Developer Mode enabled.
+[10/12/18 15:52:42 +0700 root (2881)] ERROR : No application name configured.
+[10/12/18 15:52:42 +0700 root (2881)] ERROR : The Agent cannot start without at least one. Please check your 
+[10/12/18 15:52:42 +0700 root (2881)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[10/12/18 15:52:42 +0700 root (2881)] ERROR : value set for app_name in the development 
+[10/12/18 15:52:42 +0700 root (2881)] ERROR : environment.
+[10/12/18 15:52:42 +0700 root (2881)] INFO : Installing ActiveRecord 4 instrumentation
+[10/12/18 15:52:42 +0700 root (2881)] INFO : Installing Typhoeus instrumentation
+[10/12/18 15:52:42 +0700 root (2881)] INFO : Installing Sinatra instrumentation
+[10/12/18 15:52:42 +0700 root (2881)] INFO : Installing Sidekiq instrumentation
+[10/12/18 15:52:42 +0700 root (2881)] INFO : Installing Redis Instrumentation
+[10/12/18 15:52:42 +0700 root (2881)] INFO : Installing deferred Rack instrumentation
+[10/12/18 15:52:42 +0700 root (2881)] INFO : Installing Rack::Builder middleware instrumentation
+[10/12/18 15:52:42 +0700 root (2881)] INFO : Installing Net instrumentation
+[10/12/18 15:52:42 +0700 root (2881)] INFO : Installing ActiveJob instrumentation
+[10/12/18 15:52:42 +0700 root (2881)] INFO : Installing Rails 3+ middleware instrumentation
+[10/12/18 15:52:42 +0700 root (2881)] INFO : Installing Rails 4 view instrumentation
+[10/12/18 15:52:42 +0700 root (2881)] INFO : Installing Rails 4 Controller instrumentation
+[10/12/18 15:52:42 +0700 root (2881)] INFO : Installing Rails 4 Error instrumentation
+[10/12/18 15:52:42 +0700 root (2881)] INFO : Finished instrumentation
+[10/12/18 16:20:48 +0700 root (3611)] INFO : Starting the New Relic agent in "development" environment.
+[10/12/18 16:20:48 +0700 root (3611)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[10/12/18 16:20:48 +0700 root (3611)] INFO : Reading configuration from config/newrelic.yml (/home/tma/Project/giftshop)
+[10/12/18 16:20:48 +0700 root (3611)] INFO : New Relic Agent Developer Mode enabled.
+[10/12/18 16:20:48 +0700 root (3611)] ERROR : No application name configured.
+[10/12/18 16:20:48 +0700 root (3611)] ERROR : The Agent cannot start without at least one. Please check your 
+[10/12/18 16:20:48 +0700 root (3611)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[10/12/18 16:20:48 +0700 root (3611)] ERROR : value set for app_name in the development 
+[10/12/18 16:20:48 +0700 root (3611)] ERROR : environment.
+[10/12/18 16:20:48 +0700 root (3611)] INFO : Installing ActiveRecord 4 instrumentation
+[10/12/18 16:20:48 +0700 root (3611)] INFO : Installing Typhoeus instrumentation
+[10/12/18 16:20:48 +0700 root (3611)] INFO : Installing Sinatra instrumentation
+[10/12/18 16:20:48 +0700 root (3611)] INFO : Installing Sidekiq instrumentation
+[10/12/18 16:20:48 +0700 root (3611)] INFO : Installing Redis Instrumentation
+[10/12/18 16:20:48 +0700 root (3611)] INFO : Installing deferred Rack instrumentation
+[10/12/18 16:20:48 +0700 root (3611)] INFO : Installing Rack::Builder middleware instrumentation
+[10/12/18 16:20:48 +0700 root (3611)] INFO : Installing Net instrumentation
+[10/12/18 16:20:48 +0700 root (3611)] INFO : Installing ActiveJob instrumentation
+[10/12/18 16:20:48 +0700 root (3611)] INFO : Installing Rails 3+ middleware instrumentation
+[10/12/18 16:20:48 +0700 root (3611)] INFO : Installing Rails 4 view instrumentation
+[10/12/18 16:20:48 +0700 root (3611)] INFO : Installing Rails 4 Controller instrumentation
+[10/12/18 16:20:48 +0700 root (3611)] INFO : Installing Rails 4 Error instrumentation
+[10/12/18 16:20:48 +0700 root (3611)] INFO : Finished instrumentation
+[10/12/18 16:22:02 +0700 root (3644)] INFO : Starting the New Relic agent in "development" environment.
+[10/12/18 16:22:02 +0700 root (3644)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[10/12/18 16:22:02 +0700 root (3644)] INFO : Reading configuration from config/newrelic.yml (/home/tma/Project/giftshop)
+[10/12/18 16:22:02 +0700 root (3644)] INFO : New Relic Agent Developer Mode enabled.
+[10/12/18 16:22:02 +0700 root (3644)] ERROR : No application name configured.
+[10/12/18 16:22:02 +0700 root (3644)] ERROR : The Agent cannot start without at least one. Please check your 
+[10/12/18 16:22:02 +0700 root (3644)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[10/12/18 16:22:02 +0700 root (3644)] ERROR : value set for app_name in the development 
+[10/12/18 16:22:02 +0700 root (3644)] ERROR : environment.
+[10/12/18 16:22:02 +0700 root (3644)] INFO : Installing ActiveRecord 4 instrumentation
+[10/12/18 16:22:02 +0700 root (3644)] INFO : Installing Typhoeus instrumentation
+[10/12/18 16:22:02 +0700 root (3644)] INFO : Installing Sinatra instrumentation
+[10/12/18 16:22:02 +0700 root (3644)] INFO : Installing Sidekiq instrumentation
+[10/12/18 16:22:02 +0700 root (3644)] INFO : Installing Redis Instrumentation
+[10/12/18 16:22:02 +0700 root (3644)] INFO : Installing deferred Rack instrumentation
+[10/12/18 16:22:02 +0700 root (3644)] INFO : Installing Rack::Builder middleware instrumentation
+[10/12/18 16:22:02 +0700 root (3644)] INFO : Installing Net instrumentation
+[10/12/18 16:22:02 +0700 root (3644)] INFO : Installing ActiveJob instrumentation
+[10/12/18 16:22:02 +0700 root (3644)] INFO : Installing Rails 3+ middleware instrumentation
+[10/12/18 16:22:02 +0700 root (3644)] INFO : Installing Rails 4 view instrumentation
+[10/12/18 16:22:02 +0700 root (3644)] INFO : Installing Rails 4 Controller instrumentation
+[10/12/18 16:22:02 +0700 root (3644)] INFO : Installing Rails 4 Error instrumentation
+[10/12/18 16:22:02 +0700 root (3644)] INFO : Finished instrumentation
+[10/12/18 16:22:47 +0700 root (3678)] INFO : Starting the New Relic agent in "development" environment.
+[10/12/18 16:22:47 +0700 root (3678)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[10/12/18 16:22:47 +0700 root (3678)] INFO : Reading configuration from config/newrelic.yml (/home/tma/Project/giftshop)
+[10/12/18 16:22:47 +0700 root (3678)] INFO : New Relic Agent Developer Mode enabled.
+[10/12/18 16:22:47 +0700 root (3678)] ERROR : No application name configured.
+[10/12/18 16:22:47 +0700 root (3678)] ERROR : The Agent cannot start without at least one. Please check your 
+[10/12/18 16:22:47 +0700 root (3678)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[10/12/18 16:22:47 +0700 root (3678)] ERROR : value set for app_name in the development 
+[10/12/18 16:22:47 +0700 root (3678)] ERROR : environment.
+[10/12/18 16:22:47 +0700 root (3678)] INFO : Installing ActiveRecord 4 instrumentation
+[10/12/18 16:22:47 +0700 root (3678)] INFO : Installing Typhoeus instrumentation
+[10/12/18 16:22:47 +0700 root (3678)] INFO : Installing Sinatra instrumentation
+[10/12/18 16:22:47 +0700 root (3678)] INFO : Installing Sidekiq instrumentation
+[10/12/18 16:22:47 +0700 root (3678)] INFO : Installing Redis Instrumentation
+[10/12/18 16:22:47 +0700 root (3678)] INFO : Installing deferred Rack instrumentation
+[10/12/18 16:22:47 +0700 root (3678)] INFO : Installing Rack::Builder middleware instrumentation
+[10/12/18 16:22:47 +0700 root (3678)] INFO : Installing Net instrumentation
+[10/12/18 16:22:47 +0700 root (3678)] INFO : Installing ActiveJob instrumentation
+[10/12/18 16:22:48 +0700 root (3678)] INFO : Installing Rails 3+ middleware instrumentation
+[10/12/18 16:22:48 +0700 root (3678)] INFO : Installing Rails 4 view instrumentation
+[10/12/18 16:22:48 +0700 root (3678)] INFO : Installing Rails 4 Controller instrumentation
+[10/12/18 16:22:48 +0700 root (3678)] INFO : Installing Rails 4 Error instrumentation
+[10/12/18 16:22:48 +0700 root (3678)] INFO : Finished instrumentation
+[10/12/18 16:23:04 +0700 root (3688)] INFO : Starting the New Relic agent in "development" environment.
+[10/12/18 16:23:04 +0700 root (3688)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[10/12/18 16:23:04 +0700 root (3688)] INFO : Reading configuration from config/newrelic.yml (/home/tma/Project/giftshop)
+[10/12/18 16:23:04 +0700 root (3688)] INFO : New Relic Agent Developer Mode enabled.
+[10/12/18 16:23:04 +0700 root (3688)] ERROR : No application name configured.
+[10/12/18 16:23:04 +0700 root (3688)] ERROR : The Agent cannot start without at least one. Please check your 
+[10/12/18 16:23:04 +0700 root (3688)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[10/12/18 16:23:04 +0700 root (3688)] ERROR : value set for app_name in the development 
+[10/12/18 16:23:04 +0700 root (3688)] ERROR : environment.
+[10/12/18 16:23:04 +0700 root (3688)] INFO : Installing ActiveRecord 4 instrumentation
+[10/12/18 16:23:04 +0700 root (3688)] INFO : Installing Typhoeus instrumentation
+[10/12/18 16:23:04 +0700 root (3688)] INFO : Installing Sinatra instrumentation
+[10/12/18 16:23:04 +0700 root (3688)] INFO : Installing Sidekiq instrumentation
+[10/12/18 16:23:04 +0700 root (3688)] INFO : Installing Redis Instrumentation
+[10/12/18 16:23:04 +0700 root (3688)] INFO : Installing deferred Rack instrumentation
+[10/12/18 16:23:04 +0700 root (3688)] INFO : Installing Rack::Builder middleware instrumentation
+[10/12/18 16:23:04 +0700 root (3688)] INFO : Installing Net instrumentation
+[10/12/18 16:23:04 +0700 root (3688)] INFO : Installing ActiveJob instrumentation
+[10/12/18 16:23:04 +0700 root (3688)] INFO : Installing Rails 3+ middleware instrumentation
+[10/12/18 16:23:04 +0700 root (3688)] INFO : Installing Rails 4 view instrumentation
+[10/12/18 16:23:04 +0700 root (3688)] INFO : Installing Rails 4 Controller instrumentation
+[10/12/18 16:23:04 +0700 root (3688)] INFO : Installing Rails 4 Error instrumentation
+[10/12/18 16:23:04 +0700 root (3688)] INFO : Finished instrumentation
+[10/12/18 16:23:05 +0700 root (3688)] INFO : Doing deferred dependency-detection before Rack startup
+[10/12/18 16:32:19 +0700 root (4019)] INFO : Starting the New Relic agent in "development" environment.
+[10/12/18 16:32:19 +0700 root (4019)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[10/12/18 16:32:19 +0700 root (4019)] INFO : Reading configuration from config/newrelic.yml (/home/tma/Project/giftshop)
+[10/12/18 16:32:19 +0700 root (4019)] INFO : New Relic Agent Developer Mode enabled.
+[10/12/18 16:32:19 +0700 root (4019)] ERROR : No application name configured.
+[10/12/18 16:32:19 +0700 root (4019)] ERROR : The Agent cannot start without at least one. Please check your 
+[10/12/18 16:32:19 +0700 root (4019)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[10/12/18 16:32:19 +0700 root (4019)] ERROR : value set for app_name in the development 
+[10/12/18 16:32:19 +0700 root (4019)] ERROR : environment.
+[10/12/18 16:32:19 +0700 root (4019)] INFO : Installing ActiveRecord 4 instrumentation
+[10/12/18 16:32:19 +0700 root (4019)] INFO : Installing Typhoeus instrumentation
+[10/12/18 16:32:19 +0700 root (4019)] INFO : Installing Sinatra instrumentation
+[10/12/18 16:32:19 +0700 root (4019)] INFO : Installing Sidekiq instrumentation
+[10/12/18 16:32:19 +0700 root (4019)] INFO : Installing Redis Instrumentation
+[10/12/18 16:32:19 +0700 root (4019)] INFO : Installing deferred Rack instrumentation
+[10/12/18 16:32:19 +0700 root (4019)] INFO : Installing Rack::Builder middleware instrumentation
+[10/12/18 16:32:19 +0700 root (4019)] INFO : Installing Net instrumentation
+[10/12/18 16:32:19 +0700 root (4019)] INFO : Installing ActiveJob instrumentation
+[10/12/18 16:32:19 +0700 root (4019)] INFO : Installing Rails 3+ middleware instrumentation
+[10/12/18 16:32:19 +0700 root (4019)] INFO : Installing Rails 4 view instrumentation
+[10/12/18 16:32:19 +0700 root (4019)] INFO : Installing Rails 4 Controller instrumentation
+[10/12/18 16:32:19 +0700 root (4019)] INFO : Installing Rails 4 Error instrumentation
+[10/12/18 16:32:19 +0700 root (4019)] INFO : Finished instrumentation
+[10/12/18 16:32:20 +0700 root (4019)] INFO : Doing deferred dependency-detection before Rack startup
+[10/12/18 17:41:00 +0700 root (2303)] INFO : Starting the New Relic agent in "development" environment.
+[10/12/18 17:41:00 +0700 root (2303)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[10/12/18 17:41:00 +0700 root (2303)] INFO : Reading configuration from config/newrelic.yml (/home/tma/Project/giftshop)
+[10/12/18 17:41:00 +0700 root (2303)] INFO : New Relic Agent Developer Mode enabled.
+[10/12/18 17:41:00 +0700 root (2303)] ERROR : No application name configured.
+[10/12/18 17:41:00 +0700 root (2303)] ERROR : The Agent cannot start without at least one. Please check your 
+[10/12/18 17:41:00 +0700 root (2303)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[10/12/18 17:41:00 +0700 root (2303)] ERROR : value set for app_name in the development 
+[10/12/18 17:41:00 +0700 root (2303)] ERROR : environment.
+[10/12/18 17:41:00 +0700 root (2303)] INFO : Installing ActiveRecord 4 instrumentation
+[10/12/18 17:41:00 +0700 root (2303)] INFO : Installing Typhoeus instrumentation
+[10/12/18 17:41:00 +0700 root (2303)] INFO : Installing Sinatra instrumentation
+[10/12/18 17:41:00 +0700 root (2303)] INFO : Installing Sidekiq instrumentation
+[10/12/18 17:41:00 +0700 root (2303)] INFO : Installing Redis Instrumentation
+[10/12/18 17:41:00 +0700 root (2303)] INFO : Installing deferred Rack instrumentation
+[10/12/18 17:41:00 +0700 root (2303)] INFO : Installing Rack::Builder middleware instrumentation
+[10/12/18 17:41:00 +0700 root (2303)] INFO : Installing Net instrumentation
+[10/12/18 17:41:00 +0700 root (2303)] INFO : Installing ActiveJob instrumentation
+[10/12/18 17:41:00 +0700 root (2303)] INFO : Installing Rails 3+ middleware instrumentation
+[10/12/18 17:41:00 +0700 root (2303)] INFO : Installing Rails 4 view instrumentation
+[10/12/18 17:41:00 +0700 root (2303)] INFO : Installing Rails 4 Controller instrumentation
+[10/12/18 17:41:00 +0700 root (2303)] INFO : Installing Rails 4 Error instrumentation
+[10/12/18 17:41:00 +0700 root (2303)] INFO : Finished instrumentation
+[10/12/18 17:41:03 +0700 root (2303)] INFO : Doing deferred dependency-detection before Rack startup
+[10/15/18 10:24:31 +0700 root (3167)] INFO : Starting the New Relic agent in "development" environment.
+[10/15/18 10:24:31 +0700 root (3167)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[10/15/18 10:24:31 +0700 root (3167)] INFO : Reading configuration from config/newrelic.yml (/home/tma/Project/giftshop)
+[10/15/18 10:24:31 +0700 root (3167)] INFO : New Relic Agent Developer Mode enabled.
+[10/15/18 10:24:31 +0700 root (3167)] ERROR : No application name configured.
+[10/15/18 10:24:31 +0700 root (3167)] ERROR : The Agent cannot start without at least one. Please check your 
+[10/15/18 10:24:31 +0700 root (3167)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[10/15/18 10:24:31 +0700 root (3167)] ERROR : value set for app_name in the development 
+[10/15/18 10:24:31 +0700 root (3167)] ERROR : environment.
+[10/15/18 10:24:31 +0700 root (3167)] INFO : Installing ActiveRecord 4 instrumentation
+[10/15/18 10:24:31 +0700 root (3167)] INFO : Installing Typhoeus instrumentation
+[10/15/18 10:24:31 +0700 root (3167)] INFO : Installing Sinatra instrumentation
+[10/15/18 10:24:31 +0700 root (3167)] INFO : Installing Sidekiq instrumentation
+[10/15/18 10:24:31 +0700 root (3167)] INFO : Installing Redis Instrumentation
+[10/15/18 10:24:31 +0700 root (3167)] INFO : Installing deferred Rack instrumentation
+[10/15/18 10:24:31 +0700 root (3167)] INFO : Installing Rack::Builder middleware instrumentation
+[10/15/18 10:24:31 +0700 root (3167)] INFO : Installing Net instrumentation
+[10/15/18 10:24:31 +0700 root (3167)] INFO : Installing ActiveJob instrumentation
+[10/15/18 10:24:31 +0700 root (3167)] INFO : Installing Rails 3+ middleware instrumentation
+[10/15/18 10:24:31 +0700 root (3167)] INFO : Installing Rails 4 view instrumentation
+[10/15/18 10:24:31 +0700 root (3167)] INFO : Installing Rails 4 Controller instrumentation
+[10/15/18 10:24:31 +0700 root (3167)] INFO : Installing Rails 4 Error instrumentation
+[10/15/18 10:24:31 +0700 root (3167)] INFO : Finished instrumentation
+[10/15/18 10:24:33 +0700 root (3167)] INFO : Doing deferred dependency-detection before Rack startup
