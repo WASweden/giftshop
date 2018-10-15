@@ -22,7 +22,10 @@ default: &default
 
 development:
   <<: *default
-  database: wa_giftshop_dev
+  database: giftshop 
+  username: postgres
+  password: postgres
+
 test:
   <<: *default
   database: wa_giftshop_test

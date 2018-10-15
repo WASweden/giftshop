@@ -8,14 +8,14 @@
 [09/08/18 20:46:57 +0200 Marks-MacBook-Air.local (74438)] INFO : New Relic Agent Developer Mode enabled.
 [09/08/18 20:46:57 +0200 Marks-MacBook-Air.local (74439)] INFO : New Relic Agent Developer Mode enabled.
 [09/08/18 20:46:57 +0200 Marks-MacBook-Air.local (74439)] ERROR : No application name configured.
-[09/08/18 20:46:57 +0200 Marks-MacBook-Air.local (74439)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/08/18 20:46:57 +0200 Marks-MacBook-Air.local (74439)] ERROR : The Agent cannot start without at least one. Please check your
 [09/08/18 20:46:57 +0200 Marks-MacBook-Air.local (74438)] ERROR : No application name configured.
-[09/08/18 20:46:57 +0200 Marks-MacBook-Air.local (74439)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/08/18 20:46:57 +0200 Marks-MacBook-Air.local (74439)] ERROR : value set for app_name in the development 
+[09/08/18 20:46:57 +0200 Marks-MacBook-Air.local (74439)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/08/18 20:46:57 +0200 Marks-MacBook-Air.local (74439)] ERROR : value set for app_name in the development
 [09/08/18 20:46:57 +0200 Marks-MacBook-Air.local (74439)] ERROR : environment.
-[09/08/18 20:46:57 +0200 Marks-MacBook-Air.local (74438)] ERROR : The Agent cannot start without at least one. Please check your 
-[09/08/18 20:46:57 +0200 Marks-MacBook-Air.local (74438)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/08/18 20:46:57 +0200 Marks-MacBook-Air.local (74438)] ERROR : value set for app_name in the development 
+[09/08/18 20:46:57 +0200 Marks-MacBook-Air.local (74438)] ERROR : The Agent cannot start without at least one. Please check your
+[09/08/18 20:46:57 +0200 Marks-MacBook-Air.local (74438)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/08/18 20:46:57 +0200 Marks-MacBook-Air.local (74438)] ERROR : value set for app_name in the development
 [09/08/18 20:46:57 +0200 Marks-MacBook-Air.local (74438)] ERROR : environment.
 [09/08/18 20:46:57 +0200 Marks-MacBook-Air.local (74439)] INFO : Installing ActiveJob instrumentation
 [09/08/18 20:46:57 +0200 Marks-MacBook-Air.local (74438)] INFO : Installing ActiveJob instrumentation
@@ -51,9 +51,9 @@
 [09/08/18 20:48:41 +0200 Marks-MacBook-Air.local (74472)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [09/08/18 20:48:41 +0200 Marks-MacBook-Air.local (74472)] INFO : New Relic Agent Developer Mode enabled.
 [09/08/18 20:48:41 +0200 Marks-MacBook-Air.local (74472)] ERROR : No application name configured.
-[09/08/18 20:48:41 +0200 Marks-MacBook-Air.local (74472)] ERROR : The Agent cannot start without at least one. Please check your 
-[09/08/18 20:48:41 +0200 Marks-MacBook-Air.local (74472)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/08/18 20:48:41 +0200 Marks-MacBook-Air.local (74472)] ERROR : value set for app_name in the development 
+[09/08/18 20:48:41 +0200 Marks-MacBook-Air.local (74472)] ERROR : The Agent cannot start without at least one. Please check your
+[09/08/18 20:48:41 +0200 Marks-MacBook-Air.local (74472)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/08/18 20:48:41 +0200 Marks-MacBook-Air.local (74472)] ERROR : value set for app_name in the development
 [09/08/18 20:48:41 +0200 Marks-MacBook-Air.local (74472)] ERROR : environment.
 [09/08/18 20:48:41 +0200 Marks-MacBook-Air.local (74472)] INFO : Installing ActiveJob instrumentation
 [09/08/18 20:48:41 +0200 Marks-MacBook-Air.local (74472)] INFO : Installing ActiveRecord 4 instrumentation
@@ -75,9 +75,9 @@
 [09/09/18 13:02:05 +0200 Marks-MacBook-Air.local (76830)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [09/09/18 13:02:05 +0200 Marks-MacBook-Air.local (76830)] INFO : New Relic Agent Developer Mode enabled.
 [09/09/18 13:02:05 +0200 Marks-MacBook-Air.local (76830)] ERROR : No application name configured.
-[09/09/18 13:02:05 +0200 Marks-MacBook-Air.local (76830)] ERROR : The Agent cannot start without at least one. Please check your 
-[09/09/18 13:02:05 +0200 Marks-MacBook-Air.local (76830)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/09/18 13:02:05 +0200 Marks-MacBook-Air.local (76830)] ERROR : value set for app_name in the development 
+[09/09/18 13:02:05 +0200 Marks-MacBook-Air.local (76830)] ERROR : The Agent cannot start without at least one. Please check your
+[09/09/18 13:02:05 +0200 Marks-MacBook-Air.local (76830)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/09/18 13:02:05 +0200 Marks-MacBook-Air.local (76830)] ERROR : value set for app_name in the development
 [09/09/18 13:02:05 +0200 Marks-MacBook-Air.local (76830)] ERROR : environment.
 [09/09/18 13:02:05 +0200 Marks-MacBook-Air.local (76830)] INFO : Installing ActiveJob instrumentation
 [09/09/18 13:02:05 +0200 Marks-MacBook-Air.local (76830)] INFO : Installing ActiveRecord 4 instrumentation
@@ -99,9 +99,9 @@
 [09/10/18 09:57:29 +0200 Marks-MacBook-Air.local (83831)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [09/10/18 09:57:29 +0200 Marks-MacBook-Air.local (83831)] INFO : New Relic Agent Developer Mode enabled.
 [09/10/18 09:57:29 +0200 Marks-MacBook-Air.local (83831)] ERROR : No application name configured.
-[09/10/18 09:57:29 +0200 Marks-MacBook-Air.local (83831)] ERROR : The Agent cannot start without at least one. Please check your 
-[09/10/18 09:57:29 +0200 Marks-MacBook-Air.local (83831)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/10/18 09:57:29 +0200 Marks-MacBook-Air.local (83831)] ERROR : value set for app_name in the development 
+[09/10/18 09:57:29 +0200 Marks-MacBook-Air.local (83831)] ERROR : The Agent cannot start without at least one. Please check your
+[09/10/18 09:57:29 +0200 Marks-MacBook-Air.local (83831)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/10/18 09:57:29 +0200 Marks-MacBook-Air.local (83831)] ERROR : value set for app_name in the development
 [09/10/18 09:57:29 +0200 Marks-MacBook-Air.local (83831)] ERROR : environment.
 [09/10/18 09:57:29 +0200 Marks-MacBook-Air.local (83831)] INFO : Installing ActiveJob instrumentation
 [09/10/18 09:57:29 +0200 Marks-MacBook-Air.local (83831)] INFO : Installing ActiveRecord 4 instrumentation
@@ -123,9 +123,9 @@
 [09/10/18 10:06:01 +0200 Marks-MacBook-Air.local (83995)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [09/10/18 10:06:01 +0200 Marks-MacBook-Air.local (83995)] INFO : New Relic Agent Developer Mode enabled.
 [09/10/18 10:06:01 +0200 Marks-MacBook-Air.local (83995)] ERROR : No application name configured.
-[09/10/18 10:06:01 +0200 Marks-MacBook-Air.local (83995)] ERROR : The Agent cannot start without at least one. Please check your 
-[09/10/18 10:06:01 +0200 Marks-MacBook-Air.local (83995)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/10/18 10:06:01 +0200 Marks-MacBook-Air.local (83995)] ERROR : value set for app_name in the development 
+[09/10/18 10:06:01 +0200 Marks-MacBook-Air.local (83995)] ERROR : The Agent cannot start without at least one. Please check your
+[09/10/18 10:06:01 +0200 Marks-MacBook-Air.local (83995)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/10/18 10:06:01 +0200 Marks-MacBook-Air.local (83995)] ERROR : value set for app_name in the development
 [09/10/18 10:06:01 +0200 Marks-MacBook-Air.local (83995)] ERROR : environment.
 [09/10/18 10:06:01 +0200 Marks-MacBook-Air.local (83995)] INFO : Installing ActiveJob instrumentation
 [09/10/18 10:06:01 +0200 Marks-MacBook-Air.local (83995)] INFO : Installing ActiveRecord 4 instrumentation
@@ -147,9 +147,9 @@
 [09/10/18 13:00:59 +0200 Marks-MacBook-Air.local (86296)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [09/10/18 13:00:59 +0200 Marks-MacBook-Air.local (86296)] INFO : New Relic Agent Developer Mode enabled.
 [09/10/18 13:00:59 +0200 Marks-MacBook-Air.local (86296)] ERROR : No application name configured.
-[09/10/18 13:00:59 +0200 Marks-MacBook-Air.local (86296)] ERROR : The Agent cannot start without at least one. Please check your 
-[09/10/18 13:00:59 +0200 Marks-MacBook-Air.local (86296)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/10/18 13:00:59 +0200 Marks-MacBook-Air.local (86296)] ERROR : value set for app_name in the development 
+[09/10/18 13:00:59 +0200 Marks-MacBook-Air.local (86296)] ERROR : The Agent cannot start without at least one. Please check your
+[09/10/18 13:00:59 +0200 Marks-MacBook-Air.local (86296)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/10/18 13:00:59 +0200 Marks-MacBook-Air.local (86296)] ERROR : value set for app_name in the development
 [09/10/18 13:00:59 +0200 Marks-MacBook-Air.local (86296)] ERROR : environment.
 [09/10/18 13:00:59 +0200 Marks-MacBook-Air.local (86296)] INFO : Installing ActiveJob instrumentation
 [09/10/18 13:00:59 +0200 Marks-MacBook-Air.local (86296)] INFO : Installing ActiveRecord 4 instrumentation
@@ -171,9 +171,9 @@
 [09/10/18 13:21:35 +0200 Marks-MacBook-Air.local (86566)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [09/10/18 13:21:35 +0200 Marks-MacBook-Air.local (86566)] INFO : New Relic Agent Developer Mode enabled.
 [09/10/18 13:21:35 +0200 Marks-MacBook-Air.local (86566)] ERROR : No application name configured.
-[09/10/18 13:21:35 +0200 Marks-MacBook-Air.local (86566)] ERROR : The Agent cannot start without at least one. Please check your 
-[09/10/18 13:21:35 +0200 Marks-MacBook-Air.local (86566)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/10/18 13:21:35 +0200 Marks-MacBook-Air.local (86566)] ERROR : value set for app_name in the development 
+[09/10/18 13:21:35 +0200 Marks-MacBook-Air.local (86566)] ERROR : The Agent cannot start without at least one. Please check your
+[09/10/18 13:21:35 +0200 Marks-MacBook-Air.local (86566)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/10/18 13:21:35 +0200 Marks-MacBook-Air.local (86566)] ERROR : value set for app_name in the development
 [09/10/18 13:21:35 +0200 Marks-MacBook-Air.local (86566)] ERROR : environment.
 [09/10/18 13:21:35 +0200 Marks-MacBook-Air.local (86566)] INFO : Installing ActiveJob instrumentation
 [09/10/18 13:21:35 +0200 Marks-MacBook-Air.local (86566)] INFO : Installing ActiveRecord 4 instrumentation
@@ -195,9 +195,9 @@
 [09/10/18 15:44:11 +0200 Marks-MacBook-Air.local (88601)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [09/10/18 15:44:11 +0200 Marks-MacBook-Air.local (88601)] INFO : New Relic Agent Developer Mode enabled.
 [09/10/18 15:44:11 +0200 Marks-MacBook-Air.local (88601)] ERROR : No application name configured.
-[09/10/18 15:44:11 +0200 Marks-MacBook-Air.local (88601)] ERROR : The Agent cannot start without at least one. Please check your 
-[09/10/18 15:44:11 +0200 Marks-MacBook-Air.local (88601)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/10/18 15:44:11 +0200 Marks-MacBook-Air.local (88601)] ERROR : value set for app_name in the development 
+[09/10/18 15:44:11 +0200 Marks-MacBook-Air.local (88601)] ERROR : The Agent cannot start without at least one. Please check your
+[09/10/18 15:44:11 +0200 Marks-MacBook-Air.local (88601)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/10/18 15:44:11 +0200 Marks-MacBook-Air.local (88601)] ERROR : value set for app_name in the development
 [09/10/18 15:44:11 +0200 Marks-MacBook-Air.local (88601)] ERROR : environment.
 [09/10/18 15:44:11 +0200 Marks-MacBook-Air.local (88601)] INFO : Installing ActiveJob instrumentation
 [09/10/18 15:44:11 +0200 Marks-MacBook-Air.local (88601)] INFO : Installing ActiveRecord 4 instrumentation
@@ -219,9 +219,9 @@
 [09/10/18 16:37:12 +0200 Marks-MacBook-Air.local (89133)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [09/10/18 16:37:12 +0200 Marks-MacBook-Air.local (89133)] INFO : New Relic Agent Developer Mode enabled.
 [09/10/18 16:37:12 +0200 Marks-MacBook-Air.local (89133)] ERROR : No application name configured.
-[09/10/18 16:37:12 +0200 Marks-MacBook-Air.local (89133)] ERROR : The Agent cannot start without at least one. Please check your 
-[09/10/18 16:37:12 +0200 Marks-MacBook-Air.local (89133)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/10/18 16:37:12 +0200 Marks-MacBook-Air.local (89133)] ERROR : value set for app_name in the development 
+[09/10/18 16:37:12 +0200 Marks-MacBook-Air.local (89133)] ERROR : The Agent cannot start without at least one. Please check your
+[09/10/18 16:37:12 +0200 Marks-MacBook-Air.local (89133)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/10/18 16:37:12 +0200 Marks-MacBook-Air.local (89133)] ERROR : value set for app_name in the development
 [09/10/18 16:37:12 +0200 Marks-MacBook-Air.local (89133)] ERROR : environment.
 [09/10/18 16:37:13 +0200 Marks-MacBook-Air.local (89133)] INFO : Installing ActiveJob instrumentation
 [09/10/18 16:37:13 +0200 Marks-MacBook-Air.local (89133)] INFO : Installing ActiveRecord 4 instrumentation
@@ -243,9 +243,9 @@
 [09/11/18 09:45:06 +0200 Marks-MacBook-Air.local (90238)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [09/11/18 09:45:06 +0200 Marks-MacBook-Air.local (90238)] INFO : New Relic Agent Developer Mode enabled.
 [09/11/18 09:45:06 +0200 Marks-MacBook-Air.local (90238)] ERROR : No application name configured.
-[09/11/18 09:45:06 +0200 Marks-MacBook-Air.local (90238)] ERROR : The Agent cannot start without at least one. Please check your 
-[09/11/18 09:45:06 +0200 Marks-MacBook-Air.local (90238)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/11/18 09:45:06 +0200 Marks-MacBook-Air.local (90238)] ERROR : value set for app_name in the development 
+[09/11/18 09:45:06 +0200 Marks-MacBook-Air.local (90238)] ERROR : The Agent cannot start without at least one. Please check your
+[09/11/18 09:45:06 +0200 Marks-MacBook-Air.local (90238)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/11/18 09:45:06 +0200 Marks-MacBook-Air.local (90238)] ERROR : value set for app_name in the development
 [09/11/18 09:45:06 +0200 Marks-MacBook-Air.local (90238)] ERROR : environment.
 [09/11/18 09:45:06 +0200 Marks-MacBook-Air.local (90238)] INFO : Installing ActiveJob instrumentation
 [09/11/18 09:45:06 +0200 Marks-MacBook-Air.local (90238)] INFO : Installing ActiveRecord 4 instrumentation
@@ -267,9 +267,9 @@
 [09/11/18 10:07:50 +0200 Marks-MacBook-Air.local (90350)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [09/11/18 10:07:50 +0200 Marks-MacBook-Air.local (90350)] INFO : New Relic Agent Developer Mode enabled.
 [09/11/18 10:07:50 +0200 Marks-MacBook-Air.local (90350)] ERROR : No application name configured.
-[09/11/18 10:07:50 +0200 Marks-MacBook-Air.local (90350)] ERROR : The Agent cannot start without at least one. Please check your 
-[09/11/18 10:07:50 +0200 Marks-MacBook-Air.local (90350)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/11/18 10:07:50 +0200 Marks-MacBook-Air.local (90350)] ERROR : value set for app_name in the development 
+[09/11/18 10:07:50 +0200 Marks-MacBook-Air.local (90350)] ERROR : The Agent cannot start without at least one. Please check your
+[09/11/18 10:07:50 +0200 Marks-MacBook-Air.local (90350)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/11/18 10:07:50 +0200 Marks-MacBook-Air.local (90350)] ERROR : value set for app_name in the development
 [09/11/18 10:07:50 +0200 Marks-MacBook-Air.local (90350)] ERROR : environment.
 [09/11/18 10:07:50 +0200 Marks-MacBook-Air.local (90350)] INFO : Installing ActiveJob instrumentation
 [09/11/18 10:07:50 +0200 Marks-MacBook-Air.local (90350)] INFO : Installing ActiveRecord 4 instrumentation
@@ -291,9 +291,9 @@
 [09/11/18 10:10:15 +0200 Marks-MacBook-Air.local (90361)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [09/11/18 10:10:15 +0200 Marks-MacBook-Air.local (90361)] INFO : New Relic Agent Developer Mode enabled.
 [09/11/18 10:10:15 +0200 Marks-MacBook-Air.local (90361)] ERROR : No application name configured.
-[09/11/18 10:10:15 +0200 Marks-MacBook-Air.local (90361)] ERROR : The Agent cannot start without at least one. Please check your 
-[09/11/18 10:10:15 +0200 Marks-MacBook-Air.local (90361)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/11/18 10:10:15 +0200 Marks-MacBook-Air.local (90361)] ERROR : value set for app_name in the development 
+[09/11/18 10:10:15 +0200 Marks-MacBook-Air.local (90361)] ERROR : The Agent cannot start without at least one. Please check your
+[09/11/18 10:10:15 +0200 Marks-MacBook-Air.local (90361)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/11/18 10:10:15 +0200 Marks-MacBook-Air.local (90361)] ERROR : value set for app_name in the development
 [09/11/18 10:10:15 +0200 Marks-MacBook-Air.local (90361)] ERROR : environment.
 [09/11/18 10:10:15 +0200 Marks-MacBook-Air.local (90361)] INFO : Installing ActiveJob instrumentation
 [09/11/18 10:10:15 +0200 Marks-MacBook-Air.local (90361)] INFO : Installing ActiveRecord 4 instrumentation
@@ -314,9 +314,9 @@
 [09/11/18 10:10:33 +0200 Marks-MacBook-Air.local (90364)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [09/11/18 10:10:33 +0200 Marks-MacBook-Air.local (90364)] INFO : New Relic Agent Developer Mode enabled.
 [09/11/18 10:10:33 +0200 Marks-MacBook-Air.local (90364)] ERROR : No application name configured.
-[09/11/18 10:10:33 +0200 Marks-MacBook-Air.local (90364)] ERROR : The Agent cannot start without at least one. Please check your 
-[09/11/18 10:10:33 +0200 Marks-MacBook-Air.local (90364)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/11/18 10:10:33 +0200 Marks-MacBook-Air.local (90364)] ERROR : value set for app_name in the development 
+[09/11/18 10:10:33 +0200 Marks-MacBook-Air.local (90364)] ERROR : The Agent cannot start without at least one. Please check your
+[09/11/18 10:10:33 +0200 Marks-MacBook-Air.local (90364)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/11/18 10:10:33 +0200 Marks-MacBook-Air.local (90364)] ERROR : value set for app_name in the development
 [09/11/18 10:10:33 +0200 Marks-MacBook-Air.local (90364)] ERROR : environment.
 [09/11/18 10:10:34 +0200 Marks-MacBook-Air.local (90364)] INFO : Installing ActiveJob instrumentation
 [09/11/18 10:10:34 +0200 Marks-MacBook-Air.local (90364)] INFO : Installing ActiveRecord 4 instrumentation
@@ -338,9 +338,9 @@
 [09/13/18 14:34:41 +0200 Marks-MacBook-Air.local (1060)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [09/13/18 14:34:42 +0200 Marks-MacBook-Air.local (1060)] INFO : New Relic Agent Developer Mode enabled.
 [09/13/18 14:34:42 +0200 Marks-MacBook-Air.local (1060)] ERROR : No application name configured.
-[09/13/18 14:34:42 +0200 Marks-MacBook-Air.local (1060)] ERROR : The Agent cannot start without at least one. Please check your 
-[09/13/18 14:34:42 +0200 Marks-MacBook-Air.local (1060)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/13/18 14:34:42 +0200 Marks-MacBook-Air.local (1060)] ERROR : value set for app_name in the development 
+[09/13/18 14:34:42 +0200 Marks-MacBook-Air.local (1060)] ERROR : The Agent cannot start without at least one. Please check your
+[09/13/18 14:34:42 +0200 Marks-MacBook-Air.local (1060)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/13/18 14:34:42 +0200 Marks-MacBook-Air.local (1060)] ERROR : value set for app_name in the development
 [09/13/18 14:34:42 +0200 Marks-MacBook-Air.local (1060)] ERROR : environment.
 [09/13/18 14:34:42 +0200 Marks-MacBook-Air.local (1060)] INFO : Installing ActiveJob instrumentation
 [09/13/18 14:34:42 +0200 Marks-MacBook-Air.local (1060)] INFO : Installing ActiveRecord 4 instrumentation
@@ -362,9 +362,9 @@
 [09/13/18 14:35:15 +0200 Marks-MacBook-Air.local (1079)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [09/13/18 14:35:15 +0200 Marks-MacBook-Air.local (1079)] INFO : New Relic Agent Developer Mode enabled.
 [09/13/18 14:35:15 +0200 Marks-MacBook-Air.local (1079)] ERROR : No application name configured.
-[09/13/18 14:35:15 +0200 Marks-MacBook-Air.local (1079)] ERROR : The Agent cannot start without at least one. Please check your 
-[09/13/18 14:35:15 +0200 Marks-MacBook-Air.local (1079)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/13/18 14:35:15 +0200 Marks-MacBook-Air.local (1079)] ERROR : value set for app_name in the development 
+[09/13/18 14:35:15 +0200 Marks-MacBook-Air.local (1079)] ERROR : The Agent cannot start without at least one. Please check your
+[09/13/18 14:35:15 +0200 Marks-MacBook-Air.local (1079)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/13/18 14:35:15 +0200 Marks-MacBook-Air.local (1079)] ERROR : value set for app_name in the development
 [09/13/18 14:35:15 +0200 Marks-MacBook-Air.local (1079)] ERROR : environment.
 [09/13/18 14:35:16 +0200 Marks-MacBook-Air.local (1079)] INFO : Installing ActiveJob instrumentation
 [09/13/18 14:35:16 +0200 Marks-MacBook-Air.local (1079)] INFO : Installing ActiveRecord 4 instrumentation
@@ -386,9 +386,9 @@
 [09/13/18 16:02:36 +0200 Marks-MacBook-Air.local (1599)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [09/13/18 16:02:36 +0200 Marks-MacBook-Air.local (1599)] INFO : New Relic Agent Developer Mode enabled.
 [09/13/18 16:02:36 +0200 Marks-MacBook-Air.local (1599)] ERROR : No application name configured.
-[09/13/18 16:02:36 +0200 Marks-MacBook-Air.local (1599)] ERROR : The Agent cannot start without at least one. Please check your 
-[09/13/18 16:02:36 +0200 Marks-MacBook-Air.local (1599)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/13/18 16:02:36 +0200 Marks-MacBook-Air.local (1599)] ERROR : value set for app_name in the development 
+[09/13/18 16:02:36 +0200 Marks-MacBook-Air.local (1599)] ERROR : The Agent cannot start without at least one. Please check your
+[09/13/18 16:02:36 +0200 Marks-MacBook-Air.local (1599)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/13/18 16:02:36 +0200 Marks-MacBook-Air.local (1599)] ERROR : value set for app_name in the development
 [09/13/18 16:02:36 +0200 Marks-MacBook-Air.local (1599)] ERROR : environment.
 [09/13/18 16:02:36 +0200 Marks-MacBook-Air.local (1599)] INFO : Installing ActiveJob instrumentation
 [09/13/18 16:02:36 +0200 Marks-MacBook-Air.local (1599)] INFO : Installing ActiveRecord 4 instrumentation
@@ -410,9 +410,9 @@
 [09/14/18 09:40:27 +0200 Marks-MacBook-Air.local (4230)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [09/14/18 09:40:27 +0200 Marks-MacBook-Air.local (4230)] INFO : New Relic Agent Developer Mode enabled.
 [09/14/18 09:40:27 +0200 Marks-MacBook-Air.local (4230)] ERROR : No application name configured.
-[09/14/18 09:40:27 +0200 Marks-MacBook-Air.local (4230)] ERROR : The Agent cannot start without at least one. Please check your 
-[09/14/18 09:40:27 +0200 Marks-MacBook-Air.local (4230)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/14/18 09:40:27 +0200 Marks-MacBook-Air.local (4230)] ERROR : value set for app_name in the development 
+[09/14/18 09:40:27 +0200 Marks-MacBook-Air.local (4230)] ERROR : The Agent cannot start without at least one. Please check your
+[09/14/18 09:40:27 +0200 Marks-MacBook-Air.local (4230)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/14/18 09:40:27 +0200 Marks-MacBook-Air.local (4230)] ERROR : value set for app_name in the development
 [09/14/18 09:40:27 +0200 Marks-MacBook-Air.local (4230)] ERROR : environment.
 [09/14/18 09:40:27 +0200 Marks-MacBook-Air.local (4230)] INFO : Installing ActiveJob instrumentation
 [09/14/18 09:40:27 +0200 Marks-MacBook-Air.local (4230)] INFO : Installing ActiveRecord 4 instrumentation
@@ -434,9 +434,9 @@
 [09/14/18 14:51:21 +0200 Marks-MacBook-Air.local (8118)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [09/14/18 14:51:21 +0200 Marks-MacBook-Air.local (8118)] INFO : New Relic Agent Developer Mode enabled.
 [09/14/18 14:51:21 +0200 Marks-MacBook-Air.local (8118)] ERROR : No application name configured.
-[09/14/18 14:51:21 +0200 Marks-MacBook-Air.local (8118)] ERROR : The Agent cannot start without at least one. Please check your 
-[09/14/18 14:51:21 +0200 Marks-MacBook-Air.local (8118)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/14/18 14:51:21 +0200 Marks-MacBook-Air.local (8118)] ERROR : value set for app_name in the development 
+[09/14/18 14:51:21 +0200 Marks-MacBook-Air.local (8118)] ERROR : The Agent cannot start without at least one. Please check your
+[09/14/18 14:51:21 +0200 Marks-MacBook-Air.local (8118)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/14/18 14:51:21 +0200 Marks-MacBook-Air.local (8118)] ERROR : value set for app_name in the development
 [09/14/18 14:51:21 +0200 Marks-MacBook-Air.local (8118)] ERROR : environment.
 [09/14/18 14:51:21 +0200 Marks-MacBook-Air.local (8118)] INFO : Installing ActiveJob instrumentation
 [09/14/18 14:51:21 +0200 Marks-MacBook-Air.local (8118)] INFO : Installing ActiveRecord 4 instrumentation
@@ -457,9 +457,9 @@
 [09/14/18 14:57:24 +0200 Marks-MacBook-Air.local (8216)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [09/14/18 14:57:24 +0200 Marks-MacBook-Air.local (8216)] INFO : New Relic Agent Developer Mode enabled.
 [09/14/18 14:57:24 +0200 Marks-MacBook-Air.local (8216)] ERROR : No application name configured.
-[09/14/18 14:57:24 +0200 Marks-MacBook-Air.local (8216)] ERROR : The Agent cannot start without at least one. Please check your 
-[09/14/18 14:57:24 +0200 Marks-MacBook-Air.local (8216)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/14/18 14:57:24 +0200 Marks-MacBook-Air.local (8216)] ERROR : value set for app_name in the development 
+[09/14/18 14:57:24 +0200 Marks-MacBook-Air.local (8216)] ERROR : The Agent cannot start without at least one. Please check your
+[09/14/18 14:57:24 +0200 Marks-MacBook-Air.local (8216)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/14/18 14:57:24 +0200 Marks-MacBook-Air.local (8216)] ERROR : value set for app_name in the development
 [09/14/18 14:57:24 +0200 Marks-MacBook-Air.local (8216)] ERROR : environment.
 [09/14/18 14:57:24 +0200 Marks-MacBook-Air.local (8216)] INFO : Installing ActiveJob instrumentation
 [09/14/18 14:57:24 +0200 Marks-MacBook-Air.local (8216)] INFO : Installing ActiveRecord 4 instrumentation
@@ -481,9 +481,9 @@
 [09/14/18 15:06:21 +0200 Marks-MacBook-Air.local (8531)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [09/14/18 15:06:22 +0200 Marks-MacBook-Air.local (8531)] INFO : New Relic Agent Developer Mode enabled.
 [09/14/18 15:06:22 +0200 Marks-MacBook-Air.local (8531)] ERROR : No application name configured.
-[09/14/18 15:06:22 +0200 Marks-MacBook-Air.local (8531)] ERROR : The Agent cannot start without at least one. Please check your 
-[09/14/18 15:06:22 +0200 Marks-MacBook-Air.local (8531)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/14/18 15:06:22 +0200 Marks-MacBook-Air.local (8531)] ERROR : value set for app_name in the development 
+[09/14/18 15:06:22 +0200 Marks-MacBook-Air.local (8531)] ERROR : The Agent cannot start without at least one. Please check your
+[09/14/18 15:06:22 +0200 Marks-MacBook-Air.local (8531)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/14/18 15:06:22 +0200 Marks-MacBook-Air.local (8531)] ERROR : value set for app_name in the development
 [09/14/18 15:06:22 +0200 Marks-MacBook-Air.local (8531)] ERROR : environment.
 [09/14/18 15:06:22 +0200 Marks-MacBook-Air.local (8531)] INFO : Installing ActiveJob instrumentation
 [09/14/18 15:06:22 +0200 Marks-MacBook-Air.local (8531)] INFO : Installing ActiveRecord 4 instrumentation
@@ -505,9 +505,9 @@
 [09/14/18 15:11:55 +0200 Marks-MacBook-Air.local (8583)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [09/14/18 15:11:55 +0200 Marks-MacBook-Air.local (8583)] INFO : New Relic Agent Developer Mode enabled.
 [09/14/18 15:11:55 +0200 Marks-MacBook-Air.local (8583)] ERROR : No application name configured.
-[09/14/18 15:11:55 +0200 Marks-MacBook-Air.local (8583)] ERROR : The Agent cannot start without at least one. Please check your 
-[09/14/18 15:11:55 +0200 Marks-MacBook-Air.local (8583)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/14/18 15:11:55 +0200 Marks-MacBook-Air.local (8583)] ERROR : value set for app_name in the development 
+[09/14/18 15:11:55 +0200 Marks-MacBook-Air.local (8583)] ERROR : The Agent cannot start without at least one. Please check your
+[09/14/18 15:11:55 +0200 Marks-MacBook-Air.local (8583)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/14/18 15:11:55 +0200 Marks-MacBook-Air.local (8583)] ERROR : value set for app_name in the development
 [09/14/18 15:11:55 +0200 Marks-MacBook-Air.local (8583)] ERROR : environment.
 [09/14/18 15:11:55 +0200 Marks-MacBook-Air.local (8583)] INFO : Installing ActiveJob instrumentation
 [09/14/18 15:11:55 +0200 Marks-MacBook-Air.local (8583)] INFO : Installing ActiveRecord 4 instrumentation
@@ -528,9 +528,9 @@
 [09/14/18 15:12:51 +0200 Marks-MacBook-Air.local (8668)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [09/14/18 15:12:51 +0200 Marks-MacBook-Air.local (8668)] INFO : New Relic Agent Developer Mode enabled.
 [09/14/18 15:12:51 +0200 Marks-MacBook-Air.local (8668)] ERROR : No application name configured.
-[09/14/18 15:12:51 +0200 Marks-MacBook-Air.local (8668)] ERROR : The Agent cannot start without at least one. Please check your 
-[09/14/18 15:12:51 +0200 Marks-MacBook-Air.local (8668)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/14/18 15:12:51 +0200 Marks-MacBook-Air.local (8668)] ERROR : value set for app_name in the development 
+[09/14/18 15:12:51 +0200 Marks-MacBook-Air.local (8668)] ERROR : The Agent cannot start without at least one. Please check your
+[09/14/18 15:12:51 +0200 Marks-MacBook-Air.local (8668)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/14/18 15:12:51 +0200 Marks-MacBook-Air.local (8668)] ERROR : value set for app_name in the development
 [09/14/18 15:12:51 +0200 Marks-MacBook-Air.local (8668)] ERROR : environment.
 [09/14/18 15:12:51 +0200 Marks-MacBook-Air.local (8668)] INFO : Installing ActiveJob instrumentation
 [09/14/18 15:12:51 +0200 Marks-MacBook-Air.local (8668)] INFO : Installing ActiveRecord 4 instrumentation
@@ -552,9 +552,9 @@
 [09/14/18 15:59:24 +0200 Marks-MacBook-Air.local (9476)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [09/14/18 15:59:24 +0200 Marks-MacBook-Air.local (9476)] INFO : New Relic Agent Developer Mode enabled.
 [09/14/18 15:59:24 +0200 Marks-MacBook-Air.local (9476)] ERROR : No application name configured.
-[09/14/18 15:59:24 +0200 Marks-MacBook-Air.local (9476)] ERROR : The Agent cannot start without at least one. Please check your 
-[09/14/18 15:59:24 +0200 Marks-MacBook-Air.local (9476)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/14/18 15:59:24 +0200 Marks-MacBook-Air.local (9476)] ERROR : value set for app_name in the development 
+[09/14/18 15:59:24 +0200 Marks-MacBook-Air.local (9476)] ERROR : The Agent cannot start without at least one. Please check your
+[09/14/18 15:59:24 +0200 Marks-MacBook-Air.local (9476)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/14/18 15:59:24 +0200 Marks-MacBook-Air.local (9476)] ERROR : value set for app_name in the development
 [09/14/18 15:59:24 +0200 Marks-MacBook-Air.local (9476)] ERROR : environment.
 [09/14/18 15:59:25 +0200 Marks-MacBook-Air.local (9476)] INFO : Installing ActiveJob instrumentation
 [09/14/18 15:59:25 +0200 Marks-MacBook-Air.local (9476)] INFO : Installing ActiveRecord 4 instrumentation
@@ -576,9 +576,9 @@
 [09/19/18 14:55:24 +0100 Marks-MacBook-Air.local (7859)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [09/19/18 14:55:24 +0100 Marks-MacBook-Air.local (7859)] INFO : New Relic Agent Developer Mode enabled.
 [09/19/18 14:55:24 +0100 Marks-MacBook-Air.local (7859)] ERROR : No application name configured.
-[09/19/18 14:55:24 +0100 Marks-MacBook-Air.local (7859)] ERROR : The Agent cannot start without at least one. Please check your 
-[09/19/18 14:55:24 +0100 Marks-MacBook-Air.local (7859)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/19/18 14:55:24 +0100 Marks-MacBook-Air.local (7859)] ERROR : value set for app_name in the development 
+[09/19/18 14:55:24 +0100 Marks-MacBook-Air.local (7859)] ERROR : The Agent cannot start without at least one. Please check your
+[09/19/18 14:55:24 +0100 Marks-MacBook-Air.local (7859)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/19/18 14:55:24 +0100 Marks-MacBook-Air.local (7859)] ERROR : value set for app_name in the development
 [09/19/18 14:55:24 +0100 Marks-MacBook-Air.local (7859)] ERROR : environment.
 [09/19/18 14:55:24 +0100 Marks-MacBook-Air.local (7859)] INFO : Installing ActiveJob instrumentation
 [09/19/18 14:55:24 +0100 Marks-MacBook-Air.local (7859)] INFO : Installing ActiveRecord 4 instrumentation
@@ -600,9 +600,9 @@
 [09/24/18 13:49:26 +0200 Marks-MacBook-Air.local (13266)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [09/24/18 13:49:26 +0200 Marks-MacBook-Air.local (13266)] INFO : New Relic Agent Developer Mode enabled.
 [09/24/18 13:49:26 +0200 Marks-MacBook-Air.local (13266)] ERROR : No application name configured.
-[09/24/18 13:49:26 +0200 Marks-MacBook-Air.local (13266)] ERROR : The Agent cannot start without at least one. Please check your 
-[09/24/18 13:49:26 +0200 Marks-MacBook-Air.local (13266)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[09/24/18 13:49:26 +0200 Marks-MacBook-Air.local (13266)] ERROR : value set for app_name in the development 
+[09/24/18 13:49:26 +0200 Marks-MacBook-Air.local (13266)] ERROR : The Agent cannot start without at least one. Please check your
+[09/24/18 13:49:26 +0200 Marks-MacBook-Air.local (13266)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[09/24/18 13:49:26 +0200 Marks-MacBook-Air.local (13266)] ERROR : value set for app_name in the development
 [09/24/18 13:49:26 +0200 Marks-MacBook-Air.local (13266)] ERROR : environment.
 [09/24/18 13:49:26 +0200 Marks-MacBook-Air.local (13266)] INFO : Installing ActiveJob instrumentation
 [09/24/18 13:49:26 +0200 Marks-MacBook-Air.local (13266)] INFO : Installing ActiveRecord 4 instrumentation
@@ -624,9 +624,9 @@
 [10/05/18 11:11:26 +0200 Marks-MacBook-Air.local (5831)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [10/05/18 11:11:26 +0200 Marks-MacBook-Air.local (5831)] INFO : New Relic Agent Developer Mode enabled.
 [10/05/18 11:11:26 +0200 Marks-MacBook-Air.local (5831)] ERROR : No application name configured.
-[10/05/18 11:11:26 +0200 Marks-MacBook-Air.local (5831)] ERROR : The Agent cannot start without at least one. Please check your 
-[10/05/18 11:11:26 +0200 Marks-MacBook-Air.local (5831)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[10/05/18 11:11:26 +0200 Marks-MacBook-Air.local (5831)] ERROR : value set for app_name in the development 
+[10/05/18 11:11:26 +0200 Marks-MacBook-Air.local (5831)] ERROR : The Agent cannot start without at least one. Please check your
+[10/05/18 11:11:26 +0200 Marks-MacBook-Air.local (5831)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[10/05/18 11:11:26 +0200 Marks-MacBook-Air.local (5831)] ERROR : value set for app_name in the development
 [10/05/18 11:11:26 +0200 Marks-MacBook-Air.local (5831)] ERROR : environment.
 [10/05/18 11:11:26 +0200 Marks-MacBook-Air.local (5831)] INFO : Installing ActiveJob instrumentation
 [10/05/18 11:11:26 +0200 Marks-MacBook-Air.local (5831)] INFO : Installing ActiveRecord 4 instrumentation
@@ -648,9 +648,9 @@
 [10/07/18 18:40:16 +0200 Marks-MacBook-Air.local (10116)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [10/07/18 18:40:16 +0200 Marks-MacBook-Air.local (10116)] INFO : New Relic Agent Developer Mode enabled.
 [10/07/18 18:40:16 +0200 Marks-MacBook-Air.local (10116)] ERROR : No application name configured.
-[10/07/18 18:40:16 +0200 Marks-MacBook-Air.local (10116)] ERROR : The Agent cannot start without at least one. Please check your 
-[10/07/18 18:40:16 +0200 Marks-MacBook-Air.local (10116)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[10/07/18 18:40:16 +0200 Marks-MacBook-Air.local (10116)] ERROR : value set for app_name in the development 
+[10/07/18 18:40:16 +0200 Marks-MacBook-Air.local (10116)] ERROR : The Agent cannot start without at least one. Please check your
+[10/07/18 18:40:16 +0200 Marks-MacBook-Air.local (10116)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[10/07/18 18:40:16 +0200 Marks-MacBook-Air.local (10116)] ERROR : value set for app_name in the development
 [10/07/18 18:40:16 +0200 Marks-MacBook-Air.local (10116)] ERROR : environment.
 [10/07/18 18:40:16 +0200 Marks-MacBook-Air.local (10116)] INFO : Installing ActiveJob instrumentation
 [10/07/18 18:40:16 +0200 Marks-MacBook-Air.local (10116)] INFO : Installing ActiveRecord 4 instrumentation
@@ -672,9 +672,9 @@
 [10/08/18 14:54:25 +0200 Marks-MacBook-Air.local (14967)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [10/08/18 14:54:25 +0200 Marks-MacBook-Air.local (14967)] INFO : New Relic Agent Developer Mode enabled.
 [10/08/18 14:54:25 +0200 Marks-MacBook-Air.local (14967)] ERROR : No application name configured.
-[10/08/18 14:54:25 +0200 Marks-MacBook-Air.local (14967)] ERROR : The Agent cannot start without at least one. Please check your 
-[10/08/18 14:54:25 +0200 Marks-MacBook-Air.local (14967)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[10/08/18 14:54:25 +0200 Marks-MacBook-Air.local (14967)] ERROR : value set for app_name in the development 
+[10/08/18 14:54:25 +0200 Marks-MacBook-Air.local (14967)] ERROR : The Agent cannot start without at least one. Please check your
+[10/08/18 14:54:25 +0200 Marks-MacBook-Air.local (14967)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[10/08/18 14:54:25 +0200 Marks-MacBook-Air.local (14967)] ERROR : value set for app_name in the development
 [10/08/18 14:54:25 +0200 Marks-MacBook-Air.local (14967)] ERROR : environment.
 [10/08/18 14:54:25 +0200 Marks-MacBook-Air.local (14967)] INFO : Installing ActiveJob instrumentation
 [10/08/18 14:54:25 +0200 Marks-MacBook-Air.local (14967)] INFO : Installing ActiveRecord 4 instrumentation
@@ -698,9 +698,9 @@
 [10/08/18 19:05:43 +0200 Marks-MacBook-Air.local (17012)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [10/08/18 19:05:43 +0200 Marks-MacBook-Air.local (17012)] INFO : New Relic Agent Developer Mode enabled.
 [10/08/18 19:05:43 +0200 Marks-MacBook-Air.local (17012)] ERROR : No application name configured.
-[10/08/18 19:05:43 +0200 Marks-MacBook-Air.local (17012)] ERROR : The Agent cannot start without at least one. Please check your 
-[10/08/18 19:05:43 +0200 Marks-MacBook-Air.local (17012)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[10/08/18 19:05:43 +0200 Marks-MacBook-Air.local (17012)] ERROR : value set for app_name in the development 
+[10/08/18 19:05:43 +0200 Marks-MacBook-Air.local (17012)] ERROR : The Agent cannot start without at least one. Please check your
+[10/08/18 19:05:43 +0200 Marks-MacBook-Air.local (17012)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[10/08/18 19:05:43 +0200 Marks-MacBook-Air.local (17012)] ERROR : value set for app_name in the development
 [10/08/18 19:05:43 +0200 Marks-MacBook-Air.local (17012)] ERROR : environment.
 [10/08/18 19:05:43 +0200 Marks-MacBook-Air.local (17012)] INFO : Installing ActiveJob instrumentation
 [10/08/18 19:05:43 +0200 Marks-MacBook-Air.local (17012)] INFO : Installing ActiveRecord 4 instrumentation
@@ -721,9 +721,9 @@
 [10/08/18 19:11:54 +0200 Marks-MacBook-Air.local (17093)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/wateraid-giftshop)
 [10/08/18 19:11:54 +0200 Marks-MacBook-Air.local (17093)] INFO : New Relic Agent Developer Mode enabled.
 [10/08/18 19:11:54 +0200 Marks-MacBook-Air.local (17093)] ERROR : No application name configured.
-[10/08/18 19:11:54 +0200 Marks-MacBook-Air.local (17093)] ERROR : The Agent cannot start without at least one. Please check your 
-[10/08/18 19:11:54 +0200 Marks-MacBook-Air.local (17093)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[10/08/18 19:11:54 +0200 Marks-MacBook-Air.local (17093)] ERROR : value set for app_name in the development 
+[10/08/18 19:11:54 +0200 Marks-MacBook-Air.local (17093)] ERROR : The Agent cannot start without at least one. Please check your
+[10/08/18 19:11:54 +0200 Marks-MacBook-Air.local (17093)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[10/08/18 19:11:54 +0200 Marks-MacBook-Air.local (17093)] ERROR : value set for app_name in the development
 [10/08/18 19:11:54 +0200 Marks-MacBook-Air.local (17093)] ERROR : environment.
 [10/08/18 19:11:54 +0200 Marks-MacBook-Air.local (17093)] INFO : Installing ActiveJob instrumentation
 [10/08/18 19:11:54 +0200 Marks-MacBook-Air.local (17093)] INFO : Installing ActiveRecord 4 instrumentation
@@ -745,9 +745,9 @@
 [10/09/18 13:54:59 +0200 Marks-MacBook-Air.local (18081)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/giftshop)
 [10/09/18 13:54:59 +0200 Marks-MacBook-Air.local (18081)] INFO : New Relic Agent Developer Mode enabled.
 [10/09/18 13:54:59 +0200 Marks-MacBook-Air.local (18081)] ERROR : No application name configured.
-[10/09/18 13:54:59 +0200 Marks-MacBook-Air.local (18081)] ERROR : The Agent cannot start without at least one. Please check your 
-[10/09/18 13:54:59 +0200 Marks-MacBook-Air.local (18081)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[10/09/18 13:54:59 +0200 Marks-MacBook-Air.local (18081)] ERROR : value set for app_name in the development 
+[10/09/18 13:54:59 +0200 Marks-MacBook-Air.local (18081)] ERROR : The Agent cannot start without at least one. Please check your
+[10/09/18 13:54:59 +0200 Marks-MacBook-Air.local (18081)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[10/09/18 13:54:59 +0200 Marks-MacBook-Air.local (18081)] ERROR : value set for app_name in the development
 [10/09/18 13:54:59 +0200 Marks-MacBook-Air.local (18081)] ERROR : environment.
 [10/09/18 13:54:59 +0200 Marks-MacBook-Air.local (18081)] INFO : Installing ActiveJob instrumentation
 [10/09/18 13:54:59 +0200 Marks-MacBook-Air.local (18081)] INFO : Installing ActiveRecord 4 instrumentation
@@ -769,9 +769,9 @@
 [10/15/18 13:08:50 +0200 Marks-MacBook-Air.local (20995)] INFO : Reading configuration from config/newrelic.yml (/Users/markschellhas/webprojects/giftshop)
 [10/15/18 13:08:50 +0200 Marks-MacBook-Air.local (20995)] INFO : New Relic Agent Developer Mode enabled.
 [10/15/18 13:08:50 +0200 Marks-MacBook-Air.local (20995)] ERROR : No application name configured.
-[10/15/18 13:08:50 +0200 Marks-MacBook-Air.local (20995)] ERROR : The Agent cannot start without at least one. Please check your 
-[10/15/18 13:08:50 +0200 Marks-MacBook-Air.local (20995)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
-[10/15/18 13:08:50 +0200 Marks-MacBook-Air.local (20995)] ERROR : value set for app_name in the development 
+[10/15/18 13:08:50 +0200 Marks-MacBook-Air.local (20995)] ERROR : The Agent cannot start without at least one. Please check your
+[10/15/18 13:08:50 +0200 Marks-MacBook-Air.local (20995)] ERROR : newrelic.yml and ensure that it is valid and has at least one
+[10/15/18 13:08:50 +0200 Marks-MacBook-Air.local (20995)] ERROR : value set for app_name in the development
 [10/15/18 13:08:50 +0200 Marks-MacBook-Air.local (20995)] ERROR : environment.
 [10/15/18 13:08:50 +0200 Marks-MacBook-Air.local (20995)] INFO : Installing ActiveJob instrumentation
 [10/15/18 13:08:50 +0200 Marks-MacBook-Air.local (20995)] INFO : Installing ActiveRecord 4 instrumentation
