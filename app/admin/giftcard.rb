@@ -23,7 +23,8 @@ ActiveAdmin.register Giftcard do
       f.input :description
       f.input :amount
       f.input :in_which_store
-      f.input :category      
+      #f.input :category      
+	  f.input :category, :as => :select, :collection => ["Mors dag","Fars dag","Jul"]
       f.input :thumbnail, as: :file   
       f.input :preview_swedish, as: :file  
       f.input :preview_english, as: :file   
