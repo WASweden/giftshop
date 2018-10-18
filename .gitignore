@@ -19,6 +19,7 @@
 /tmp
 log/*.log
 
+
 /config/application.yml
 
 erd.pdf
