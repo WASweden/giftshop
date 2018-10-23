@@ -67,7 +67,7 @@
   <section class="cards">
 
   <!-- List of giftcards -->
-    <ul class="index__products" data-equalizer>
+    <ul class="index__products" data-equalizer style="display:none;">
       <li data-equalizer-watch>
         <article class="product product--card">
           <div class="product__picture">
@@ -138,12 +138,30 @@
   </section>
 
 
-  <!-- List all giftcards -->
-  <% @giftcards.each do |g| %>
-    <% if g.in_which_store == 'privat' %>
-      <%= g.name %>
+  <div class="row">
+    <% @giftcards.each do |giftcard| %>
+      <% if giftcard.in_which_store == 'privat' %>
+        <!-- true -->
+        <div class="col-md-3">
+          <div class="card">
+            <img class="card-img-top" src="<%= giftcard.thumbnail %>" alt="<%= giftcard.name %>">
+            <div class="card-body">
+              <h5 class="card-title" style="color:#00adb8;"><%= giftcard.amount %> kronor</h5>
+              <p class="card-text"><%= giftcard.description %></p>
+              <div class="text-right">
+                <button class="btn btn-primary" data-reveal-id="modal-card-<%= giftcard.id %>">Beställ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal for this giftcard -->
+        <div id="modal-card-<%= giftcard.id %>" class="reveal-modal small" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+          <%= render partial: 'add_order_item_form', :locals => {:quantity => giftcard.amount, :giftcardId => giftcard.id, :description => giftcard.description, :previewImageSe => giftcard.preview_swedish, :previewImageEn => giftcard.preview_english} %>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
+  <!-- / end of NEW DESIGN: Cards listing  -->
 
 <!-- Modals for each giftcard -->
   <section class="product__modals">
